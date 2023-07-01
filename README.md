@@ -14,7 +14,8 @@ Just a cool appstore. ⛄
     - [How to Upgrade CasaOS](#-how-to-upgrade-casaos)
     - ["Error 404: Not Found" during install](#-error-404-not-found-during-install)
     - [How to uninstall the CasaOS Coolstore](#-how-to-uninstall-the-casaos-coolstore)
-- [Contributing](#contributing)
+- [Request an App](#-request-an-app)
+- [Contributing](#-contributing)
 
 ---
 
@@ -104,8 +105,13 @@ Unregister the CasaOS Coolstore:
 
 ---
 
+### 🎈 Request an App
 
-## Contributing
+You can request an app to be added into the list by submitting a request [here](https://github.com/WisdomSky/CasaOS-Coolstore/issues/new?assignees=&labels=app-request&projects=&template=app-request.md&title=%5BApp+Request%5D+%3CApp+Name+Here%3E).
+
+---
+
+### 💙 Contributing
 
 > ☠ WARNING: Please refrain from submitting PRs into this repository.
 
