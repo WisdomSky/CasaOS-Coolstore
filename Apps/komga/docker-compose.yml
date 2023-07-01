@@ -42,5 +42,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
   title:
     en_us: Komga
-  category: Library Server
+  category: Coolstore
   port_map: '25600 '

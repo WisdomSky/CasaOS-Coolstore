@@ -113,5 +113,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/jake-walker/selfhosted_templates/wallabag/Images/wallabag.png
   title:
     en_us: Wallbag
-  category: Tools
+  category: Coolstore
   port_map: '8080'

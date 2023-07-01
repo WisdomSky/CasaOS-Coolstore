@@ -37,5 +37,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/speedtest-tracker.png
   title:
     en_us: Speedtest Tracker
-  category: Tools
+  category: Coolstore
   port_map: '8765'

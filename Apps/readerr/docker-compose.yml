@@ -48,5 +48,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/Readarr/Readarr/develop/Logo/128.png
   title:
     en_us: Readarr
-  category: Usenet Server
+  category: Coolstore
   port_map: '8787'

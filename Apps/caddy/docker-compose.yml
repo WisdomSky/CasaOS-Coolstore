@@ -39,5 +39,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
   title:
     en_us: Caddy
-  category: Tools
+  category: Coolstore
   port_map: '80'

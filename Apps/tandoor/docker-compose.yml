@@ -81,5 +81,5 @@ x-casaos:
   thumbnail: https://docs.tandoor.dev/logo_color.svg
   title:
     en_us: Tandoor
-  category: Tools
+  category: Coolstore
   port_map: '8080'

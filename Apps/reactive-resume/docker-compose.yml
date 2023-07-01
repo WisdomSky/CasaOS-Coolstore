@@ -84,5 +84,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/reactiveresume.png
   title:
     en_us: Reactive Resume
-  category: Other
+  category: Coolstore
   port_map: '3000'

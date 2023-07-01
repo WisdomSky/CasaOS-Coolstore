@@ -45,5 +45,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/pucherot/Pi.Alert/main/docs/img/1_devices.jpg
   title:
     en_us: Pi.alert
-  category: Network Server
+  category: Coolstore
   port_map: '20211'

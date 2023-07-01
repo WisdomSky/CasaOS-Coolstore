@@ -50,5 +50,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
   title:
     en_us: Archivebox
-  category: Other
+  category: Coolstore
   port_map: '8002'

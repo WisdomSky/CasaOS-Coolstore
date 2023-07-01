@@ -34,5 +34,5 @@ x-casaos:
   thumbnail: https://www.saashub.com/images/app/service_logos/55/2901389fab77/large.png?1561117248
   title:
     en_us: Trilium
-  category: Notes Server
+  category: Coolstore
   port_map: '8080'

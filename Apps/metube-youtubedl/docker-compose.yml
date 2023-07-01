@@ -37,5 +37,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png
   title:
     en_us: Metube
-  category: Other
+  category: Coolstore
   port_map: '8081'

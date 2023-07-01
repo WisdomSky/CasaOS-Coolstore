@@ -52,5 +52,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/traefik.png
   title:
     en_us: Traefik
-  category: Proxy
+  category: Coolstore
   port_map: '8080'

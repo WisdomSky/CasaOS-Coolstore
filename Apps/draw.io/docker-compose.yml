@@ -38,5 +38,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/jgraph/drawio/dev/src/main/webapp/images/logo.png
   title:
     en_us: Draw.io
-  category: Management Utility Server
+  category: Coolstore
   port_map: '8080'

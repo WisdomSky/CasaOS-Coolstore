@@ -48,5 +48,5 @@ x-casaos:
   thumbnail: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
   title:
     en_us: Joomla
-  category: CMS
+  category: Coolstore
   port_map: '80'

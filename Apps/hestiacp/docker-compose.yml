@@ -49,5 +49,5 @@ x-casaos:
   thumbnail: https://raw.githubusercontent.com/hestiacp/hestiacp/main/web/images/logo.png
   title:
     en_us: Hestia CP
-  category: Other
+  category: Coolstore
   port_map: '8083'
