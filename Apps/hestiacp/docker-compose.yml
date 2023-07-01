@@ -1,36 +1,39 @@
 name: hestiacp
 services:
   app:
-    image: smied/hestia-cp:1.4.0
+    image: artsemkniazeu/hestiacp:1.0.1
     restart: unless-stopped
-    privileged: true
     network_mode: host
     environment:
       TZ: $TZ
+    networks:
+      docnet:
+        ipv4_address: 10.1.1.0
+    command: sh -c "/usr/local/hestia/bin/v-change-user-password admin admin"
     volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /hestia
       - type: bind
         source: /DATA/AppData/$AppID/home
         target: /home
       - type: bind
-        source: /DATA/AppData/$AppID/usr
-        target: /usr
-      - type: bind
         source: /DATA/AppData/$AppID/backup
         target: /backup
-      - type: bind
-        source: /DATA/AppData/$AppID/etc
-        target: /etc
-      - type: bind
-        source: /DATA/AppData/$AppID/var
-        target: /var
-      - type: bind
-        source: /sys/fs/cgroup
-        target: /sys/fs/cgroup
-        read_only: true
-    tmpfs:
-      - /tmp
-      - /run
-      - /run/lock
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
+      - DAC_READ_SEARCH
+networks:
+  docnet:
+    name: docnet
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/16
+        - ip_range: 10.1.1.0/24
+        - gateway: 10.1.0.1
 x-casaos:
   architectures:
     - amd64
