@@ -3,13 +3,15 @@ services:
   app:
     image: artsemkniazeu/hestiacp:1.0.1
     restart: unless-stopped
-    network_mode: host
     environment:
       TZ: $TZ
     networks:
       docnet:
         ipv4_address: 10.1.1.0
-    command: sh -c "/usr/local/hestia/bin/v-change-user-password admin admin"
+    ports:
+      - target: 8083
+        published: 8083
+        protocol: tcp
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/config
@@ -32,8 +34,8 @@ networks:
     ipam:
       config:
         - subnet: 10.1.0.0/16
-        - ip_range: 10.1.1.0/24
-        - gateway: 10.1.0.1
+          ip_range: 10.1.1.0/24
+          gateway: 10.1.0.1
 x-casaos:
   architectures:
     - amd64
@@ -48,6 +50,10 @@ x-casaos:
   author: WisdomSky
   icon: https://raw.githubusercontent.com/hestiacp/hestiacp/main/web/images/logo.png
   thumbnail: https://raw.githubusercontent.com/hestiacp/hestiacp/main/web/images/logo.png
+  tips:
+    before_install:
+      en_us: |
+        Default `username` is `admin` and the default password can be found inside the `/DATA/AppData/$AppID/config/root/password.txt` file.
   title:
     en_us: Hestia CP
   category: Coolstore
