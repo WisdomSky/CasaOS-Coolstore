@@ -1,10 +1,9 @@
 
-![CasaOS Coolstore](https://raw.githubusercontent.com/WisdomSky/CasaOS-Cool-AppStore/main/banner.png)
+![CasaOS Coolstore](https://raw.githubusercontent.com/WisdomSky/CasaOS-Coolstore/main/banner.png)
 
 # CasaOS Coolstore
 
 Just a cool appstore. ⛄
-
 
 ## 📃 Table of Contents
 
