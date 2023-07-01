@@ -34,8 +34,8 @@ x-casaos:
     en_us: Draw.io (formerly Diagramly) Is Free Online Diagram Software. You Can Use It As A Flowchart Maker, Network Diagram Software, To Create Uml Online, As An Er Diagram Tool, To Design Database Schema, To Build Bpmn Online, As A Circuit Diagram Maker, And More. Draw.io Can Import .vsdx, Gliffy™ And Lucidchart™ Files.
   developer: ''
   author: WisdomSky
-  icon: https://raw.githubusercontent.com/qwerty00007/portainer_templates/master/Images/draw.io.png
-  thumbnail: https://raw.githubusercontent.com/qwerty00007/portainer_templates/master/Images/draw.io.png
+  icon: https://raw.githubusercontent.com/jgraph/drawio/dev/src/main/webapp/images/logo.png
+  thumbnail: https://raw.githubusercontent.com/jgraph/drawio/dev/src/main/webapp/images/logo.png
   title:
     en_us: Draw.io
   category: Management Utility Server

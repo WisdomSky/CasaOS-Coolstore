@@ -1,0 +1,53 @@
+name: hestiacp
+services:
+  app:
+    image: smied/hestia-cp:1.4.0
+    restart: unless-stopped
+    privileged: true
+    network_mode: host
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/home
+        target: /home
+      - type: bind
+        source: /DATA/AppData/$AppID/usr
+        target: /usr
+      - type: bind
+        source: /DATA/AppData/$AppID/backup
+        target: /backup
+      - type: bind
+        source: /DATA/AppData/$AppID/etc
+        target: /etc
+      - type: bind
+        source: /DATA/AppData/$AppID/var
+        target: /var
+      - type: bind
+        source: /sys/fs/cgroup
+        target: /sys/fs/cgroup
+        read_only: true
+    tmpfs:
+      - /tmp
+      - /run
+      - /run/lock
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Hestia Control Panel (HestiaCP) is an open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks.
+  tagline:
+    en_us: An open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks.
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
+  title:
+    en_us: Hestia CP
+  category: Other
+  port_map: '8083'

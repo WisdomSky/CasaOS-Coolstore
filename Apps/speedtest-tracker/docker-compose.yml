@@ -14,8 +14,8 @@ services:
           description:
             en_us: ''
     ports:
-      - target: 8765
-        published: 80
+      - target: 80
+        published: 8765
         protocol: tcp
     volumes:
       - type: bind
