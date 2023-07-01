@@ -4,10 +4,10 @@ services:
     image: alexta69/metube:2023-06-27
     restart: unless-stopped
     environment:
-      - UID=$PUID
-      - GID=$PGID
-      - DARK_MODE=true
-      - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
+      UID: $PUID
+      GID: $PGID
+      DARK_MODE: true
+      YTDL_OPTIONS: '{"cookiefile":"/cookies/cookies.txt"}'
     x-casaos:
       envs: []
     ports:
