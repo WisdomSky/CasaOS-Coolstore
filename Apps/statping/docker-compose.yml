@@ -3,17 +3,65 @@ services:
   app:
     image: statping/statping:v0.90.74
     restart: always
-    environment: {}
+    depends_on:
+      - db
+    environment:
+      VIRTUAL_PORT: 8080
+      DB_CONN: postgres
+      DB_HOST: db
+      DB_USER: casaos
+      DB_PASS: casaos
+      DB_DATABASE: casaos
+      NAME: ''
+      DESCRIPTION: ''
     x-casaos:
       envs: []
     ports:
-      - target: 4040
+      - target: 8080
         published: 8080
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/statping
+        source: /DATA/AppData/$AppID/app
         target: /app
+  db:
+    image: postgres:undefined
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+        - container: POSTGRES_DB
+          description:
+            en_us: Specify the name of a database to be created on image startup.
+        - container: POSTGRES_USER
+          description:
+            en_us: Postgres server username
+        - container: POSTGRES_PASSWORD
+          description:
+            en_us: Postgres server password
+      volumes:
+        - container: /var/lib/postgresql/data
+          description:
+            en_us: Directory where Postgres database data is stored
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/postgres/data
+        target: /var/lib/postgresql/data
 x-casaos:
   architectures:
     - amd64
@@ -31,4 +79,4 @@ x-casaos:
   title:
     en_us: Statping
   category: Network
-  port_map: '4040'
+  port_map: '8080'

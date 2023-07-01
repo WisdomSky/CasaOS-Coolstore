@@ -18,7 +18,13 @@ services:
       - target: 5000
         published: 5000
         protocol: tcp
-    volumes: []
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/manga
+        target: /manga
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /kavita/config
 x-casaos:
   architectures:
     - amd64

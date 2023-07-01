@@ -4,23 +4,19 @@ services:
     image: zadam/trilium:0.60.4
     restart: unless-stopped
     environment:
-      TRILIUM_DATA_DIR: ''
-      PORT: ''
+      TRILIUM_DATA_DIR: /home/node/trilium-data
     x-casaos:
       envs:
         - container: TRILIUM_DATA_DIR
           description:
             en_us: ''
-        - container: PORT
-          description:
-            en_us: ''
     ports:
-      - target: 3388
+      - target: 8080
         published: 8080
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/trilium-data
+        source: /DATA/AppData/$AppID/data
         target: /home/node/trilium-data
 x-casaos:
   architectures:
@@ -39,4 +35,4 @@ x-casaos:
   title:
     en_us: Trilium
   category: Notes Server
-  port_map: '3388'
+  port_map: '8080'

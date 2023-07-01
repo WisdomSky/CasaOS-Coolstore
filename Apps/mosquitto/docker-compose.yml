@@ -3,22 +3,24 @@ services:
   app:
     image: eclipse-mosquitto:2.0.15
     restart: unless-stopped
-    environment: {}
     x-casaos:
       envs: []
     ports:
       - target: 1883
         published: 1883
         protocol: tcp
+      - target: 9001
+        published: 9001
+        protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/Mosquitto/config
+        source: /DATA/AppData/$AppID/config
         target: /mosquitto/config
       - type: bind
-        source: /DATA/AppData/Config/Mosquitto/data
+        source: /DATA/AppData/$AppID/data
         target: /mosquitto/data
       - type: bind
-        source: /DATA/AppData/Config/Mosquitto/log
+        source: /DATA/AppData/$AppID/log
         target: /mosquitto/log
 x-casaos:
   architectures:

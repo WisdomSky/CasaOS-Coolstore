@@ -2,14 +2,16 @@ name: ghost
 services:
   app:
     image: ghost:5.53.3
-    environment: {}
     x-casaos:
       envs: []
     ports:
       - target: 2368
         published: 2368
         protocol: tcp
-    volumes: []
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/content
+        target: /var/lib/ghost/content
 x-casaos:
   architectures:
     - amd64

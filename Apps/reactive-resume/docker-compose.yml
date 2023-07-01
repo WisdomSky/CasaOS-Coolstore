@@ -3,17 +3,71 @@ services:
   app:
     image: martadinata666/reactive-resume:v3.7.4
     restart: unless-stopped
-    environment: {}
+    environment:
+      TZ: $TZ
+      SECRET_KEY: ''
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+      POSTGRES_SSL_CERT: null
+    depends_on:
+      - db
     x-casaos:
       envs: []
     ports:
-      - target: 7768
-        published: 80
+      - target: 3000
+        published: 3000
+        protocol: tcp
+      - target: 3100
+        published: 3100
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/ReactiveResume
-        target: /keepoutoftheway/var/www/html
+        source: /DATA/AppData/$AppID/uploads
+        target: /home/debian/reactiveresume/server/dist/assets/uploads
+      - type: bind
+        source: /DATA/AppData/$AppID/exports
+        target: /home/debian/reactiveresume/server/dist/assets/exports
+  db:
+    image: postgres:undefined
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+        - container: POSTGRES_DB
+          description:
+            en_us: Specify the name of a database to be created on image startup.
+        - container: POSTGRES_USER
+          description:
+            en_us: Postgres server username
+        - container: POSTGRES_PASSWORD
+          description:
+            en_us: Postgres server password
+      volumes:
+        - container: /var/lib/postgresql/data
+          description:
+            en_us: Directory where Postgres database data is stored
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/postgres/data
+        target: /var/lib/postgresql/data
 x-casaos:
   architectures:
     - amd64
@@ -31,4 +85,4 @@ x-casaos:
   title:
     en_us: Reactive Resume
   category: Other
-  port_map: '7768'
+  port_map: '3000'

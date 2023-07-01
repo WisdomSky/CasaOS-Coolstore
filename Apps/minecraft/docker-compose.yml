@@ -3,7 +3,7 @@ services:
   app:
     image: itzg/minecraft-server:2023.6.4
     environment:
-      EULA: ''
+      EULA: true
     x-casaos:
       envs:
         - container: EULA
@@ -15,7 +15,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/Minecraft-data
+        source: /DATA/AppData/$AppID/data
         target: /data
 x-casaos:
   architectures:

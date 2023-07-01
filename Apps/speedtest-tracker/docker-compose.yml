@@ -4,13 +4,12 @@ services:
     image: henrywhitaker3/speedtest-tracker:v1.12.3-dev
     restart: unless-stopped
     environment:
-      arch: ''
-      OOKLA_EULA_GDPR: ''
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      OOKLA_EULA_GDPR: true
     x-casaos:
       envs:
-        - container: arch
-          description:
-            en_us: ''
         - container: OOKLA_EULA_GDPR
           description:
             en_us: ''
@@ -20,7 +19,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/speedtest-tracker
+        source: /DATA/AppData/$AppID/config
         target: /config
 x-casaos:
   architectures:

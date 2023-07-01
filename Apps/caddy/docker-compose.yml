@@ -3,7 +3,6 @@ services:
   app:
     image: caddy:2.7
     restart: unless-stopped
-    environment: {}
     x-casaos:
       envs: []
     ports:
@@ -18,14 +17,14 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/Caddy/Data
+        source: /DATA/AppData/$AppID/data
         target: /data
       - type: bind
-        source: /DATA/AppData/Config/Caddy/Config
+        source: /DATA/AppData/$AppID/config
         target: /config
       - type: bind
-        source: /DATA/AppData/Config/Caddy/Caddyfile
-        target: /etc/caddy/Caddyfile
+        source: /DATA/AppData/$AppID/caddyfile
+        target: /etc/caddy/caddyfile
 x-casaos:
   architectures:
     - amd64

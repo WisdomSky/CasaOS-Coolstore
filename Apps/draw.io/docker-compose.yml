@@ -3,13 +3,25 @@ services:
   app:
     image: jgraph/drawio:21.5.2
     restart: unless-stopped
-    environment: {}
+    environment:
+      LETS_ENCRYPT_ENABLED: false
+      PUBLIC_DNS: ''
     x-casaos:
       envs: []
     ports:
       - target: 8080
         published: 8080
         protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/log/letsencrypt
+        target: /var/log/letsencrypt
+      - type: bind
+        source: /DATA/AppData/$AppID/letsencrypt
+        target: /etc/letsencrypt
+      - type: bind
+        source: /DATA/AppData/$AppID/lib/letsencrypt
+        target: /var/lib/letsencrypt
 x-casaos:
   architectures:
     - amd64

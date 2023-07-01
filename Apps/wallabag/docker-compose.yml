@@ -4,6 +4,14 @@ services:
     image: wallabag/wallabag:2.6.1
     restart: unless-stopped
     environment:
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      SYMFONY__ENV__DATABASE_DRIVER: pdo_pgsql
+      SYMFONY__ENV__DATABASE_HOST: db
+      SYMFONY__ENV__DATABASE_USER: casaos
+      SYMFONY__ENV__DATABASE_PASSWORD: casaos
+      SYMFONY__ENV__DATABASE_NAME: casaos
+      SYMFONY__ENV__DATABASE_PORT: 5432
       SYMFONY__ENV__SECRET: ''
       SYMFONY__ENV__DOMAIN_NAME: ''
       SYMFONY__ENV__MAILER_HOST: ''
@@ -12,6 +20,8 @@ services:
       SYMFONY__ENV__FROM_EMAIL: ''
       SYMFONY__ENV__FOSUSER_REGISTRATION: ''
       SYMFONY__ENV__FOSUSER_CONFIRMATION: ''
+    depends_on:
+      - db
     x-casaos:
       envs:
         - container: SYMFONY__ENV__SECRET
@@ -39,7 +49,7 @@ services:
           description:
             en_us: ''
     ports:
-      - target: 80
+      - target: 8080
         published: 80
         protocol: tcp
     volumes:
@@ -49,6 +59,44 @@ services:
       - type: bind
         source: /DATA/AppData/Wallabag/images
         target: /var/www/wallabag/web/assets/images
+  db:
+    image: postgres:15.3
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+        - container: POSTGRES_DB
+          description:
+            en_us: Specify the name of a database to be created on image startup.
+        - container: POSTGRES_USER
+          description:
+            en_us: Postgres server username
+        - container: POSTGRES_PASSWORD
+          description:
+            en_us: Postgres server password
+      volumes:
+        - container: /var/lib/postgresql/data
+          description:
+            en_us: Directory where Postgres database data is stored
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/postgres/data
+        target: /var/lib/postgresql/data
 x-casaos:
   architectures:
     - amd64
@@ -66,4 +114,4 @@ x-casaos:
   title:
     en_us: Wallbag
   category: Tools
-  port_map: '80'
+  port_map: '8080'

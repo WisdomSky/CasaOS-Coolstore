@@ -6,6 +6,7 @@ services:
     environment:
       PUID: $PUID
       PGID: $PGID
+      TZ: $TZ
     x-casaos:
       envs:
         - container: PUID
@@ -14,16 +15,19 @@ services:
         - container: PGID
           description:
             en_us: ''
+        - container: TZ
+          description:
+            en_us: ''
     ports:
       - target: 8787
         published: 8787
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/Readarr
+        source: /DATA/AppData/$AppID/config
         target: /config
       - type: bind
-        source: /portainer/Downloads
+        source: /portainer/downloads
         target: /downloads
       - type: bind
         source: /portainer/books
@@ -45,3 +49,4 @@ x-casaos:
   title:
     en_us: Readarr
   category: Usenet Server
+  port_map: '8787'

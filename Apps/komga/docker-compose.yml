@@ -6,6 +6,7 @@ services:
     environment:
       PUID: $PUID
       PGID: $PGID
+      TZ: $TZ
     x-casaos:
       envs:
         - container: PUID
@@ -15,10 +16,16 @@ services:
           description:
             en_us: ''
     ports:
-      - target: 8080
-        published: 8080
+      - target: 25600
+        published: 25600
         protocol: tcp
-    volumes: []
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
 x-casaos:
   architectures:
     - amd64
@@ -36,4 +43,4 @@ x-casaos:
   title:
     en_us: Komga
   category: Library Server
-  port_map: '8080'
+  port_map: '25600 '

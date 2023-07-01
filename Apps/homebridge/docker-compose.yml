@@ -28,7 +28,7 @@ services:
             en_us: ''
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/homebridge
+        source: /DATA/AppData/$AppID/config/
         target: /homebridge
 x-casaos:
   architectures:

@@ -3,7 +3,11 @@ services:
   app:
     image: alexta69/metube:2023-06-27
     restart: unless-stopped
-    environment: {}
+    environment:
+      - UID=$PUID
+      - GID=$PGID
+      - DARK_MODE=true
+      - YTDL_OPTIONS={"cookiefile":"/cookies/cookies.txt"}
     x-casaos:
       envs: []
     ports:
@@ -12,8 +16,11 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/MeTube/Downloads
+        source: /DATA/AppData/$AppID/downloads
         target: /downloads
+      - type: bind
+        source: /DATA/AppData/$AppID/cookies
+        target: /cookies
 x-casaos:
   architectures:
     - amd64
@@ -29,5 +36,6 @@ x-casaos:
   icon: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png
   thumbnail: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png
   title:
-    en_us: Metube (youtubedl)
+    en_us: Metube
   category: Other
+  port_map: '8081'

@@ -3,9 +3,13 @@ services:
   app:
     image: traefik:v3.0
     restart: unless-stopped
-    environment: {}
-    x-casaos:
-      envs: []
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      TRAEFIK_API: false
+      TRAEFIK_API_DASHBOARD: true
+      TRAEFIK_API_INSECURE: false
     ports:
       - target: 80
         published: 80
@@ -18,14 +22,17 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/traefik/traefik.yml
-        target: /traefik.yml
+        source: /DATA/AppData/$AppID/traefik.toml
+        target: /etc/traefik/traefik.toml
       - type: bind
-        source: /DATA/AppData/Config/traefik/config.yml
-        target: /config.yml
+        source: /DATA/AppData/$AppID/traefik.yml
+        target: /etc/traefik/traefik.yml
       - type: bind
-        source: /DATA/AppData/Config/traefik/acme.json
-        target: /acme.json
+        source: /DATA/AppData/$AppID/config.yml
+        target: /etc/traefik/config.yml
+      - type: bind
+        source: /DATA/AppData/$AppID/acme.json
+        target: /etc/traefik/acme.json
       - type: bind
         source: /var/run/docker.sock
         target: /var/run/docker.sock
@@ -46,4 +53,4 @@ x-casaos:
   title:
     en_us: Traefik
   category: Proxy
-  port_map: '80'
+  port_map: '8080'

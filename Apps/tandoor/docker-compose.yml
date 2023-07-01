@@ -3,17 +3,68 @@ services:
   app:
     image: vabene1111/recipes:1
     restart: unless-stopped
-    environment: {}
-    x-casaos:
-      envs: []
+    environment:
+      SECRET_KEY: ''
+      DB_ENGINE: django.db.backends.postgresql
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    depends_on:
+      - db
     ports:
-      - target: 3280
+      - target: 8080
         published: 8080
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/Config/Tandoor
+        source: /DATA/AppData/$AppID/config
         target: /config
+      - type: bind
+        source: /DATA/AppData/$AppID/staticfiles
+        target: /opt/recipes/staticfiles
+      - type: bind
+        source: /DATA/AppData/$AppID/mediafiles
+        target: /opt/recipes/mediafiles
+  db:
+    image: postgres:15.3
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+        - container: POSTGRES_DB
+          description:
+            en_us: Specify the name of a database to be created on image startup.
+        - container: POSTGRES_USER
+          description:
+            en_us: Postgres server username
+        - container: POSTGRES_PASSWORD
+          description:
+            en_us: Postgres server password
+      volumes:
+        - container: /var/lib/postgresql/data
+          description:
+            en_us: Directory where Postgres database data is stored
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/postgres/data
+        target: /var/lib/postgresql/data
 x-casaos:
   architectures:
     - amd64
@@ -31,4 +82,4 @@ x-casaos:
   title:
     en_us: Tandoor
   category: Tools
-  port_map: '3280'
+  port_map: '8080'

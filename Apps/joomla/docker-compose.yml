@@ -3,8 +3,10 @@ services:
   app:
     image: joomla:5.0-apache
     environment:
-      JOOMLA_DB_HOST: ''
-      JOOMLA_DB_PASSWORD: ''
+      JOOMLA_DB_HOST: joomladb
+      JOOMLA_DB_PASSWORD: casaos
+    depends_on:
+      - joomladb
     x-casaos:
       envs:
         - container: JOOMLA_DB_HOST
@@ -17,7 +19,19 @@ services:
       - target: 80
         published: 80
         protocol: tcp
-    volumes: []
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/www
+        target: /var/www/html
+  joomladb:
+    image: mysql:undefined
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/mysql
+        target: /var/lib/mysql
 x-casaos:
   architectures:
     - amd64
