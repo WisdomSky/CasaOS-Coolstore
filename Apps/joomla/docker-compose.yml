@@ -46,6 +46,10 @@ x-casaos:
   author: WisdomSky
   icon: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
   thumbnail: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
+  tips:
+    before_install:
+      en_us: |
+        For database connection, select `MySQL` then on the `database host` field put `joomladb`, for `database user` put `root` and for `database password` put `casaos`
   title:
     en_us: Joomla
   category: Coolstore
