@@ -7,7 +7,6 @@ services:
       UID: $PUID
       GID: $PGID
       DARK_MODE: true
-      YTDL_OPTIONS: '{"cookiefile":"/cookies/cookies.txt"}'
     x-casaos:
       envs: []
     ports:
@@ -18,9 +17,6 @@ services:
       - type: bind
         source: /DATA/AppData/$AppID/downloads
         target: /downloads
-      - type: bind
-        source: /DATA/AppData/$AppID/cookies
-        target: /cookies
 x-casaos:
   architectures:
     - amd64
