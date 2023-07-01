@@ -6,8 +6,6 @@ services:
     privileged: true
     network_mode: host
     environment:
-      PUID: $PUID
-      PGID: $PGID
       TZ: $TZ
     volumes:
       - type: bind
