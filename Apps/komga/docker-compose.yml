@@ -1,0 +1,39 @@
+name: komga
+services:
+  app:
+    image: gotson/komga:1.1.0
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ''
+        - container: PGID
+          description:
+            en_us: ''
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes: []
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Koomga Manga, Comic and E-Book Server
+  tagline:
+    en_us: Koomga Manga, Comic And E-book Server
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
+  thumbnail: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
+  title:
+    en_us: Komga
+  category: Library Server
+  port_map: '8080'

@@ -1,0 +1,47 @@
+name: readerr
+services:
+  app:
+    image: hotio/readarr:nightly-0.2.1.1915
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ''
+        - container: PGID
+          description:
+            en_us: ''
+    ports:
+      - target: 8787
+        published: 8787
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/Readarr
+        target: /config
+      - type: bind
+        source: /portainer/Downloads
+        target: /downloads
+      - type: bind
+        source: /portainer/books
+        target: /books
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Readarr usent server
+  tagline:
+    en_us: Readarr Usent Server
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/Readarr/Readarr/develop/Logo/128.png
+  thumbnail: https://raw.githubusercontent.com/Readarr/Readarr/develop/Logo/128.png
+  title:
+    en_us: Readarr
+  category: Usenet Server

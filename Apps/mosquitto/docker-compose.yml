@@ -1,0 +1,39 @@
+name: mosquitto
+services:
+  app:
+    image: eclipse-mosquitto:2.0.15
+    restart: unless-stopped
+    environment: {}
+    x-casaos:
+      envs: []
+    ports:
+      - target: 1883
+        published: 1883
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/Mosquitto/config
+        target: /mosquitto/config
+      - type: bind
+        source: /DATA/AppData/Config/Mosquitto/data
+        target: /mosquitto/data
+      - type: bind
+        source: /DATA/AppData/Config/Mosquitto/log
+        target: /mosquitto/log
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: "Eclipse Mosquitto is an open source implementation of a server for versions 5, 3.1.1, and 3.1 of the MQTT protocol.\rYou will need to create /portainer/Files/AppData/Config/Mosquitto/config/mosquitto.conf and if needed your password file.\rHave a look on https://mosquitto.org/man/mosquitto_passwd-1.html"
+  tagline:
+    en_us: "Eclipse Mosquitto Is An Open Source Implementation Of A Server For Versions 5, 3.1.1, And 3.1 Of The Mqtt Protocol.\r\nyou Will Need To Create /portainer/files/appdata/config/mosquitto/config/mosquitto.conf And If Needed Your Password File.\r\nhave A Look On Https://mosquitto.org/man/mosquitto_passwd-1.html"
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/docker-library/docs/757578e3a44e5460a8a11d32a81776f8b74231a9/eclipse-mosquitto/logo.png
+  thumbnail: https://raw.githubusercontent.com/docker-library/docs/757578e3a44e5460a8a11d32a81776f8b74231a9/eclipse-mosquitto/logo.png
+  title:
+    en_us: Eclipse Mosquitto
+  category: Other

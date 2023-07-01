@@ -1,0 +1,42 @@
+name: pi.alert
+services:
+  app:
+    image: jokobsk/pi.alert:23
+    restart: always
+    network_mode: host
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ''
+        - container: PGID
+          description:
+            en_us: ''
+    ports:
+      - target: 20211
+        published: 20211
+        protocol: udp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/pi.alert
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: WIFI / LAN intruder detector
+  tagline:
+    en_us: Wifi / Lan Intruder Detector
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/pucherot/Pi.Alert/main/docs/img/1_devices.jpg
+  thumbnail: https://raw.githubusercontent.com/pucherot/Pi.Alert/main/docs/img/1_devices.jpg
+  title:
+    en_us: Pi.alert
+  category: Network Server

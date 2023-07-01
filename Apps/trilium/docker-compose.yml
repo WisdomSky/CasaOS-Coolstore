@@ -1,0 +1,42 @@
+name: trilium
+services:
+  app:
+    image: zadam/trilium:0.60.4
+    restart: unless-stopped
+    environment:
+      TRILIUM_DATA_DIR: ''
+      PORT: ''
+    x-casaos:
+      envs:
+        - container: TRILIUM_DATA_DIR
+          description:
+            en_us: ''
+        - container: PORT
+          description:
+            en_us: ''
+    ports:
+      - target: 3388
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/trilium-data
+        target: /home/node/trilium-data
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases
+  tagline:
+    en_us: Trilium Notes Is A Hierarchical Note Taking Application With Focus On Building Large Personal Knowledge Bases
+  developer: ''
+  author: WisdomSky
+  icon: https://www.saashub.com/images/app/service_logos/55/2901389fab77/large.png?1561117248
+  thumbnail: https://www.saashub.com/images/app/service_logos/55/2901389fab77/large.png?1561117248
+  title:
+    en_us: Trilium
+  category: Notes Server
+  port_map: '3388'

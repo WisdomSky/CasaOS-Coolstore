@@ -1,0 +1,34 @@
+name: reactive-resume
+services:
+  app:
+    image: martadinata666/reactive-resume:v3.7.4
+    restart: unless-stopped
+    environment: {}
+    x-casaos:
+      envs: []
+    ports:
+      - target: 7768
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/ReactiveResume
+        target: /keepoutoftheway/var/www/html
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: A one-of-a-kind resume builder that's not out to get your data. Completely secure, customizable, portable, open-source and free forever.
+  tagline:
+    en_us: A One-of-a-kind Resume Builder That's Not Out To Get Your Data. Completely Secure, Customizable, Portable, Open-source And Free Forever.
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/reactiveresume.png
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/reactiveresume.png
+  title:
+    en_us: Reactive Resume
+  category: Other
+  port_map: '7768'

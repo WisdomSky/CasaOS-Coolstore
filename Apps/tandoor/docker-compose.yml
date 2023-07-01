@@ -1,0 +1,34 @@
+name: tandoor
+services:
+  app:
+    image: vabene1111/recipes:1
+    restart: unless-stopped
+    environment: {}
+    x-casaos:
+      envs: []
+    ports:
+      - target: 3280
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/Tandoor
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: The recipe manager that allows you to manage your ever growing collection of digital recipes.
+  tagline:
+    en_us: The Recipe Manager That Allows You To Manage Your Ever Growing Collection Of Digital Recipes.
+  developer: ''
+  author: WisdomSky
+  icon: https://docs.tandoor.dev/logo_color.svg
+  thumbnail: https://docs.tandoor.dev/logo_color.svg
+  title:
+    en_us: Tandoor
+  category: Tools
+  port_map: '3280'

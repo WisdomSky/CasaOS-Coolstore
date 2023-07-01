@@ -1,0 +1,38 @@
+name: joomla
+services:
+  app:
+    image: joomla:5.0-apache
+    environment:
+      JOOMLA_DB_HOST: ''
+      JOOMLA_DB_PASSWORD: ''
+    x-casaos:
+      envs:
+        - container: JOOMLA_DB_HOST
+          description:
+            en_us: ''
+        - container: JOOMLA_DB_PASSWORD
+          description:
+            en_us: ''
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes: []
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Another free and open-source CMS
+  tagline:
+    en_us: Another Free And Open-source Cms
+  developer: ''
+  author: WisdomSky
+  icon: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
+  thumbnail: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
+  title:
+    en_us: Joomla
+  category: CMS
+  port_map: '80'

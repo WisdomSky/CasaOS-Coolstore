@@ -1,0 +1,69 @@
+name: wallabag
+services:
+  app:
+    image: wallabag/wallabag:2.6.1
+    restart: unless-stopped
+    environment:
+      SYMFONY__ENV__SECRET: ''
+      SYMFONY__ENV__DOMAIN_NAME: ''
+      SYMFONY__ENV__MAILER_HOST: ''
+      SYMFONY__ENV__MAILER_USER: ''
+      SYMFONY__ENV__MAILER_PASSWORD: ''
+      SYMFONY__ENV__FROM_EMAIL: ''
+      SYMFONY__ENV__FOSUSER_REGISTRATION: ''
+      SYMFONY__ENV__FOSUSER_CONFIRMATION: ''
+    x-casaos:
+      envs:
+        - container: SYMFONY__ENV__SECRET
+          description:
+            en_us: This should be set to a random string of characters.
+        - container: SYMFONY__ENV__DOMAIN_NAME
+          description:
+            en_us: ''
+        - container: SYMFONY__ENV__MAILER_HOST
+          description:
+            en_us: ''
+        - container: SYMFONY__ENV__MAILER_USER
+          description:
+            en_us: ''
+        - container: SYMFONY__ENV__MAILER_PASSWORD
+          description:
+            en_us: ''
+        - container: SYMFONY__ENV__FROM_EMAIL
+          description:
+            en_us: ''
+        - container: SYMFONY__ENV__FOSUSER_REGISTRATION
+          description:
+            en_us: ''
+        - container: SYMFONY__ENV__FOSUSER_CONFIRMATION
+          description:
+            en_us: ''
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Wallabag/data
+        target: /var/www/wallabag/data
+      - type: bind
+        source: /DATA/AppData/Wallabag/images
+        target: /var/www/wallabag/web/assets/images
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: 'wallabag is a self hostable application for saving web pages: Save and classify articles. Read them later. Freely.'
+  tagline:
+    en_us: 'Wallabag Is A Self Hostable Application For Saving Web Pages: Save And Classify Articles. Read Them Later. Freely.'
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/jake-walker/selfhosted_templates/wallabag/Images/wallabag.png
+  thumbnail: https://raw.githubusercontent.com/jake-walker/selfhosted_templates/wallabag/Images/wallabag.png
+  title:
+    en_us: Wallbag
+  category: Tools
+  port_map: '80'

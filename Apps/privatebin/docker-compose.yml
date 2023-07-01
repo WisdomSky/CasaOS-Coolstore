@@ -1,0 +1,46 @@
+name: privatebin
+services:
+  app:
+    image: privatebin/nginx-fpm-alpine:1.5.1
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ''
+        - container: PGID
+          description:
+            en_us: ''
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/PrivateBin
+        target: /srv/data
+      - type: bind
+        source: /DATA/AppData/Config/PrivateBin
+        target: /srv/cfg
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data!
+  tagline:
+    en_us: |
+      Privatebin Is A Minimalist, Open Source Online Pastebin Where The Server Has Zero Knowledge Of Pasted Data!
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/privatebin.png
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/privatebin.png
+  title:
+    en_us: Privatebin
+  category: Cloud
+  port_map: '8080'

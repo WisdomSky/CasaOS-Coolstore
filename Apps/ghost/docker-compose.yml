@@ -1,0 +1,29 @@
+name: ghost
+services:
+  app:
+    image: ghost:5.53.3
+    environment: {}
+    x-casaos:
+      envs: []
+    ports:
+      - target: 2368
+        published: 2368
+        protocol: tcp
+    volumes: []
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Free and open-source blogging platform
+  tagline:
+    en_us: Free And Open-source Blogging Platform
+  developer: ''
+  author: WisdomSky
+  icon: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png
+  thumbnail: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png
+  title:
+    en_us: Ghost
+  category: blog

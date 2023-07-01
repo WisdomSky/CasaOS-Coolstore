@@ -1,0 +1,38 @@
+name: kavita
+services:
+  app:
+    image: kizaing/kavita:0.7.3
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: ''
+        - container: PGID
+          description:
+            en_us: ''
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    volumes: []
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Kavita Manga, Comic and E-Book Server
+  tagline:
+    en_us: Kavita Manga, Comic And E-book Server
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/Kareadita/Kavita/main/UI/Web/src/assets/images/logo.png
+  thumbnail: https://raw.githubusercontent.com/Kareadita/Kavita/main/UI/Web/src/assets/images/logo.png
+  title:
+    en_us: Kavita
+  category: Library Server

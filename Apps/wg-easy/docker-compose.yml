@@ -1,0 +1,44 @@
+name: wg-easy
+services:
+  app:
+    image: weejewel/wg-easy:7
+    environment:
+      WG_HOST: ''
+      PASSWORD: ''
+      WG_PORT: ''
+      WG_DEFAULT_DNS: ''
+      WG_ALLOWED_IPS: ''
+    x-casaos:
+      envs:
+        - container: WG_HOST
+          description:
+            en_us: Set here your DDNS domain
+        - container: PASSWORD
+          description:
+            en_us: Leave blank to access WebUI without loggin
+        - container: WG_PORT
+          description:
+            en_us: ''
+        - container: WG_DEFAULT_DNS
+          description:
+            en_us: ''
+        - container: WG_ALLOWED_IPS
+          description:
+            en_us: ''
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Fast VPN Server with easy to use User Interface
+  tagline:
+    en_us: Fast Vpn Server With Easy To Use User Interface
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png
+  title:
+    en_us: Wireguard Server
+  category: Other

@@ -1,0 +1,54 @@
+name: archivebox
+services:
+  app:
+    image: archivebox/archivebox:0.7
+    restart: unless-stopped
+    environment:
+      ALLOWED_HOSTS: ''
+      MEDIA_MAX_SIZE: ''
+      PUBLIC_INDEX: ''
+      PUBLIC_SNAPSHOTS: ''
+      PUBLIC_ADD_VIEW: ''
+    x-casaos:
+      envs:
+        - container: ALLOWED_HOSTS
+          description:
+            en_us: ''
+        - container: MEDIA_MAX_SIZE
+          description:
+            en_us: ''
+        - container: PUBLIC_INDEX
+          description:
+            en_us: ''
+        - container: PUBLIC_SNAPSHOTS
+          description:
+            en_us: ''
+        - container: PUBLIC_ADD_VIEW
+          description:
+            en_us: ''
+    ports:
+      - target: 8002
+        published: 8000
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Config/archivebox
+        target: /data
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
+  tagline:
+    en_us: Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.
+  developer: ''
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
+  thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
+  title:
+    en_us: Archivebox
+  category: Other
+  port_map: '8002'
