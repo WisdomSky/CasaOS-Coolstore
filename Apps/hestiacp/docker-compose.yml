@@ -53,7 +53,7 @@ x-casaos:
   tips:
     before_install:
       en_us: |
-        Default `username` is `admin` and the default password can be found inside the `/DATA/AppData/$AppID/config/root/password.txt` file.
+        Default `username` is `admin` and the default password can be found inside the `/DATA/AppData/hestiacp/config/root/password.txt` file.
   title:
     en_us: Hestia CP
   category: Coolstore
