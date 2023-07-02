@@ -6,9 +6,9 @@ services:
     environment:
       PGID: $PGID
       PUID: $PUID
-      HOMEBRIDGE_CONFIG_UI: ''
-      HOMEBRIDGE_CONFIG_UI_PORT: ''
+      ENABLE_AVAHI: 1
       TZ: $TZ
+    network_mode: host
     x-casaos:
       envs:
         - container: PGID
@@ -17,18 +17,12 @@ services:
         - container: PUID
           description:
             en_us: ''
-        - container: HOMEBRIDGE_CONFIG_UI
-          description:
-            en_us: ''
-        - container: HOMEBRIDGE_CONFIG_UI_PORT
-          description:
-            en_us: ''
         - container: TZ
           description:
             en_us: ''
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/config/
+        source: /DATA/AppData/$AppID/config
         target: /homebridge
 x-casaos:
   architectures:
@@ -47,3 +41,4 @@ x-casaos:
   title:
     en_us: Homebridge
   category: Coolstore
+  port_map: '8581'
