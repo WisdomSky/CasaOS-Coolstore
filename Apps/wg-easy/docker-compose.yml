@@ -57,6 +57,9 @@ x-casaos:
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png
+  tips:
+    before_install:
+      en_us: Default password is `casaos`.
   title:
     en_us: Wireguard Server
   category: Coolstore
