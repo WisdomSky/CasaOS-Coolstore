@@ -3,7 +3,7 @@ services:
   app:
     image: weejewel/wg-easy:7
     environment:
-      WG_HOST: ''
+      WG_HOST: 0.0.0.0
       PASSWORD: casaos
       WG_PORT: 51820
       WG_DEFAULT_DNS: 1.1.1.1
