@@ -36,10 +36,11 @@ Just an another CasaOS third-party Appstore with ❄**Cool**❄ apps.
 
 ## ✅ Installation
 
-Run the following command to install the appstore:
+Run the following command to install the appstore and restart casaos:
 ```bash
-casaos-cli app-management register app-store https://casaos-appstore.paodayag.dev/coolstore.zip
+casaos-cli app-management register app-store https://casaos-appstore.paodayag.dev/coolstore.zip && sudo systemctl restart casaos
 ```
+To implement the changes and view the additional applications, it is necessary to restart casaos after the installation.
 
 > **NOTE: Custom Appstore is only supported on CasaOS version [0.4.4](https://blog.casaos.io/blog/23.html) and above. How to upgrade? [Click here](#-how-to-upgrade-casaos)**
 
