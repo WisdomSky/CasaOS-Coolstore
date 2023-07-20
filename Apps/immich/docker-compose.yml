@@ -1,7 +1,7 @@
 name: immich
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v1.67.0
+    image: ghcr.io/immich-app/immich-server:v1.67.1
     command:
       - start.sh
       - immich
@@ -22,7 +22,7 @@ services:
       - immich-machine-learning
     restart: always
   immich-microservices:
-    image: ghcr.io/immich-app/immich-server:v1.67.0
+    image: ghcr.io/immich-app/immich-server:v1.67.1
     command:
       - start.sh
       - microservices
@@ -41,7 +41,7 @@ services:
       - typesense
     restart: always
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v1.66.1
+    image: ghcr.io/immich-app/immich-machine-learning:undefined
     volumes:
       - /DATA/AppData/immich/model/cache:/cache
     environment:
@@ -53,7 +53,7 @@ services:
       - REDIS_HOSTNAME=immich_redis
     restart: always
   immich-web:
-    image: ghcr.io/immich-app/immich-web:v1.67.0
+    image: ghcr.io/immich-app/immich-web:v1.67.1
     restart: always
   typesense:
     image: typesense/typesense:0.24.1
@@ -69,7 +69,7 @@ services:
     image: redis:6.0-alpine
     restart: always
   database:
-    image: postgres:13
+    image: postgres:undefined
     environment:
       POSTGRES_PASSWORD: casaos
       POSTGRES_USER: casaos
