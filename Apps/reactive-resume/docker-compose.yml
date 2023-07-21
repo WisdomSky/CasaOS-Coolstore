@@ -31,7 +31,7 @@ services:
         source: /DATA/AppData/$AppID/exports
         target: /home/debian/reactiveresume/server/dist/assets/exports
   db:
-    image: postgres:undefined
+    image: postgres:13
     restart: unless-stopped
     environment:
       PUID: $PUID
