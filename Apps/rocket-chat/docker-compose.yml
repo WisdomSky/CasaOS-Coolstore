@@ -1,0 +1,45 @@
+name: rocket-chat
+services:
+  app:
+    image: rocket.chat:6.2.0
+    restart: unless-stopped
+    environment:
+      MONGO_OPLOG_URL: mongodb://database:27017/local
+    depends_on:
+      - database
+    ports:
+      - target: 3000
+        published: '3000'
+        protocol: tcp
+  database:
+    image: mongo:6.0.8
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rocket-chat/mongo/data/configdb
+        target: /data/configdb
+      - type: bind
+        source: /DATA/AppData/rocket-chat/mongo/data/db
+        target: /data/db
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: app
+  description:
+    en_us: Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection. It enables real-time conversations between colleagues, with other companies or with your customers, across devices on web, desktop or mobile.
+  tagline:
+    en_us: Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection.
+  developer: Rocket Chat
+  author: ''
+  icon: https://static.cdnlogo.com/logos/r/32/rocket-chat.svg
+  thumbnail: https://static.cdnlogo.com/logos/r/32/rocket-chat.svg
+  title:
+    en_us: Rocket. Chat
+  category: Chat
+  port_map: '3000'
