@@ -4,14 +4,14 @@ services:
     image: rocket.chat:6.2.0
     restart: unless-stopped
     environment:
-      MONGO_OPLOG_URL: mongodb://database:27017/local
+      MONGO_OPLOG_URL: mongodb://db:27017/local
     depends_on:
-      - database
+      - db
     ports:
       - target: 3000
         published: '3000'
         protocol: tcp
-  database:
+  db:
     image: mongo:6.0.8
     restart: unless-stopped
     environment:
