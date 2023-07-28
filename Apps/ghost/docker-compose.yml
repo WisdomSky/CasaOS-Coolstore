@@ -1,7 +1,7 @@
 name: ghost
 services:
   app:
-    image: ghost:5.55.0
+    image: ghost:5.55.2
     x-casaos:
       envs: []
     ports:
