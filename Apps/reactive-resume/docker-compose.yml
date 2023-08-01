@@ -1,7 +1,7 @@
 name: reactive-resume
 services:
   app:
-    image: martadinata666/reactive-resume:v3.8.3
+    image: martadinata666/reactive-resume:undefined
     restart: unless-stopped
     environment:
       TZ: $TZ
@@ -31,7 +31,7 @@ services:
         source: /DATA/AppData/$AppID/exports
         target: /home/debian/reactiveresume/server/dist/assets/exports
   db:
-    image: postgres:15.3
+    image: postgres:undefined
     restart: unless-stopped
     environment:
       PUID: $PUID
