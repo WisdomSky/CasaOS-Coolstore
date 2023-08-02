@@ -41,7 +41,7 @@ services:
       - typesense
     restart: always
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v1.71.0
+    image: ghcr.io/immich-app/immich-machine-learning:v1.69.0
     volumes:
       - /DATA/AppData/immich/model/cache:/cache
     environment:

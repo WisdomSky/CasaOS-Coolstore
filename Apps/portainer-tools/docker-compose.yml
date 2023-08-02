@@ -1,0 +1,60 @@
+name: portainer-tools
+services:
+  app:
+    image: technorabilia/portainer-tools:latest
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      PORTAINER_USERNAME: ''
+      PORTAINER_PASSWORD: ''
+      PORTAINER_URL: 0.0.0.0:9000
+      SERVER_URL: http://0.0.0.0:9999
+    x-casaos:
+      envs:
+        - container: SERVER_URL
+          description:
+            en_us: ''
+        - container: PORTAINER_URL
+          description:
+            en_us: Portainer Base URL
+        - container: PORTAINER_USERNAME
+          description:
+            en_us: Portainer admin username
+        - container: PORTAINER_PASSWORD
+          description:
+            en_us: Portainer admin password
+        - container: PUID
+          description:
+            en_us: ''
+        - container: PGID
+          description:
+            en_us: ''
+      volumes:
+        - container: /config
+          description:
+            en_us: Config for portainer tools
+    ports:
+      - target: 9999
+        published: 9999
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/portainer-tools/config
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server. You can set the Portainer App Templates URL from within the application to easily switch App Template definitions. Detailed information about installing and using the application and more can be found on https://www.technorabilia.com/portainer-tools-merge-and-host-app-template-definitions.
+  tagline:
+    en_us: Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server.
+  developer: Technorabilia
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Portainer/thumbnail.png
+  thumbnail: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Portainer/thumbnail.png
+  title:
+    en_us: Portainer Tools
+  category: Coolstore
+  port_map: '9999'
