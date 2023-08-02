@@ -1,7 +1,7 @@
 name: statping
 services:
   app:
-    image: statping/statping:undefined
+    image: statping/statping:v0.90.74
     restart: always
     depends_on:
       - db

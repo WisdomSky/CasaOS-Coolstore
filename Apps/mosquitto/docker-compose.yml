@@ -1,7 +1,7 @@
 name: mosquitto
 services:
   app:
-    image: eclipse-mosquitto:undefined
+    image: eclipse-mosquitto:2.0.15
     restart: unless-stopped
     x-casaos:
       envs: []
