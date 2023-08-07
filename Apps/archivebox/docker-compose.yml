@@ -4,11 +4,11 @@ services:
     image: archivebox/archivebox:0.7
     restart: unless-stopped
     environment:
-      ALLOWED_HOSTS: ''
-      MEDIA_MAX_SIZE: ''
-      PUBLIC_INDEX: ''
-      PUBLIC_SNAPSHOTS: ''
-      PUBLIC_ADD_VIEW: ''
+      ALLOWED_HOSTS: '*'
+      MEDIA_MAX_SIZE: 500m
+      PUBLIC_INDEX: true
+      PUBLIC_SNAPSHOTS: true
+      PUBLIC_ADD_VIEW: true
     x-casaos:
       envs:
         - container: ALLOWED_HOSTS
@@ -27,8 +27,8 @@ services:
           description:
             en_us: ''
     ports:
-      - target: 8002
-        published: 8000
+      - target: 8000
+        published: 8002
         protocol: tcp
     volumes:
       - type: bind
