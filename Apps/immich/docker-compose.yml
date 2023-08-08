@@ -1,7 +1,7 @@
 name: immich
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v1.68.0
+    image: ghcr.io/immich-app/immich-server:v1.70.0
     command:
       - start.sh
       - immich
@@ -22,7 +22,7 @@ services:
       - immich-machine-learning
     restart: always
   immich-microservices:
-    image: ghcr.io/immich-app/immich-server:v1.68.0
+    image: ghcr.io/immich-app/immich-server:v1.70.0
     command:
       - start.sh
       - microservices
