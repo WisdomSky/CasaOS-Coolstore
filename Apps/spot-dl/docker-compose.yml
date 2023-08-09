@@ -1,0 +1,38 @@
+name: spot-dl
+services:
+  app:
+    image: spotdl/spotify-downloader:v4.2.0
+    restart: unless-stopped
+    ports:
+      - target: 8808
+        published: 8808
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/spot-dl/music
+        target: /music
+    command:
+      - web
+      - '--host'
+      - 0.0.0.0
+      - '--port'
+      - '8808'
+      - '--web-use-output-dir'
+    tty: true
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_us: spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
+  tagline:
+    en_us: spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
+  developer: spotDL
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/spot-dl/icon.svg
+  thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/spot-dl/icon.svg
+  title:
+    en_us: spotDL
+  category: Coolstore
+  port_map: '8808'
