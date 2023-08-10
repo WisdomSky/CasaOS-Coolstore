@@ -25,6 +25,9 @@ x-casaos:
     en_us: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
   developer: ''
   author: WisdomSky
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/websync/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/websync/screenshot-2.png
   icon: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
   thumbnail: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
   title:
