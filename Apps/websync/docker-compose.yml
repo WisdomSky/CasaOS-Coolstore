@@ -1,0 +1,33 @@
+name: websync
+services:
+  app:
+    image: furier/websync:latest
+    restart: unless-stopped
+    working_dir: /src
+    command:
+      - node
+      - server.js
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/websync/data
+        target: /data
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
+  tagline:
+    en_us: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
+  developer: ''
+  author: WisdomSky
+  icon: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
+  thumbnail: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
+  title:
+    en_us: Web Sync (RSync)
+  category: Coolstore
+  port_map: '3000'
