@@ -9,7 +9,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/spot-dl/music
+        source: /DATA/Media/Music
         target: /music
     command:
       - web
