@@ -33,16 +33,27 @@ Just an another CasaOS third-party Appstore with ❄**Cool**❄ apps.
 
 ---
 
+### ❄ CasaOS Coolstore URL
+
+    https://casaos-appstore.paodayag.dev/coolstore.zip
 
 ## ✅ Installation
 
-Run the following command to install the appstore:
-```bash
-casaos-cli app-management register app-store https://casaos-appstore.paodayag.dev/coolstore.zip
-```
+- Go to your CasaOS dashboard.
 
-> **NOTE: Custom Appstore is only supported on CasaOS version [0.4.4](https://blog.casaos.io/blog/23.html) and above. How to upgrade? [Click here](#-how-to-upgrade-casaos)**
+  ![Step 1](https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-1.jpg)
 
+- Open the appstore and click `Add Source` button  located on the right just above the apps list.
+
+  ![Step 2](https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-2.jpg)
+
+- Paste the appstore link `https://casaos-appstore.paodayag.dev/coolstore.zip` and then click `Add` to submit.
+
+  ![Step 3](https://raw.githubusercontent.com/WisdomSky/CasaOS-LinuxServer-AppStore/main/tip-3.jpg)
+
+- Wait for the installation to finish. Done!
+
+> **NOTE: Custom Appstore is only supported on CasaOS version [0.4.4](https://blog.casaos.io/blog/32.html) and above. How to upgrade? [Click here](#-how-to-upgrade-casaos)**
 ---
 
 ## 🛠 List of Applications
@@ -79,41 +90,13 @@ casaos-cli app-management register app-store https://casaos-appstore.paodayag.de
 | <img src="https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png" width="15"/>&nbsp;&nbsp;&nbsp;[Wireguard Server](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/wg-easy) | 7 | Fast Vpn Server With Easy To Use User Interface |
 
 
-
 ## 💡 Frequently Asked Questions
 
 ### 👉 How to Upgrade CasaOS
 
 Run the following command:
 
-    curl -fsSL https://get.casaos.io/update/v0.4.4-alpha | sudo bash
-
-
-### 👉 Error 404 Not Found during install
-
-This could be caused by your CasaOS running on a port other than the default `port 80`. You need to add the `-u` flag at the end to tell command which port your CasaOS is running:
-
-```bash
-casaos-cli app-management register app-store https://casaos-appstore.paodayag.dev/coolstore.zip -u "localhost:<my-casa-os-port>"
-```
-
-Replace `<my-casa-os-port>` with the port where your CasaOS is running. For example if my CasaOS is running on port 99:
-
-```bash
-casaos-cli app-management register app-store https://casaos-appstore.paodayag.dev/coolstore.zip -u "localhost:99"
-```
-
-### 👉 How to uninstall the CasaOS Coolstore
-
-Get the assigned ID of the Coolstore:
-
-    casaos-cli app-management list app-stores
-
-Unregister the CasaOS Coolstore:
-
-    casaos-cli app-management unregister app-store <coolstore-id>
-
-> NOTE: Replace `<coolstore-id>` with the corresponding ID of the CasaOS Coolstore.
+    curl -fsSL https://get.casaos.io/update/v0.4.4 | sudo bash
 
 ---
 

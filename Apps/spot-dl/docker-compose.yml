@@ -34,5 +34,9 @@ x-casaos:
   thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/spot-dl/icon.svg
   title:
     en_us: spotDL
+  tips:
+    before_install:
+      en_us: |
+        The default download location is set to `/DATA/Media/Music`. You can change this by going into the app settings and changing the specified path.
   category: Coolstore
   port_map: '8808'
