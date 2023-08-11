@@ -1,0 +1,53 @@
+name: rsshub
+services:
+  app:
+    image: diygod/rsshub:2023-08-11
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      CACHE_TYPE: redis
+      REDIS_URL: redis://redis:6379/
+      PUPPETEER_WS_ENDPOINT: ws://browserless:3000
+    ports:
+      - target: 1200
+        published: 1200
+        protocol: tcp
+    depends_on:
+      - redis
+      - browserless
+  browserless:
+    image: browserless/chrome:1-puppeteer-1.20.0
+    restart: unless-stopped
+    ulimits:
+      core:
+        hard: 0
+        soft: 0
+  redis:
+    image: redis:6.2-alpine
+    restart: always
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rsshub/redis
+        target: /data
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_us: |
+      RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
+
+      RSSHub delivers millions of contents aggregated from all kinds of sources, our vibrant open source community is ensuring the deliver of RSSHub's new routes, new features and bug fixes.
+
+      RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android)
+  tagline:
+    en_us: RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
+  developer: DIYgod
+  author: WisdomSky
+  icon: https://docs.rsshub.app/logo.png
+  thumbnail: https://docs.rsshub.app/logo.png
+  title:
+    en_us: RSShub
+  category: Coolstore
+  port_map: '1200'
