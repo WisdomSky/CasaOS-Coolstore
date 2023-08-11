@@ -1,0 +1,32 @@
+name: stirling-pdf
+services:
+  app:
+    image: frooodle/s-pdf:0.12.2
+    restart: unless-stopped
+    environment:
+      APP_HOME_NAME: Stirling PDF
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_us: Stirling-PDF is a locally hosted web application that allows you to perform various operations on PDF files, such as splitting and adding images.
+  tagline:
+    en_us: Stirling-PDF is a locally hosted web application that allows you to perform various operations on PDF files, such as splitting and adding images.
+  developer: Frooodle
+  author: WisdomSky
+  screenshot_link:
+    - https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/images/stirling-home.png
+  icon: https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/docs/stirling.png
+  thumbnail: https://raw.githubusercontent.com/Frooodle/Stirling-PDF/main/docs/stirling.png
+  title:
+    en_us: Stirling PDF
+  category: Coolstore
+  port_map: '8080'
