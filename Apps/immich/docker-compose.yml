@@ -8,6 +8,7 @@ services:
     volumes:
       - /DATA/AppData/immich/upload:/usr/src/app/upload
     environment:
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
       - DB_HOSTNAME=immich_postgres
       - DB_USERNAME=casaos
       - DB_PASSWORD=casaos
@@ -29,6 +30,7 @@ services:
     volumes:
       - /DATA/AppData/immich/upload:/usr/src/app/upload
     environment:
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
       - DB_HOSTNAME=immich_postgres
       - DB_USERNAME=casaos
       - DB_PASSWORD=casaos
@@ -58,7 +60,7 @@ services:
   typesense:
     image: typesense/typesense:0.24.1
     environment:
-      - TYPESENSE_API_KEY=
+      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
       - TYPESENSE_DATA_DIR=/data
     logging:
       driver: none
@@ -68,8 +70,10 @@ services:
   redis:
     image: redis:6.2-alpine
     restart: always
+    hostname: immich_redis
   database:
     image: postgres:15.3
+    hostname: immich_postgres
     environment:
       POSTGRES_PASSWORD: casaos
       POSTGRES_USER: casaos
@@ -108,4 +112,14 @@ x-casaos:
   title:
     en_us: Immich
   category: Coolstore
+  tips:
+    before_install:
+      en_us: |
+        In order for Immich to work correctly, you need to specify the `TYPESENSE_API_KEY` before installing by running this command:
+
+        ```
+        casaos-cli app-management set global TYPESENSE_API_KEY <your-typesense-api-key>
+        ```
+
+        Failure to run this command will result Immich to unable to start.
   port_map: '2283'
