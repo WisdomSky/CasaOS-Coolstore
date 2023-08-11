@@ -41,5 +41,13 @@ x-casaos:
   thumbnail: https://static.cdnlogo.com/logos/r/32/rocket-chat.svg
   title:
     en_us: Rocket. Chat
+  tips:
+    before_install:
+      en_us: |
+        ### Note
+
+        After finished installing the Rocket. Chat app, wait for at least 1 to 5 minutes before opening the Web UI.
+
+        Opening the Web UI right after the installation will cause the Rocket. Chat app to crash and never recover which requires re-installing.
   category: Chat
   port_map: '3000'
