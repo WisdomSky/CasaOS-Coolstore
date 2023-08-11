@@ -1,0 +1,37 @@
+name: mealie
+services:
+  app:
+    image: hkotel/mealie:omni-nightly
+    ports:
+      - '3000:3000'
+      - '9000:9000'
+    volumes:
+      - type: bind
+        source: /DATA/AppData/mealie
+        target: /app/data/
+    environment:
+      ALLOW_SIGNUP: true
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      BASE_URL: https://0.0.0.0
+    restart: unless-stopped
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_us: Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and mealie will automatically import the relevant data or add a family recipe with the UI editor.
+  tagline:
+    en_us: Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.
+  developer: hkotel
+  author: WisdomSky
+  screenshot_link:
+    - https://nightly.mealie.io/assets/img/home_screenshot.png
+  icon: https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png
+  thumbnail: https://cf.appdrag.com/dashboard-openvm-clo-b2d42c/uploads/Mealie-LZF8.png
+  title:
+    en_us: Mealie
+  category: Coolstore
+  port_map: '3000'
