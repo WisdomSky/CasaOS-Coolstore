@@ -115,11 +115,15 @@ x-casaos:
   tips:
     before_install:
       en_us: |
+        ### Warning!!!
+
         In order for Immich to work correctly, you need to specify the `TYPESENSE_API_KEY` before installing by running this command:
 
         ```
         casaos-cli app-management set global TYPESENSE_API_KEY <your-typesense-api-key>
         ```
+
+        > Replace `<your-typesense-api-key>` with your actual `TYPESENSE_API_KEY`
 
         Failure to run this command will result Immich to unable to start.
   port_map: '2283'
