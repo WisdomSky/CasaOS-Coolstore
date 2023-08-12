@@ -1,0 +1,89 @@
+name: peppermint
+services:
+  app:
+    image: pepperlabs/peppermint:latest
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    depends_on:
+      - db
+    environment:
+      PORT: 5000
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+      DB_HOST: db
+      BASE_URL: http://0.0.0.0
+    restart: unless-stopped
+  db:
+    image: postgres:15.3
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    x-casaos:
+      envs:
+        - container: PUID
+          description:
+            en_us: for UserID
+        - container: PGID
+          description:
+            en_us: for GroupID
+        - container: TZ
+          description:
+            en_us: specify a timezone to use, see this list.
+        - container: POSTGRES_DB
+          description:
+            en_us: Specify the name of a database to be created on image startup.
+        - container: POSTGRES_USER
+          description:
+            en_us: Postgres server username
+        - container: POSTGRES_PASSWORD
+          description:
+            en_us: Postgres server password
+      volumes:
+        - container: /var/lib/postgresql/data
+          description:
+            en_us: Directory where Postgres database data is stored
+    volumes:
+      - type: bind
+        source: /DATA/AppData/peppermint/postgres/data
+        target: /var/lib/postgresql/data
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
+  tagline:
+    en_us: Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
+  developer: Pepperlabs
+  author: WisdomSky
+  screenshot_link:
+    - https://preview.redd.it/jrmmd2eeafe81.png?width=2878&format=png&auto=webp&s=87e8eaa264bec2154aad268cbb114978b64b0e85
+    - https://preview.redd.it/nvv28jeeafe81.png?width=2878&format=png&auto=webp&s=c52bad873fc7051c0e1eaa46f612dfcc9f10a7a4
+    - https://preview.redd.it/511ej8eeafe81.png?width=2880&format=png&auto=webp&s=49bae4c8109a2180c3e837c0fa6c517e7aee1780
+    - https://preview.redd.it/2jz3bbeeafe81.png?width=2878&format=png&auto=webp&s=4488044fba794cf59a821526820a8efaa4cb8349
+    - https://preview.redd.it/z079czeeafe81.png?width=2878&format=png&auto=webp&s=9e4e7ba029c96c74764137ee75dcb5251aaaa24e
+    - https://preview.redd.it/fepz11eeafe81.png?width=2878&format=png&auto=webp&s=be8d7350fcec1d2d3041f15750ab309d482c25cf
+    - https://preview.redd.it/a348a6eeafe81.png?width=2878&format=png&auto=webp&s=730d64228f99a50b72ebf81cbcaed35458acd1cb
+    - https://preview.redd.it/bkho3aeeafe81.png?width=2878&format=png&auto=webp&s=445ebfd2435521162843164eed690c23c43d6fb6
+    - https://preview.redd.it/t56ne0eeafe81.png?width=2878&format=png&auto=webp&s=b42ae459e5b0e9d9f65bc33784ed0d0dd2fb1eaa
+  icon: data:image/png;base64,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
+  thumbnail: data:image/png;base64,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
+  title:
+    en_us: Peppermint
+  category: Coolstore
+  tips:
+    before_install:
+      en_us: |
+        ### Default credentials:
+
+        Username: `admin@admin.com`
+
+        Password: `1234`
+  port_map: '5000'
