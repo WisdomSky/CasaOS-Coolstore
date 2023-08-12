@@ -1,0 +1,31 @@
+name: hrconvert2
+services:
+  app:
+    image: dwaaan/hrconvert2-docker:latest
+    ports:
+      - target: 8085
+        published: 80
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/hrconvert2/config.php
+        target: /var/www/html/HRProprietary/HRConvert2/config.php
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.
+  tagline:
+    en_us: HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.
+  developer: zelon88
+  author: WisdomSky
+  screenshot_link:
+    - https://github.com/zelon88/HRConvert2/raw/master/Documentation/Screenshots/HRConvert2-1.png
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/hrconvert2/icon.png
+  thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/hrconvert2/icon.png
+  title:
+    en_us: HRConvert2
+  category: Coolstore
+  port_map: '8085'
