@@ -7,10 +7,6 @@ services:
         published: 8085
         protocol: tcp
     restart: unless-stopped
-    volumes:
-      - type: bind
-        source: /DATA/AppData/hrconvert2/config.php
-        target: /var/www/html/HRProprietary/HRConvert2/config.php
 x-casaos:
   architectures:
     - amd64
