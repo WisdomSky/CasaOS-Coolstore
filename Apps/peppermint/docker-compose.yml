@@ -86,7 +86,9 @@ x-casaos:
         After finished installing, open the `app settings` and update the `BASE_URL` to point it to your Home Server's IP Address.
 
         e.g:
-            http://192.168.31.31:5000
+        ```
+        http://192.168.31.31:5000
+        ```
 
         ### Default credentials:
 
