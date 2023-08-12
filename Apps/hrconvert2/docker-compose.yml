@@ -3,8 +3,8 @@ services:
   app:
     image: dwaaan/hrconvert2-docker:latest
     ports:
-      - target: 8085
-        published: 80
+      - target: 80
+        published: 8085
         protocol: tcp
     restart: unless-stopped
     volumes:
