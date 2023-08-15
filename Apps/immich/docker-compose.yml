@@ -43,7 +43,7 @@ services:
       - typesense
     restart: always
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v1.72.2
+    image: ghcr.io/immich-app/immich-machine-learning:v1.72.0
     volumes:
       - /DATA/AppData/immich/model/cache:/cache
     environment:
@@ -83,7 +83,7 @@ services:
       - /DATA/AppData/immich/postgresql/data:/var/lib/postgresql/data
     restart: always
   immich-proxy:
-    image: ghcr.io/immich-app/immich-proxy:v1.72.2
+    image: ghcr.io/immich-app/immich-proxy:v1.72.0
     environment:
       - IMMICH_SERVER_URL=http://immich-server:3001
       - IMMICH_WEB_URL=http://immich-web:3000
