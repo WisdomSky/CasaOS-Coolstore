@@ -1,7 +1,7 @@
 name: joomla
 services:
   app:
-    image: joomla:4.3.3-apache
+    image: joomla:5.0-apache
     environment:
       JOOMLA_DB_HOST: joomladb
       JOOMLA_DB_PASSWORD: casaos
