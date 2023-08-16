@@ -39,7 +39,7 @@ services:
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/casaos-cloudflared/config
+        source: /DATA/AppData/cloudflared-web/config
         target: /config
 x-casaos:
   architectures:
@@ -52,13 +52,13 @@ x-casaos:
   tagline:
     en_us: Cloudflare tunnel with a simple web-based user interface.
   screenshot_link:
-    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-cloudflared/screenshot-1.png
-    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-cloudflared/screenshot-2.png
-    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-cloudflared/screenshot-3.png
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/cloudflared-web/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/cloudflared-web/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/cloudflared-web/screenshot-3.png
   developer: Cloudflare Inc.
   author: WisdomSky
-  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-cloudflared/icon.png
-  thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-cloudflared/icon.png
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/cloudflared-web/icon.png
+  thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/cloudflared-web/icon.png
   category: Coolstore
   title:
     en_us: Cloudflared-web
