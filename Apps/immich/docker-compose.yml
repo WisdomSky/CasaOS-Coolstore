@@ -8,14 +8,14 @@ services:
     volumes:
       - /DATA/AppData/immich/upload:/usr/src/app/upload
     environment:
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-      - DB_HOSTNAME=immich_postgres
-      - DB_USERNAME=casaos
-      - DB_PASSWORD=casaos
-      - DB_DATABASE_NAME=casaos
-      - DB_PORT=5432
-      - REDIS_HOSTNAME=immich_redis
-      - IMMICH_MACHINE_LEARNING_URL=http://immich-machine-learning:3003
+      TYPESENSE_API_KEY: $TYPESENSE_API_KEY
+      DB_HOSTNAME: immich_postgres
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+      DB_DATABASE_NAME: casaos
+      DB_PORT: 5432
+      REDIS_HOSTNAME: immich_redis
+      IMMICH_MACHINE_LEARNING_URL: http://immich-machine-learning:3003
     depends_on:
       - redis
       - database
@@ -30,13 +30,13 @@ services:
     volumes:
       - /DATA/AppData/immich/upload:/usr/src/app/upload
     environment:
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-      - DB_HOSTNAME=immich_postgres
-      - DB_USERNAME=casaos
-      - DB_PASSWORD=casaos
-      - DB_DATABASE_NAME=casaos
-      - DB_PORT=5432
-      - REDIS_HOSTNAME=immich_redis
+      TYPESENSE_API_KEY: $TYPESENSE_API_KEY
+      DB_HOSTNAME: immich_postgres
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+      DB_DATABASE_NAME: casaos
+      DB_PORT: 5432
+      REDIS_HOSTNAME: immich_redis
     depends_on:
       - redis
       - database
@@ -47,12 +47,12 @@ services:
     volumes:
       - /DATA/AppData/immich/model/cache:/cache
     environment:
-      - DB_HOSTNAME=immich_postgres
-      - DB_USERNAME=casaos
-      - DB_PASSWORD=casaos
-      - DB_DATABASE_NAME=casaos
-      - DB_PORT=5432
-      - REDIS_HOSTNAME=immich_redis
+      DB_HOSTNAME: immich_postgres
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+      DB_DATABASE_NAME: casaos
+      DB_PORT: 5432
+      REDIS_HOSTNAME: immich_redis
     restart: always
   immich-web:
     image: ghcr.io/immich-app/immich-web:v1.73.0
@@ -60,8 +60,8 @@ services:
   typesense:
     image: typesense/typesense:0.25.0
     environment:
-      - TYPESENSE_API_KEY=${TYPESENSE_API_KEY}
-      - TYPESENSE_DATA_DIR=/data
+      TYPESENSE_API_KEY: $TYPESENSE_API_KEY
+      TYPESENSE_DATA_DIR: /data
     logging:
       driver: none
     volumes:
@@ -85,9 +85,9 @@ services:
   immich-proxy:
     image: ghcr.io/immich-app/immich-proxy:v1.73.0
     environment:
-      - IMMICH_SERVER_URL=http://immich-server:3001
-      - IMMICH_WEB_URL=http://immich-web:3000
-      - IMMICH_MACHINE_LEARNING_URL=http://immich-machine-learning:3003
+      IMMICH_SERVER_URL: http://immich-server:3001
+      IMMICH_WEB_URL: http://immich-web:3000
+      IMMICH_MACHINE_LEARNING_URL: http://immich-machine-learning:3003
     ports:
       - '2283:8080'
     depends_on:
