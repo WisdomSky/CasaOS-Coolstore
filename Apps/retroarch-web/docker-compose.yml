@@ -1,0 +1,30 @@
+name: retroarch-web
+services:
+  app:
+    image: inglebard/retroarch-web:latest
+    restart: unless-stopped
+    environment:
+      ROOT_WWW_PATH: /var/www/html
+    ports:
+      - target: 8080
+        published: '80'
+        protocol: tcp
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - armhf
+    - arm
+  main: app
+  description:
+    en_us: Online retro games emulator.The RetroArch Web Player is RetroArch compiled through Emscripten.
+  tagline:
+    en_us: Online retro games emulator.
+  developer: Libretro
+  author: WisdomSky
+  icon: https://avatars.githubusercontent.com/u/1812827
+  thumbnail: https://avatars.githubusercontent.com/u/1812827
+  category: Coolstore
+  title:
+    en_us: RetroArch-web
+  port_map: '8080'
