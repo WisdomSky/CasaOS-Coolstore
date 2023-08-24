@@ -68,7 +68,7 @@ services:
       - /DATA/AppData/immich/typesense/data:/data
     restart: always
   redis:
-    image: redis:7.2.0-alpine
+    image: redis:undefined
     restart: always
     hostname: immich_redis
   database:
