@@ -27,5 +27,11 @@ x-casaos:
   icon: https://airvideo.app/images/icon.png
   thumbnail: https://airvideo.app/images/icon.png
   category: Coolstore
+  tips:
+    before_install:
+      en_us: |
+        ### Note
+
+        To find your `Server PIN`, look in the `network.log` file in /DATA/AppData/airvideohd/config/logs after the server has started.
   title:
     en_us: Air Video HD
