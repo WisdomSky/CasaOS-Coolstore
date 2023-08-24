@@ -60,6 +60,7 @@ Just an another CasaOS third-party Appstore with ❄**Cool**❄ apps.
 
 | Application  | Version | Description |
 | --- | --- | --- |
+| <img src="https://airvideo.app/images/icon.png" width="15"/>&nbsp;&nbsp;&nbsp;[Air Video HD](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/airvideohd) | latest | Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV. |
 | <img src="https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png" width="15"/>&nbsp;&nbsp;&nbsp;[Archivebox](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/archivebox) | 0.6 | Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline. |
 | <img src="https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png" width="15"/>&nbsp;&nbsp;&nbsp;[Caddy](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/caddy) | 2.7.4 | Caddy - The Ultimate Server With Automatic Https.  Need To Run Tools/install_caddy.sh Before Installing The Template. |
 | <img src="https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/cloudflared-web/icon.png" width="15"/>&nbsp;&nbsp;&nbsp;[Cloudflared-web](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/cloudflared-web) | 2023.7.3 | Cloudflare tunnel with a simple web-based user interface. |
