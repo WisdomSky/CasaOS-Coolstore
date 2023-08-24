@@ -1,0 +1,31 @@
+name: airvideohd
+services:
+  app:
+    image: dmaxwell/airvideohd:latest
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - type: bind
+        source: /DATA/AppData/airvideohd/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/airvideohd/conversionPath
+        target: /conversionPath
+      - type: bind
+        source: /DATA/Media/Movies
+        target: /videos
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
+  tagline:
+    en_us: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
+  developer: InMethod
+  author: WisdomSky
+  icon: https://airvideo.app/images/icon.png
+  thumbnail: https://airvideo.app/images/icon.png
+  category: Coolstore
+  title:
+    en_us: Air Video HD
