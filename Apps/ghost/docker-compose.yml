@@ -16,7 +16,7 @@ services:
         protocol: tcp
     depends_on:
       db:
-        condition: service_completed_successfully
+        condition: service_healthy
     volumes:
       - type: bind
         source: /DATA/AppData/ghost/content
@@ -33,6 +33,11 @@ services:
       - type: bind
         source: /DATA/AppData/ghost/mysql
         target: /var/lib/mysql
+    healthcheck:
+      test: healtcheck.sh --su-mysql --connect --innodb_initialized
+      interval: 10s
+      timeout: 5s
+      retries: 3
 x-casaos:
   architectures:
     - amd64
