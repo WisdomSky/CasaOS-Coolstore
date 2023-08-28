@@ -2,16 +2,36 @@ name: ghost
 services:
   app:
     image: ghost:5.60.0
+    environment:
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: casaos
+      database__connection__password: casaos
+      database__connection__database: casaos
     x-casaos:
       envs: []
     ports:
       - target: 2368
         published: 2368
         protocol: tcp
+    depends_on:
+      - db
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/content
+        source: /DATA/AppData/ghost/content
         target: /var/lib/ghost/content
+  db:
+    image: mariadb:11.0.3
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: casaos
+      MYSQL_USER: casaos
+      MYSQL_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ghost/mysql
+        target: /var/lib/mysql
 x-casaos:
   architectures:
     - amd64
@@ -29,3 +49,4 @@ x-casaos:
   title:
     en_us: Ghost
   category: Coolstore
+  port_map: '2368'
