@@ -7,8 +7,7 @@ Just a cool appstore. ⛄
 
 ---
 
-#### ☕ Treat WisdomSky a cup of coffee...
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RYAFEWHVZCZ62)
+![Number of installs](https://counter.paodayag.dev/badge/coolstore?silent=true&label=Installs) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RYAFEWHVZCZ62) 👈 ☕ Treat me a cup of coffee...
 
 ---
 
