@@ -34,7 +34,11 @@ services:
         source: /DATA/AppData/ghost/mysql
         target: /var/lib/mysql
     healthcheck:
-      test: healtcheck.sh --su-mysql --connect --innodb_initialized
+      test:
+        - healtcheck.sh
+        - '--su-mysql'
+        - '--connect'
+        - '--innodb_initialized'
       interval: 10s
       timeout: 5s
       retries: 3
