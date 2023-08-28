@@ -1,5 +1,17 @@
 name: ghost
 services:
+  db:
+    image: mariadb:11.0.3
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: casaos
+      MYSQL_USER: casaos
+      MYSQL_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ghost/mysql
+        target: /var/lib/mysql
   app:
     image: ghost:5.60.0
     environment:
@@ -20,18 +32,6 @@ services:
       - type: bind
         source: /DATA/AppData/ghost/content
         target: /var/lib/ghost/content
-  db:
-    image: mariadb:11.0.3
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: casaos
-      MYSQL_DATABASE: casaos
-      MYSQL_USER: casaos
-      MYSQL_PASSWORD: casaos
-    volumes:
-      - type: bind
-        source: /DATA/AppData/ghost/mysql
-        target: /var/lib/mysql
 x-casaos:
   architectures:
     - amd64
