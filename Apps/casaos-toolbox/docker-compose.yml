@@ -17,7 +17,7 @@ services:
       - /var/lib/casaos/apps:/casaos/apps
       - /var/lib/casaos/www:/casaos/www
   db:
-    image: mariadb:11.0.3
+    image: mariadb:11.1.2
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
