@@ -1,7 +1,7 @@
 name: immich
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v1.76.0
+    image: ghcr.io/immich-app/immich-server:v1.76.1
     command:
       - start.sh
       - immich
@@ -23,7 +23,7 @@ services:
       - immich-machine-learning
     restart: always
   immich-microservices:
-    image: ghcr.io/immich-app/immich-server:v1.76.0
+    image: ghcr.io/immich-app/immich-server:v1.76.1
     command:
       - start.sh
       - microservices
@@ -43,7 +43,7 @@ services:
       - typesense
     restart: always
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v1.76.0
+    image: ghcr.io/immich-app/immich-machine-learning:v1.76.1
     volumes:
       - /DATA/AppData/immich/model/cache:/cache
     environment:
@@ -55,7 +55,7 @@ services:
       REDIS_HOSTNAME: immich_redis
     restart: always
   immich-web:
-    image: ghcr.io/immich-app/immich-web:v1.76.0
+    image: ghcr.io/immich-app/immich-web:v1.76.1
     restart: always
   typesense:
     image: typesense/typesense:0.25.0
@@ -83,7 +83,7 @@ services:
       - /DATA/AppData/immich/postgresql/data:/var/lib/postgresql/data
     restart: always
   immich-proxy:
-    image: ghcr.io/immich-app/immich-proxy:v1.75.2
+    image: ghcr.io/immich-app/immich-proxy:v1.76.0
     environment:
       IMMICH_SERVER_URL: http://immich-server:3001
       IMMICH_WEB_URL: http://immich-web:3000
