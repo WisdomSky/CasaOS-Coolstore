@@ -1,7 +1,7 @@
 name: immich
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v1.75.2
+    image: ghcr.io/immich-app/immich-server:v1.76.0
     command:
       - start.sh
       - immich
@@ -23,7 +23,7 @@ services:
       - immich-machine-learning
     restart: always
   immich-microservices:
-    image: ghcr.io/immich-app/immich-server:v1.75.2
+    image: ghcr.io/immich-app/immich-server:v1.76.0
     command:
       - start.sh
       - microservices
@@ -43,7 +43,7 @@ services:
       - typesense
     restart: always
   immich-machine-learning:
-    image: ghcr.io/immich-app/immich-machine-learning:v1.75.2
+    image: ghcr.io/immich-app/immich-machine-learning:v1.76.0
     volumes:
       - /DATA/AppData/immich/model/cache:/cache
     environment:
