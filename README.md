@@ -7,7 +7,7 @@ Just a cool appstore. ⛄
 
 ---
 
-![Number of installs](https://counter.paodayag.dev/badge/coolstore?silent=true&label=Installs) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RYAFEWHVZCZ62) 👈 ☕ Treat me a cup of coffee...
+![Number of installs](https://visitly.paodayag.dev/coolstore.zip/badge?label=Installs) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RYAFEWHVZCZ62) 👈 ☕ Treat me a cup of coffee...
 
 ---
 
