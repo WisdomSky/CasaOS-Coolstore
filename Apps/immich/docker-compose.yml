@@ -1,7 +1,7 @@
 name: immich
 services:
   immich-server:
-    image: ghcr.io/immich-app/immich-server:v1.76.1
+    image: ghcr.io/immich-app/immich-server:v1.77.0
     command:
       - start.sh
       - immich
@@ -23,7 +23,7 @@ services:
       - immich-machine-learning
     restart: always
   immich-microservices:
-    image: ghcr.io/immich-app/immich-server:v1.76.1
+    image: ghcr.io/immich-app/immich-server:v1.77.0
     command:
       - start.sh
       - microservices
@@ -68,11 +68,11 @@ services:
       - /DATA/AppData/immich/typesense/data:/data
     restart: always
   redis:
-    image: redis:7.2.0-alpine
+    image: redis:7.2.1-alpine
     restart: always
     hostname: immich_redis
   database:
-    image: postgres:12.16
+    image: postgres:15.4
     hostname: immich_postgres
     environment:
       POSTGRES_PASSWORD: casaos
@@ -83,7 +83,7 @@ services:
       - /DATA/AppData/immich/postgresql/data:/var/lib/postgresql/data
     restart: always
   immich-proxy:
-    image: ghcr.io/immich-app/immich-proxy:v1.76.0
+    image: ghcr.io/immich-app/immich-proxy:v1.76.1
     environment:
       IMMICH_SERVER_URL: http://immich-server:3001
       IMMICH_WEB_URL: http://immich-web:3000
