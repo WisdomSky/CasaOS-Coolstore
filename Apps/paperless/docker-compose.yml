@@ -63,5 +63,13 @@ x-casaos:
   thumbnail: https://avatars.githubusercontent.com/u/99562962
   title:
     en_us: Paperless-ngx
+  tips:
+    before_install:
+      en_us: |
+        ## Credentials:
+
+        username: `admin`
+
+        password: `admin`
   category: Coolstore
   port_map: '8005'
