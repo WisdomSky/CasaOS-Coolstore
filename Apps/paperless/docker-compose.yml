@@ -29,6 +29,8 @@ services:
       PAPERLESS_DBUSER: paperless
       PAPERLESS_DBPASS: paperless
       PAPERLESS_DBPORT: 3306
+      PAPERLESS_ADMIN_USER: admin
+      PAPERLESS_ADMIN_PASSWORD: admin
   broker:
     image: redis:7.2.1
     restart: unless-stopped
