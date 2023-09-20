@@ -1,0 +1,35 @@
+name: rustdesk-server
+services:
+  hbbs:
+    image: rustdesk/rustdesk-server:1
+    command: hbbs
+    volumes:
+      - /DATA/AppData/rustdesk/data:/root
+    network_mode: host
+    depends_on:
+      - hbbr
+    restart: unless-stopped
+  hbbr:
+    image: rustdesk/rustdesk-server:1
+    command: hbbr
+    volumes:
+      - /DATA/AppData/rustdesk/data:/root
+    network_mode: host
+    restart: unless-stopped
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: hbbs
+  description:
+    en_us: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
+  tagline:
+    en_us: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
+  developer: RustDesk
+  author: WisdomSky
+  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rustdesk.svg/48px-Rustdesk.svg.png
+  thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rustdesk.svg/48px-Rustdesk.svg.png
+  title:
+    en_us: Rustdesk Server
+  category: Coolstore
