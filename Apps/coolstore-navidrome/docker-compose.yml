@@ -35,3 +35,4 @@ x-casaos:
   title:
     en_us: Navidrome
   category: Coolstore
+  port_map: '4533'
