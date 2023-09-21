@@ -35,4 +35,8 @@ x-casaos:
   title:
     en_us: Navidrome
   category: Coolstore
+  tips:
+    before_install:
+      en_us: |
+        The default path of the music library is pointed to `/DATA/Media/Music`. If your music library is stored elsewhere, you can change this by going into the app settings and changing the specified volume path.
   port_map: '4533'
