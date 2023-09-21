@@ -11,6 +11,9 @@ services:
       - type: bind
         source: /DATA/Media/Music
         target: /music
+      - type: bind
+        source: /DATA/AppData/coolstore-spotdl/config
+        target: /config
     command:
       - web
       - '--host'
