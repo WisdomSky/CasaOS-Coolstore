@@ -3,13 +3,17 @@
 
 # CasaOS Coolstore
 
+[![Number of installs](https://visitly.paodayag.dev/coolstore.zip/badge?label=Installs)](https://visitly.paodayag.dev)
+
+
 Just a cool appstore. ⛄
 
 ---
 
-[![Number of installs](https://visitly.paodayag.dev/coolstore.zip/badge?label=Installs)](https://visitly.paodayag.dev) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RYAFEWHVZCZ62) 👈 ☕ Treat me a cup of coffee...
+## Support me by treating me with a cup of coffee ☺
 
----
+[![Buy me a coffee](https://raw.githubusercontent.com/WisdomSky/CasaOS-Coolstore/main/buy-me-a-coffee.png)](https://www.buymeacoffee.com/wisdomsky)
+
 
 ## 📃 Table of Contents
 
