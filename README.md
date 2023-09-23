@@ -12,7 +12,7 @@ Just a cool appstore. ⛄
 
 ## Support me by treating me with a cup of coffee ☺
 
-[![Buy me a coffee](https://raw.githubusercontent.com/WisdomSky/CasaOS-Coolstore/main/buy-me-a-coffee.png|width=300px)](https://www.buymeacoffee.com/wisdomsky)
+[![Buy me a coffee](https://raw.githubusercontent.com/WisdomSky/CasaOS-Coolstore/main/buy-me-a-coffee.png)](https://www.buymeacoffee.com/wisdomsky)
 
 
 ## 📃 Table of Contents
