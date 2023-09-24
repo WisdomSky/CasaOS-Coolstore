@@ -11,6 +11,7 @@ services:
       DB_DATABASE: casaos
       DB_USERNAME: casaos
       DB_PASSWORD: casaos
+      APP_URL: http://localhost
     volumes:
       - /usr/bin/casaos-cli:/usr/bin/casaos-cli
       - /etc/casaos/gateway.ini:/casaos/gateway.ini
@@ -45,6 +46,7 @@ x-casaos:
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/screenshot-1.png
     - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/screenshot-3.png
   icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/icon.png
   thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/icon.png
   category: Coolstore
