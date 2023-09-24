@@ -5,13 +5,13 @@ services:
     restart: unless-stopped
     network_mode: host
     environment:
+      FORCE_HTTPS: false
       WEBUI_PORT: 8088
       DB_HOST: 0.0.0.0
       DB_PORT: 33066
       DB_DATABASE: casaos
       DB_USERNAME: casaos
       DB_PASSWORD: casaos
-      APP_URL: http://localhost
     volumes:
       - /usr/bin/casaos-cli:/usr/bin/casaos-cli
       - /etc/casaos/gateway.ini:/casaos/gateway.ini
