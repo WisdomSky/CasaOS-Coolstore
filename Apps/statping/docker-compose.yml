@@ -25,7 +25,7 @@ services:
         source: /DATA/AppData/$AppID/app
         target: /app
   db:
-    image: postgres:16.0
+    image: postgres:12.16
     restart: unless-stopped
     environment:
       PUID: $PUID
