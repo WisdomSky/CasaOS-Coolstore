@@ -3,7 +3,7 @@
 
 # CasaOS Coolstore
 
-[![Number of Unique Installs](https://visitly.paodayag.dev/coolstore.zip/badge?unique=1&label=Unique%20Installs)](https://visitly.paodayag.dev) [![Number of Installs](https://visitly.paodayag.dev/coolstore.zip/badge?label=Total%20Installs)](https://visitly.paodayag.dev)
+[![Number of Unique Installs](https://visitly.paodayag.dev/coolstore.zip/badge?unique=1&label=Unique%20Installs)](https://visitly.paodayag.dev) [![Number of Installs](https://visitly.paodayag.dev/coolstore.zip/badge?label=Total%20Downloads)](https://visitly.paodayag.dev)
 
 Just a cool appstore. ⛄
 
