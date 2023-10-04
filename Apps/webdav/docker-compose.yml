@@ -1,0 +1,41 @@
+name: webdav
+services:
+  app:
+    image: bytemark/webdav:latest
+    restart: unless-stopped
+    environment:
+      AUTH_TYPE: Digest
+      USERNAME: casaos
+      PASSWORD: casaos
+    ports:
+      - target: 80
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/Documents
+        target: /var/lib/dav
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_us: Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers.
+  tagline:
+    en_us: Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers.
+  developer: Bytemark
+  author: WisdomSky
+  icon: https://debrid-link.com/screen/webdav_logo.png
+  thumbnail: https://debrid-link.com/screen/webdav_logo.png
+  category: Coolstore
+  tips:
+    before_install:
+      en_us: |
+        | Label | Value |
+        | --- | --- |
+        | Username | `casaos` |
+        | Password | `casaos` |
+        | Port | `8080` |
+        | Files Path | `/DATA/Documents` |
+  title:
+    en_us: WebDAV
