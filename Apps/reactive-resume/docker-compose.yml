@@ -11,11 +11,8 @@ services:
       POSTGRES_USER: casaos
       POSTGRES_PASSWORD: casaos
       POSTGRES_DB: casaos
-      POSTGRES_SSL_CERT: null
     depends_on:
       - db
-    x-casaos:
-      envs: []
     ports:
       - target: 3000
         published: 3000
