@@ -1,0 +1,43 @@
+name: esphome
+services:
+  app:
+    image: esphome/esphome:2023.9
+    restart: unless-stopped
+    network_mode: host
+    privileged: true
+    environment:
+      USERNAME: casaos
+      PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/esphome/config
+        target: /config
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - armhf
+  main: app
+  description:
+    en_us: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
+  tagline:
+    en_us: ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.
+  developer: ESPHome
+  author: WisdomSky
+  icon: https://avatars.githubusercontent.com/u/45919759
+  thumbnail: https://avatars.githubusercontent.com/u/45919759
+  category: Coolstore
+  tips:
+    before_install:
+      en_us: |
+        | Label | Value |
+        | --- | --- |
+        | Username | `casaos` |
+        | Password | `casaos` |
+  title:
+    en_us: ESPHome
+  port_map: '6052'
