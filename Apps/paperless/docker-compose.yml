@@ -37,7 +37,7 @@ services:
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
   db:
-    image: mariadb:11.1
+    image: mariadb:11.1.2
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/mysql:/var/lib/mysql
