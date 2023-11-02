@@ -1,7 +1,7 @@
 name: rocket-chat
 services:
   app:
-    image: rocket.chat:6.4.2
+    image: rocket.chat:undefined
     restart: unless-stopped
     environment:
       MONGO_OPLOG_URL: mongodb://db:27017/local
@@ -12,7 +12,7 @@ services:
         published: '3000'
         protocol: tcp
   db:
-    image: mongo:5.0.22
+    image: mongo:undefined
     restart: unless-stopped
     environment:
       PUID: $PUID

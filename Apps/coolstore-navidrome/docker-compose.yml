@@ -1,7 +1,7 @@
 name: coolstore-navidrome
 services:
   navidrome:
-    image: deluan/navidrome:sha-4f9418b
+    image: deluan/navidrome:undefined
     ports:
       - '4533:4533'
     restart: unless-stopped
