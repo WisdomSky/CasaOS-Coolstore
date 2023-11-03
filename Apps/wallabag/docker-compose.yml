@@ -1,7 +1,7 @@
 name: wallabag
 services:
   app:
-    image: wallabag/wallabag:undefined
+    image: wallabag/wallabag:2.6.7
     restart: unless-stopped
     environment:
       POSTGRES_USER: casaos
@@ -60,7 +60,7 @@ services:
         source: /DATA/AppData/Wallabag/images
         target: /var/www/wallabag/web/assets/images
   db:
-    image: postgres:undefined
+    image: postgres:13.12
     restart: unless-stopped
     environment:
       PUID: $PUID
