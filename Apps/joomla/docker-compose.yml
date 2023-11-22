@@ -1,7 +1,7 @@
 name: joomla
 services:
   app:
-    image: joomla:5.0.0-apache
+    image: joomla:undefined
     environment:
       JOOMLA_DB_HOST: joomladb
       JOOMLA_DB_PASSWORD: casaos
@@ -24,7 +24,7 @@ services:
         source: /DATA/AppData/$AppID/www
         target: /var/www/html
   joomladb:
-    image: mysql:5.7
+    image: mysql:undefined
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
