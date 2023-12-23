@@ -1,7 +1,7 @@
 name: peppermint
 services:
   app:
-    image: pepperlabs/peppermint:undefined
+    image: pepperlabs/peppermint:latest
     ports:
       - target: 5000
         published: 5000
