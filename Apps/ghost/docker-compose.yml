@@ -1,7 +1,7 @@
 name: ghost
 services:
   app:
-    image: ghost:5.75.2
+    image: ghost:undefined
     environment:
       database__client: mysql
       database__connection__host: db
@@ -22,7 +22,7 @@ services:
         source: /DATA/AppData/ghost/content
         target: /var/lib/ghost/content
   db:
-    image: mariadb:11.2.2
+    image: mariadb:undefined
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos

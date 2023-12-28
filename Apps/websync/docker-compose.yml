@@ -1,7 +1,7 @@
 name: websync
 services:
   app:
-    image: furier/websync:latest
+    image: furier/websync:undefined
     restart: unless-stopped
     working_dir: /src
     command:

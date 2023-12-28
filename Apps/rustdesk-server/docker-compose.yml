@@ -1,7 +1,7 @@
 name: rustdesk-server
 services:
   hbbs:
-    image: rustdesk/rustdesk-server:1
+    image: rustdesk/rustdesk-server:undefined
     command: hbbs
     volumes:
       - /DATA/AppData/rustdesk/data:/root
@@ -10,7 +10,7 @@ services:
       - hbbr
     restart: unless-stopped
   hbbr:
-    image: rustdesk/rustdesk-server:1
+    image: rustdesk/rustdesk-server:undefined
     command: hbbr
     volumes:
       - /DATA/AppData/rustdesk/data:/root
