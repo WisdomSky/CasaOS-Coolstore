@@ -1,7 +1,7 @@
 name: trilium
 services:
   app:
-    image: zadam/trilium:0.62.4
+    image: zadam/trilium:0.62.5
     restart: unless-stopped
     environment:
       TRILIUM_DATA_DIR: /home/node/trilium-data
