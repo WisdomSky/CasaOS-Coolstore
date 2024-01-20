@@ -1,7 +1,7 @@
 name: esphome
 services:
   app:
-    image: esphome/esphome:2023.12.7
+    image: esphome/esphome:2023.12.8
     restart: unless-stopped
     network_mode: host
     privileged: true
