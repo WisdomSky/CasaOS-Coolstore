@@ -16,7 +16,7 @@ services:
       - redis
       - browserless
   browserless:
-    image: browserless/chrome:1-puppeteer-1.20.0
+    image: browserless/chrome:1-puppeteer-10.4.0
     restart: unless-stopped
     ulimits:
       core:
