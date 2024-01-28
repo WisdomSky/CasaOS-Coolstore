@@ -1,7 +1,7 @@
 name: webdav
 services:
   app:
-    image: bytemark/webdav:undefined
+    image: bytemark/webdav:latest
     restart: unless-stopped
     environment:
       AUTH_TYPE: Digest
