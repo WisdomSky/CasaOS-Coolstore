@@ -1,7 +1,7 @@
 name: homebridge
 services:
   app:
-    image: oznu/homebridge:2023-01-08
+    image: oznu/homebridge:undefined
     restart: unless-stopped
     environment:
       PGID: $PGID
