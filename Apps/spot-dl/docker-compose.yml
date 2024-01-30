@@ -1,7 +1,7 @@
 name: spot-dl
 services:
   app:
-    image: spotdl/spotify-downloader:undefined
+    image: spotdl/spotify-downloader:v4.2.4
     restart: unless-stopped
     ports:
       - target: 8808
