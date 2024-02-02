@@ -22,7 +22,7 @@ services:
         source: /DATA/AppData/ghost/content
         target: /var/lib/ghost/content
   db:
-    image: mariadb:10.6.16
+    image: mariadb:11.2.2
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
