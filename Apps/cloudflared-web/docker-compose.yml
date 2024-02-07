@@ -1,7 +1,7 @@
 name: cloudflared-web
 services:
   cloudflared:
-    image: wisdomsky/cloudflared-web:2024.1.5
+    image: wisdomsky/cloudflared-web
     restart: unless-stopped
     network_mode: host
     x-casaos:
