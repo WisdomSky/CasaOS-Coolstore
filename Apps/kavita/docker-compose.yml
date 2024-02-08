@@ -1,7 +1,7 @@
 name: kavita
 services:
   app:
-    image: kizaing/kavita
+    image: kizaing/kavita:0.7.8
     restart: unless-stopped
     environment:
       PUID: $PUID
