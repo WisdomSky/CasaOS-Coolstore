@@ -1,7 +1,7 @@
 name: paperless
 services:
   paperless:
-    image: ghcr.io/paperless-ngx/paperless-ngx:2.5.1
+    image: ghcr.io/paperless-ngx/paperless-ngx
     restart: unless-stopped
     depends_on:
       - db
