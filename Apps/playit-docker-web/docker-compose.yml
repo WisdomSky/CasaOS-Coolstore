@@ -1,0 +1,43 @@
+name: playit-docker-web
+services:
+  playit:
+    image: wisdomsky/playit-docker-web:1.0
+    restart: unless-stopped
+    network_mode: host
+    x-casaos:
+      volumes:
+        - container: /config
+          description:
+            en_us: playit-docker-web config file.
+      ports:
+        - container: '8008'
+          description:
+            en_us: Playit Tunnel Setup WebUI
+    ports:
+      - target: 8008
+        published: '8008'
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/playit-docker-web/config
+        target: /config
+x-casaos:
+  architectures:
+    - amd64
+    - arm
+    - arm64
+  main: playit
+  description:
+    en_us: Playit.gg is a global proxy that allows anyone to host a server without port forwarding. We use tunneling. Only the server needs to run the program, not every player!
+  tagline:
+    en_us: Playit.gg is a global proxy that allows anyone to host a server without port forwarding.
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/playit-docker-web/screenshot-1.png
+  developer: Playit.gg
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/playit-docker-web/icon.png
+  thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/playit-docker-web/icon.png
+  category: Coolstore
+  title:
+    en_us: Playit.gg
+  port_map: '8008'
