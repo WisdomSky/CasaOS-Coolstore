@@ -1,7 +1,7 @@
 name: matter-server
 services:
   app:
-    image: ghcr.io/home-assistant-libs/python-matter-server:5.7
+    image: ghcr.io/home-assistant-libs/python-matter-server:5.8.0
     restart: unless-stopped
     network_mode: host
     volumes:
