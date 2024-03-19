@@ -32,7 +32,7 @@ services:
       PAPERLESS_ADMIN_USER: admin
       PAPERLESS_ADMIN_PASSWORD: admin
   broker:
-    image: redis
+    image: redis:7.2.4
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
