@@ -32,12 +32,12 @@ services:
       PAPERLESS_ADMIN_USER: admin
       PAPERLESS_ADMIN_PASSWORD: admin
   broker:
-    image: redis:6.0
+    image: redis:7.2.4
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
   db:
-    image: mariadb:10.6
+    image: mariadb:11.3.2
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/mysql:/var/lib/mysql
