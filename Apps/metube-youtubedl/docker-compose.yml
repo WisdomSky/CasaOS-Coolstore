@@ -1,7 +1,7 @@
 name: metube-youtubedl
 services:
   app:
-    image: alexta69/metube:2024-04-12
+    image: alexta69/metube:2024-04-28
     restart: unless-stopped
     environment:
       UID: $PUID
