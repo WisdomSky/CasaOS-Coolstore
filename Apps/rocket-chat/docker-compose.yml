@@ -12,7 +12,7 @@ services:
         published: '3000'
         protocol: tcp
   db:
-    image: mongo:5.0.26
+    image: mongo:7.0.9
     restart: unless-stopped
     environment:
       PUID: $PUID
