@@ -1,7 +1,7 @@
 name: paperless
 services:
   paperless:
-    image: ghcr.io/paperless-ngx/paperless-ngx:2.7.2
+    image: ghcr.io/paperless-ngx/paperless-ngx
     restart: unless-stopped
     depends_on:
       - db
@@ -37,7 +37,7 @@ services:
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
   db:
-    image: mariadb:11.2.3
+    image: mariadb:11.3.2
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/mysql:/var/lib/mysql
