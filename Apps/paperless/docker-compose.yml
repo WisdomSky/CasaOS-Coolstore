@@ -1,7 +1,7 @@
 name: paperless
 services:
   paperless:
-    image: ghcr.io/paperless-ngx/paperless-ngx
+    image: ghcr.io/paperless-ngx/paperless-ngx:2.8.1
     restart: unless-stopped
     depends_on:
       - db
@@ -32,12 +32,12 @@ services:
       PAPERLESS_ADMIN_USER: admin
       PAPERLESS_ADMIN_PASSWORD: admin
   broker:
-    image: redis
+    image: redis:7.2.4
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
   db:
-    image: mariadb
+    image: mariadb:11.3.2
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/mysql:/var/lib/mysql
