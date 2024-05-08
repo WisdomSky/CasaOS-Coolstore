@@ -1,7 +1,7 @@
 name: rsshub
 services:
   app:
-    image: diygod/rsshub:2024-05-06
+    image: diygod/rsshub:2024-05-07
     restart: unless-stopped
     environment:
       NODE_ENV: production
