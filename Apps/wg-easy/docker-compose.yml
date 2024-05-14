@@ -1,7 +1,7 @@
 name: wg-easy
 services:
   app:
-    image: ghcr.io/wg-easy/wg-easy:12
+    image: ghcr.io/wg-easy/wg-easy:13
     environment:
       WG_HOST: 0.0.0.0
       PASSWORD: casaos
