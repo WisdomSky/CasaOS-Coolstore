@@ -31,6 +31,9 @@ services:
       PAPERLESS_DBPORT: 3306
       PAPERLESS_ADMIN_USER: admin
       PAPERLESS_ADMIN_PASSWORD: admin
+      PAPERLESS_TIKA_ENABLED: 1
+      PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
+      PAPERLESS_TIKA_ENDPOINT: http://tika:9998
   broker:
     image: redis:7.2.4
     restart: unless-stopped
@@ -47,6 +50,20 @@ services:
       MARIADB_USER: paperless
       MARIADB_PASSWORD: paperless
       MARIADB_ROOT_PASSWORD: paperless
+  tika:
+    image: ghcr.io/paperless-ngx/tika:latest
+    restart: unless-stopped
+    ports:
+      - '9998:9998'
+  gotenberg:
+    image: docker.io/gotenberg/gotenberg:7.10
+    restart: unless-stopped
+    command:
+      - gotenberg
+      - '--chromium-disable-javascript=true'
+      - '--chromium-allow-list=file:///tmp/.*'
+    ports:
+      - '3000:3000'
 x-casaos:
   architectures:
     - amd64
