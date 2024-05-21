@@ -1,7 +1,7 @@
 name: readerr
 services:
   app:
-    image: hotio/readarr:nightly-0.3.27.2538
+    image: hotio/readarr:nightly-0.3.28.2546
     restart: unless-stopped
     environment:
       PUID: $PUID
