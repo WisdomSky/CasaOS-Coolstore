@@ -1,7 +1,7 @@
 name: portainer-tools
 services:
   app:
-    image: technorabilia/portainer-tools:latest
+    image: technorabilia/portainer-tools
     restart: unless-stopped
     environment:
       PUID: $PUID
