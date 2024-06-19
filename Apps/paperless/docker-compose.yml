@@ -1,7 +1,7 @@
 name: paperless
 services:
   paperless:
-    image: ghcr.io/paperless-ngx/paperless-ngx:2.9
+    image: ghcr.io/paperless-ngx/paperless-ngx:2.10.1
     restart: unless-stopped
     depends_on:
       - db
@@ -35,12 +35,12 @@ services:
       PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
       PAPERLESS_TIKA_ENDPOINT: http://tika:9998
   broker:
-    image: redis:7.2.5
+    image: redis
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
   db:
-    image: mariadb:11.4.2
+    image: mariadb
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/mysql:/var/lib/mysql
