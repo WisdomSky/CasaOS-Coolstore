@@ -1,7 +1,7 @@
 name: mealie
 services:
   app:
-    image: hkotel/mealie:omni-nightly
+    image: hkotel/mealie
     ports:
       - '3000:3000'
       - '9000:9000'
