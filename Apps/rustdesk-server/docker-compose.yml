@@ -1,7 +1,7 @@
 name: rustdesk-server
 services:
   hbbs:
-    image: rustdesk/rustdesk-server:latest
+    image: rustdesk/rustdesk-server:1
     command: hbbs
     volumes:
       - /DATA/AppData/rustdesk/data:/root
