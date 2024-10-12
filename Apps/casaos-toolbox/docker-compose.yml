@@ -1,7 +1,7 @@
 name: casaos-toolbox
 services:
   app:
-    image: wisdomsky/casaos-toolbox:0.2
+    image: wisdomsky/casaos-toolbox
     restart: unless-stopped
     network_mode: host
     environment:
