@@ -1,7 +1,7 @@
 name: hestiacp
 services:
   app:
-    image: artsemkniazeu/hestiacp:1.0.1
+    image: artsemkniazeu/hestiacp
     restart: unless-stopped
     environment:
       TZ: $TZ
