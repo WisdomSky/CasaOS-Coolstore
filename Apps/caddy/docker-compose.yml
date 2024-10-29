@@ -1,7 +1,7 @@
 name: caddy
 services:
   app:
-    image: caddy
+    image: caddy:2.8.4
     restart: unless-stopped
     ports:
       - target: 80
