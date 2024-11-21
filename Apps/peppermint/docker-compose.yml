@@ -1,7 +1,7 @@
 name: peppermint
 services:
   app:
-    image: pepperlabs/peppermint
+    image: pepperlabs/peppermint:latest
     ports:
       - target: 5000
         published: 5000
@@ -16,7 +16,7 @@ services:
       BASE_URL: http://casaos.local:5000
     restart: unless-stopped
   db:
-    image: postgres
+    image: postgres:12.21
     restart: unless-stopped
     environment:
       PUID: $PUID
