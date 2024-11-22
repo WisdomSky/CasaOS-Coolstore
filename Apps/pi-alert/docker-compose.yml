@@ -1,7 +1,7 @@
 name: pi-alert
 services:
   app:
-    image: jokobsk/pi.alert:24
+    image: jokobsk/pi.alert
     restart: always
     network_mode: host
     environment:
