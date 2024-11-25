@@ -1,7 +1,7 @@
 name: traefik
 services:
   app:
-    image: traefik:v3.2.1
+    image: traefik
     restart: unless-stopped
     environment:
       PUID: $PUID
