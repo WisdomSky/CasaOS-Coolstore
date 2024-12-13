@@ -105,7 +105,7 @@ Just an another CasaOS third-party Appstore with ❄**Cool**❄ apps.
 | <img src="https://raw.githubusercontent.com/jake-walker/selfhosted_templates/wallabag/Images/wallabag.png" width="15"/>&nbsp;&nbsp;&nbsp;[Wallabag](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/wallabag) | 2.6.10 | Wallabag Is A Self Hostable Application For Saving Web Pages: Save And Classify Articles. Read Them Later. Freely. |
 | <img src="https://debrid-link.com/screen/webdav_logo.png" width="15"/>&nbsp;&nbsp;&nbsp;[WebDAV](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/webdav) | latest | Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers. |
 | <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png" width="15"/>&nbsp;&nbsp;&nbsp;[Web Sync (RSync)](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/websync) | latest | Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner. |
-| <img src="https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png" width="15"/>&nbsp;&nbsp;&nbsp;[Wireguard Server](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/wg-easy) | latest | Fast Vpn Server With Easy To Use User Interface |
+| <img src="https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png" width="15"/>&nbsp;&nbsp;&nbsp;[Wireguard Server](https://github.com/WisdomSky/CasaOS-Coolstore/tree/main/Apps/wg-easy) | 14 | Fast Vpn Server With Easy To Use User Interface |
 
 
 ## 💡 Frequently Asked Questions
