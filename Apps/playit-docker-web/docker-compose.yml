@@ -1,7 +1,7 @@
 name: playit-docker-web
 services:
   playit:
-    image: wisdomsky/playit-docker-web
+    image: wisdomsky/playit-docker-web:1.1
     restart: unless-stopped
     network_mode: host
     x-casaos:
