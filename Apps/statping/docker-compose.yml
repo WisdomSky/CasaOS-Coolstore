@@ -1,7 +1,7 @@
 name: statping
 services:
   app:
-    image: statping/statping:v0.90.74
+    image: statping/statping
     restart: always
     depends_on:
       - db
@@ -25,7 +25,7 @@ services:
         source: /DATA/AppData/$AppID/app
         target: /app
   db:
-    image: postgres:13.18
+    image: postgres
     restart: unless-stopped
     environment:
       PUID: $PUID
