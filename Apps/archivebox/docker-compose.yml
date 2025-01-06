@@ -1,7 +1,7 @@
 name: archivebox
 services:
   app:
-    image: archivebox/archivebox:0.7
+    image: archivebox/archivebox
     restart: unless-stopped
     environment:
       ALLOWED_HOSTS: '*'
