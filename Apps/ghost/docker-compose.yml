@@ -1,7 +1,7 @@
 name: ghost
 services:
   app:
-    image: ghost:5.106.1
+    image: ghost:5.107.0
     environment:
       database__client: mysql
       database__connection__host: db
