@@ -1,7 +1,7 @@
 name: rocket-chat
 services:
   app:
-    image: rocket.chat:7.2.2
+    image: rocket.chat:7.3.1
     restart: unless-stopped
     environment:
       MONGO_OPLOG_URL: mongodb://db:27017/local
