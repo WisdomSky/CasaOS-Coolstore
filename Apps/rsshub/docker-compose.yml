@@ -1,7 +1,7 @@
 name: rsshub
 services:
   app:
-    image: diygod/rsshub:2025-02-14
+    image: diygod/rsshub:2025-02-15
     restart: unless-stopped
     environment:
       NODE_ENV: production
@@ -23,7 +23,7 @@ services:
         hard: 0
         soft: 0
   redis:
-    image: redis:7.2.7-alpine
+    image: redis:7.4.2-alpine
     restart: always
     volumes:
       - type: bind
