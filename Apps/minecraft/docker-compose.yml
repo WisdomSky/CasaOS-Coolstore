@@ -1,7 +1,7 @@
 name: minecraft
 services:
   app:
-    image: itzg/minecraft-server:2025.2.1
+    image: itzg/minecraft-server:2025.3.0
     environment:
       EULA: true
     x-casaos:
