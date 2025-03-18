@@ -1,7 +1,7 @@
 name: redis
 services:
   app:
-    image: redis:7.4.2
+    image: redis:7.2.7
     restart: unless-stopped
     ports:
       - target: 6379
