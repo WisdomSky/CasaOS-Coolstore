@@ -1,7 +1,7 @@
 name: rsshub
 services:
   app:
-    image: diygod/rsshub:2025-03-26
+    image: diygod/rsshub:2025-03-27
     restart: unless-stopped
     environment:
       NODE_ENV: production
@@ -16,7 +16,7 @@ services:
       - redis
       - browserless
   browserless:
-    image: browserless/chrome
+    image: browserless/chrome:1-puppeteer-10.4.0
     restart: unless-stopped
     ulimits:
       core:
