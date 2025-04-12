@@ -1,7 +1,7 @@
 name: wallabag
 services:
   app:
-    image: wallabag/wallabag:2.6.11
+    image: wallabag/wallabag:2.6.12
     restart: unless-stopped
     environment:
       POSTGRES_USER: casaos
