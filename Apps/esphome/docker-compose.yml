@@ -1,7 +1,7 @@
 name: esphome
 services:
   app:
-    image: esphome/esphome:2025.4.0
+    image: esphome/esphome:2025.4.1
     restart: unless-stopped
     network_mode: host
     privileged: true
