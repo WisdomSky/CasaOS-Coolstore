@@ -1,7 +1,7 @@
 name: flaresolverr
 services:
   app:
-    image: flaresolverr/flaresolverr:v3.3.24
+    image: flaresolverr/flaresolverr:v3.3.25
     restart: unless-stopped
     environment:
       LOG_LEVEL: info
