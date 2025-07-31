@@ -1,7 +1,7 @@
 name: stirling-pdf
 services:
   app:
-    image: frooodle/s-pdf:1.1.0
+    image: frooodle/s-pdf:1.1.1
     restart: unless-stopped
     environment:
       APP_HOME_NAME: Stirling PDF
