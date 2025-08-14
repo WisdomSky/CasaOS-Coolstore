@@ -28,7 +28,7 @@ services:
         source: /DATA/AppData/$AppID/mediafiles
         target: /opt/recipes/mediafiles
   db:
-    image: postgres:17.5
+    image: postgres:15.13
     restart: unless-stopped
     environment:
       PUID: $PUID
