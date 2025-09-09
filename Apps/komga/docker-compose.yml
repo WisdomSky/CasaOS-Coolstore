@@ -1,7 +1,7 @@
 name: komga
 services:
   app:
-    image: gotson/komga:1.23.3
+    image: gotson/komga:1.23.4
     restart: unless-stopped
     environment:
       PUID: $PUID
