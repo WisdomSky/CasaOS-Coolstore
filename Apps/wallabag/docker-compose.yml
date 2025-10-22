@@ -60,7 +60,7 @@ services:
         source: /DATA/AppData/Wallabag/images
         target: /var/www/wallabag/web/assets/images
   db:
-    image: postgres:14.19
+    image: postgres:16.10
     restart: unless-stopped
     environment:
       PUID: $PUID
