@@ -1,7 +1,7 @@
 name: draw-io
 services:
   app:
-    image: jgraph/drawio:28.2.8
+    image: jgraph/drawio:28.2.9
     restart: unless-stopped
     environment:
       LETS_ENCRYPT_ENABLED: false
