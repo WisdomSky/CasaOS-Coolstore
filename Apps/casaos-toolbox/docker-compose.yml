@@ -1,7 +1,7 @@
 name: casaos-toolbox
 services:
   app:
-    image: wisdomsky/casaos-toolbox:0.2
+    image: wisdomsky/casaos-toolbox
     restart: unless-stopped
     network_mode: host
     environment:
@@ -18,7 +18,7 @@ services:
       - /var/lib/casaos/apps:/casaos/apps
       - /var/lib/casaos/www:/casaos/www
   db:
-    image: mariadb:12.1.2
+    image: mariadb
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
