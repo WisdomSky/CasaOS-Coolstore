@@ -23,7 +23,7 @@ services:
         hard: 0
         soft: 0
   redis:
-    image: redis:8.2.4-alpine
+    image: redis:8.0.6-alpine
     restart: always
     volumes:
       - type: bind
