@@ -13,7 +13,7 @@ services:
         target: /music
       - type: bind
         source: /DATA/AppData/coolstore-spotdl/config
-        target: /config
+        target: /root/.spotdl
     command:
       - web
       - '--host'
