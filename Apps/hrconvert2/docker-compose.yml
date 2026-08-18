@@ -1,7 +1,7 @@
 name: hrconvert2
 services:
   app:
-    image: dwaaan/hrconvert2-docker:latest
+    image: dwaaan/hrconvert2-docker
     ports:
       - target: 80
         published: 8085
