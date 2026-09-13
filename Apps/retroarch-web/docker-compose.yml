@@ -1,7 +1,7 @@
 name: retroarch-web
 services:
   app:
-    image: inglebard/retroarch-web:latest
+    image: inglebard/retroarch-web
     restart: unless-stopped
     environment:
       ROOT_WWW_PATH: /var/www/html
