@@ -1,7 +1,7 @@
 name: airvideohd
 services:
   app:
-    image: dmaxwell/airvideohd
+    image: dmaxwell/airvideohd:latest
     restart: unless-stopped
     network_mode: host
     volumes:
