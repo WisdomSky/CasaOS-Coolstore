@@ -1,0 +1,39 @@
+name: briefing
+services:
+  app:
+    image: holtwick/briefing:3.1.10
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/briefing/data
+        target: /app/data
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: app
+  description:
+    en_US: Briefing is a WebRTC group video room with screen sharing, chat, and no account system. Rooms are joined by URL and media flows peer-to-peer.
+  tagline:
+    en_US: Secure direct video group chat.
+  developer: holtwick
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/holtwick/briefing/master/icon.png
+  thumbnail: https://raw.githubusercontent.com/holtwick/briefing/master/icon.png
+  category: Social
+  tips:
+    before_install:
+      en_US: Camera and microphone access requires HTTPS in most browsers. Use a reverse proxy with TLS for internet access. A TURN server may be needed for restrictive NATs.
+  title:
+    en_US: Briefing
+  id: com.wisdomsky.coolstore.briefing
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 3.1.10
+  update_at: "2026-10-30"
