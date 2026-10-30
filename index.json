@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-10-30T06:03:23Z",
+  "updated_at": "2026-10-30T16:03:15Z",
   "app_count": 62,
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "apps": [
@@ -189,8 +189,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.cloudflared-web/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.cloudflared-web/meta.json",
-      "content_hash": "9b907124",
-      "version": "2026.10.5"
+      "content_hash": "ee9973fc",
+      "version": "2026.10.6"
     },
     {
       "id": "com.wisdomsky.coolstore.copyparty",
@@ -296,7 +296,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.flaresolverr/assets/10577978.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.flaresolverr/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.flaresolverr/meta.json",
-      "content_hash": "8e19a1cc",
+      "content_hash": "f3ebc04e",
       "version": "3.5.2"
     },
     {
@@ -796,8 +796,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.playit-docker-web/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.playit-docker-web/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.playit-docker-web/meta.json",
-      "content_hash": "8064c949",
-      "version": "1.1.0"
+      "content_hash": "3e3b2850",
+      "version": "1.2.0"
     },
     {
       "id": "com.wisdomsky.coolstore.portainer-tools",
@@ -944,7 +944,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.rsshub/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.rsshub/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.rsshub/meta.json",
-      "content_hash": "bdbd8938"
+      "content_hash": "5fa2865e"
     },
     {
       "id": "com.wisdomsky.coolstore.rustdesk-server",
@@ -986,8 +986,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.searxng/assets/searxng.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.searxng/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.searxng/meta.json",
-      "content_hash": "52edf3ba",
-      "version": "2026.10.29-c15647b5a"
+      "content_hash": "095f199b",
+      "version": "2026.10.30-1cd13d98d"
     },
     {
       "id": "com.wisdomsky.coolstore.speedtest-tracker",

@@ -13,13 +13,13 @@
   "title": "RSShub",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.rsshub",
-  "version": "2026-10-29",
+  "version": "2026-10-30",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 1372340531,
-    "arm64": 1376255271
+    "amd64": 1372340761,
+    "arm64": 1376265426
   }
 }

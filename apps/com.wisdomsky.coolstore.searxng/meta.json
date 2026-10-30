@@ -17,14 +17,14 @@
   "title": "SearXNG",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.searxng",
-  "version": "2026.10.29-c15647b5a",
+  "version": "2026.10.30-1cd13d98d",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 98560002,
-    "arm": 92558737,
-    "arm64": 96282246
+    "amd64": 98566452,
+    "arm": 92563942,
+    "arm64": 96289201
   }
 }
