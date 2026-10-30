@@ -1,0 +1,60 @@
+name: trek
+services:
+  app:
+    image: mauriceboe/trek:5.0.1
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      ENCRYPTION_KEY: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+      TZ: $TZ
+      COOKIE_SECURE: "false"
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/trek/data
+        target: /app/data
+      - type: bind
+        source: /DATA/AppData/trek/uploads
+        target: /app/uploads
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -qO- http://127.0.0.1:3000/api/health || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Self-hosted collaborative travel planner with maps, day plans, bookings, budgets, packing lists, journals, and optional AI assistance. Supports real-time collaboration and offline-first PWA use.
+  tagline:
+    en_US: Your trip. Your plan.
+  developer: liketrek
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/mauriceboe/TREK/main/docs/trek-icon.png
+  thumbnail: https://raw.githubusercontent.com/mauriceboe/TREK/main/docs/trek-icon.png
+  screenshot_link:
+    - https://github.com/user-attachments/assets/7e466509-7afc-4449-9d39-6c69c8461f9a
+    - https://github.com/user-attachments/assets/6c20b7c8-d974-4ca6-9d6a-a79b9d30d38f
+  category: Productivity
+  tips:
+    before_install:
+      en_US: The initial admin account is `admin@example.com` with password `casaos`. Change it after first login and keep `ENCRYPTION_KEY` safe. Use HTTPS if exposing TREK to the internet.
+  title:
+    en_US: TREK
+  id: com.wisdomsky.coolstore.trek
+  index: /
+  port_map: "3000"
+  scheme: http
+  version: 5.0.1
+  update_at: "2026-10-30"
