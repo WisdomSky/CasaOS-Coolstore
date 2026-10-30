@@ -1,0 +1,112 @@
+name: azuracast
+services:
+  app:
+    image: ghcr.io/azuracast/azuracast:latest
+    restart: unless-stopped
+    ports:
+      - target: 80
+        published: "9080"
+        protocol: tcp
+      - target: 2022
+        published: "2022"
+        protocol: tcp
+      - target: 8000
+        published: "8000"
+        protocol: tcp
+      - target: 8001
+        published: "8001"
+        protocol: tcp
+      - target: 8002
+        published: "8002"
+        protocol: tcp
+      - target: 8003
+        published: "8003"
+        protocol: tcp
+      - target: 8004
+        published: "8004"
+        protocol: tcp
+      - target: 8005
+        published: "8005"
+        protocol: tcp
+      - target: 8006
+        published: "8006"
+        protocol: tcp
+      - target: 8007
+        published: "8007"
+        protocol: tcp
+      - target: 8008
+        published: "8008"
+        protocol: tcp
+      - target: 8009
+        published: "8009"
+        protocol: tcp
+      - target: 8010
+        published: "8010"
+        protocol: tcp
+    environment:
+      AZURACAST_HTTP_PORT: "80"
+      AZURACAST_HTTPS_PORT: "443"
+      AZURACAST_SFTP_PORT: "2022"
+      AZURACAST_PUID: $PUID
+      AZURACAST_PGID: $PGID
+      NGINX_TIMEOUT: "1800"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/azuracast/stations
+        target: /var/azuracast/stations
+      - type: bind
+        source: /DATA/AppData/azuracast/backups
+        target: /var/azuracast/backups
+      - type: bind
+        source: /DATA/AppData/azuracast/db
+        target: /var/lib/mysql
+      - type: bind
+        source: /DATA/AppData/azuracast/uploads
+        target: /var/azuracast/storage/uploads
+      - type: bind
+        source: /DATA/AppData/azuracast/shoutcast2
+        target: /var/azuracast/storage/shoutcast2
+      - type: bind
+        source: /DATA/AppData/azuracast/stereo_tool
+        target: /var/azuracast/storage/stereo_tool
+      - type: bind
+        source: /DATA/AppData/azuracast/rsas
+        target: /var/azuracast/storage/rsas
+      - type: bind
+        source: /DATA/AppData/azuracast/geoip
+        target: /var/azuracast/storage/geoip
+      - type: bind
+        source: /DATA/AppData/azuracast/sftpgo
+        target: /var/azuracast/storage/sftpgo
+      - type: bind
+        source: /DATA/AppData/azuracast/acme
+        target: /var/azuracast/storage/acme
+    ulimits:
+      nofile:
+        soft: 65536
+        hard: 65536
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: AzuraCast manages radio stations, playlists, media, DJs, and Icecast/Shoutcast streams from one web panel. The all-in-one image bundles the database, Redis, nginx, Liquidsoap, and station services.
+  tagline:
+    en_US: Turnkey self-hosted web radio.
+  developer: AzuraCast
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/resources/icon.png
+  thumbnail: https://raw.githubusercontent.com/AzuraCast/AzuraCast/main/resources/icon.png
+  category: Media
+  tips:
+    before_install:
+      en_US: The web installer opens on first visit. Station streams use host ports `8000-8010` in this package; add more mappings in the app settings if you run more stations. SFTP is on port `2022`.
+  title:
+    en_US: AzuraCast
+  id: com.wisdomsky.coolstore.azuracast
+  index: /
+  port_map: "9080"
+  scheme: http
+  version: latest
+  update_at: "2026-10-30"
