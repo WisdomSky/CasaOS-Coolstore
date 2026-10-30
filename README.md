@@ -39,7 +39,13 @@ The store is published using the AppStore **v2** format and currently contains *
 
 ### ❄ CasaOS / ZimaOS Appstore URL
 
-    https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/store.json
+##### ZimaOS
+
+    https://paodayag.dev/coolstore/zimaos/store.json
+
+##### CasaOS
+
+    https://paodayag.dev/coolstore/casaos/store.zip
 
 ---
 
