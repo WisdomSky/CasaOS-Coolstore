@@ -1,0 +1,49 @@
+name: veloren
+services:
+  app:
+    image: registry.gitlab.com/veloren/veloren/server-cli:weekly
+    restart: unless-stopped
+    stdin_open: true
+    tty: true
+    ports:
+      - target: 14004
+        published: "14004"
+        protocol: tcp
+      - target: 14004
+        published: "14004"
+        protocol: udp
+      - target: 14005
+        published: "14005"
+        protocol: tcp
+      - target: 14006
+        published: "14006"
+        protocol: udp
+    environment:
+      RUST_LOG: debug,common::net=info
+    volumes:
+      - type: bind
+        source: /DATA/AppData/veloren/userdata
+        target: /opt/userdata
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_US: Veloren is an open-world voxel action RPG; this image runs a dedicated multiplayer server. Players connect with the Veloren client on port 14004.
+  tagline:
+    en_US: Open-source multiplayer voxel RPG.
+  developer: Veloren
+  author: WisdomSky
+  icon: https://book.veloren.net/favicon.png
+  thumbnail: https://book.veloren.net/favicon.png
+  category: Others
+  tips:
+    before_install:
+      en_US: This is a game server with no web UI. The first start generates a world and can take several minutes. Connect using the Veloren client to port `14004`. Server commands are available from the CasaOS terminal.
+  title:
+    en_US: Veloren Server
+  id: com.wisdomsky.coolstore.veloren
+  index: /
+  port_map: "14004"
+  version: weekly
+  update_at: "2026-10-30"
