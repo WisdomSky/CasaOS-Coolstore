@@ -1,0 +1,56 @@
+name: forgejo
+services:
+  app:
+    image: codeberg.org/forgejo/forgejo:17.0.1
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "3002"
+        protocol: tcp
+      - target: 22
+        published: "2222"
+        protocol: tcp
+    environment:
+      USER_UID: "1000"
+      USER_GID: "1000"
+      FORGEJO__server__ROOT_URL: http://localhost:3002/
+      FORGEJO__server__SSH_DOMAIN: localhost
+      FORGEJO__server__SSH_PORT: "2222"
+      FORGEJO__server__SSH_LISTEN_PORT: "22"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/forgejo/data
+        target: /data
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  main: app
+  description:
+    en_US: Lightweight, community-governed Git service with repositories, issues, pull requests, packages, and Actions. Runs as a single SQLite-backed container.
+  tagline:
+    en_US: Painless self-hosted Git forge.
+  developer: Forgejo
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/forgejo.png
+  thumbnail: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/forgejo.png
+  category: Developer
+  tips:
+    before_install:
+      en_US: |-
+        The web UI is on port `3002`; Git SSH is on port `2222`. Complete the first-run onboarding at the web UI.
+
+        If you access CasaOS from another device, change `FORGEJO__server__ROOT_URL` in the app settings to `http://<casaos-ip>:3002/`.
+  title:
+    en_US: Forgejo
+  id: com.wisdomsky.coolstore.forgejo
+  index: /
+  port_map: "3002"
+  scheme: http
+  version: 17.0.1
+  update_at: "2026-10-30"
