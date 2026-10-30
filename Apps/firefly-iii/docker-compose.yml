@@ -1,0 +1,83 @@
+name: firefly-iii
+services:
+  app:
+    image: fireflyiii/core:version-6.7.9
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: 0123456789abcdef0123456789abcdef
+      APP_URL: http://localhost:8080
+      SITE_OWNER: admin@example.com
+      DEFAULT_LANGUAGE: en_US
+      DEFAULT_LOCALE: equal
+      TZ: $TZ
+      TRUSTED_PROXIES: "**"
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_DATABASE: firefly
+      DB_USERNAME: firefly
+      DB_PASSWORD: casaos
+      CACHE_STORE: file
+      SESSION_DRIVER: file
+      STATIC_CRON_TOKEN: abcdef0123456789abcdef0123456789
+    volumes:
+      - type: bind
+        source: /DATA/AppData/firefly-iii/upload
+        target: /var/www/html/storage/upload
+    depends_on:
+      - db
+  db:
+    image: mariadb:11.8.9
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: casaos
+      MARIADB_DATABASE: firefly
+      MARIADB_USER: firefly
+      MARIADB_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/firefly-iii/db
+        target: /var/lib/mysql
+  cron:
+    image: alpine:latest
+    restart: unless-stopped
+    depends_on:
+      - app
+    environment:
+      TZ: $TZ
+      STATIC_CRON_TOKEN: abcdef0123456789abcdef0123456789
+    command:
+      - sh
+      - "-c"
+      - apk add --no-cache tzdata && (ln -s /usr/share/zoneinfo/$$TZ /etc/localtime || true) && echo "0 3 * * * wget -qO- http://app:8080/api/v1/cron/$$STATIC_CRON_TOKEN;echo" | crontab - && crond -f -L /dev/stdout
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Double-entry personal finance manager for accounts, budgets, categories, bills, and reports. Supports imports, rules, multiple currencies, and recurring transactions.
+  tagline:
+    en_US: Take control of your personal finances.
+  developer: Firefly III
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.github/assets/img/logo-small.png
+  thumbnail: https://raw.githubusercontent.com/firefly-iii/firefly-iii/main/.github/assets/img/logo-small.png
+  category: Finance
+  tips:
+    before_install:
+      en_US: The first visit creates the admin account. Change `APP_KEY` and `STATIC_CRON_TOKEN` in the app settings before exposing Firefly outside your LAN. The cron container handles recurring transactions and bills.
+  title:
+    en_US: Firefly III
+  id: com.wisdomsky.coolstore.firefly-iii
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 6.7.9
+  update_at: "2026-10-30"
