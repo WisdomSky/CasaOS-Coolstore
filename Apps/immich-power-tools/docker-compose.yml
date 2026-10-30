@@ -1,0 +1,52 @@
+name: immich-power-tools
+services:
+  app:
+    image: ghcr.io/immich-power-tools/immich-power-tools:latest
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "8001"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/immich-power-tools/data
+        target: /app/data
+    environment:
+      IMMICH_URL: http://host.docker.internal:2283
+      EXTERNAL_IMMICH_URL: http://localhost:2283
+      IMMICH_API_KEY: change-me
+      DB_HOST: host.docker.internal
+      DB_PORT: "5432"
+      DB_USERNAME: postgres
+      DB_PASSWORD: change-me
+      DB_DATABASE_NAME: immich
+      AI_API_KEY: ""
+      AI_BASE_URL: https://api.openai.com/v1
+      AI_MODEL: gpt-4o-mini
+    extra_hosts:
+      - host.docker.internal:host-gateway
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Unofficial Immich companion for bulk people management, merge suggestions, missing-location fixes, potential albums, analytics, and natural-language library search.
+  tagline:
+    en_US: Bulk organization tools for Immich.
+  developer: Immich Power Tools
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/immich-power-tools.png
+  thumbnail: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/immich-power-tools.png
+  category: Media
+  tips:
+    before_install:
+      en_US: This is a companion app for Immich. Set `IMMICH_URL`, `IMMICH_API_KEY`, and the Immich Postgres credentials in the app settings. If Immich runs in Docker, `host.docker.internal` reaches the host; expose Immich PostgreSQL on the host or adjust `DB_HOST` to reach it.
+  title:
+    en_US: Immich Power Tools
+  id: com.wisdomsky.coolstore.immich-power-tools
+  index: /
+  port_map: "8001"
+  scheme: http
+  version: latest
+  update_at: "2026-10-30"
