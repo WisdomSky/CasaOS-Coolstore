@@ -1,0 +1,60 @@
+name: copyparty
+services:
+  app:
+    image: copyparty/ac:1.20.26
+    restart: unless-stopped
+    user: "1000:1000"
+    ports:
+      - target: 3923
+        published: "3923"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/copyparty/cfg
+        target: /cfg
+      - type: bind
+        source: /DATA/AppData/copyparty/files
+        target: /w
+    command:
+      - "-a"
+      - admin:casaos
+      - "-v"
+      - /w::rw,admin
+      - "-e2dsa"
+      - "-e2ts"
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - "-c"
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:3923/', timeout=5)
+      interval: 30s
+      timeout: 10s
+      retries: 3
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+    - "386"
+  main: app
+  description:
+    en_US: Single-binary file server with a browser UI, resumable uploads, WebDAV/FTP/SFTP options, media thumbnails, search, and sharing. Works on everything from a Raspberry Pi to a NAS.
+  tagline:
+    en_US: Turn almost any device into a file server.
+  developer: "9001"
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/copyparty.png
+  thumbnail: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/copyparty.png
+  category: Productivity
+  tips:
+    before_install:
+      en_US: The default account is `admin` with password `casaos`. Change the password in the compose file or app settings. Files are served from `/DATA/AppData/copyparty/files`.
+  title:
+    en_US: copyparty
+  id: com.wisdomsky.coolstore.copyparty
+  index: /
+  port_map: "3923"
+  scheme: http
+  version: 1.20.26
+  update_at: "2026-10-30"
