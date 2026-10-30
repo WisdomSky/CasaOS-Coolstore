@@ -1,0 +1,46 @@
+name: paperless-ai
+services:
+  app:
+    image: clusterzx/paperless-ai:3.0.9
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      PAPERLESS_AI_PORT: "3000"
+      TZ: $TZ
+      PAPERLESS_API_URL: http://paperless-ngx:8000/api
+      PAPERLESS_API_TOKEN: ""
+      RAG_SERVICE_ENABLED: "false"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/paperless-ai/data
+        target: /app/data
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Automatically classifies Paperless-ngx documents with titles, tags, correspondents, and document types, and adds RAG-based natural-language search over the archive.
+  tagline:
+    en_US: AI tagging and chat for Paperless-ngx.
+  developer: clusterzx
+  author: WisdomSky
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/paperless-ai.png
+  thumbnail: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/paperless-ai.png
+  category: Productivity
+  tips:
+    before_install:
+      en_US: Requires an existing Paperless-ngx instance. After installation, open the app and enter your Paperless URL, API token, and AI provider settings. Use `http://<casaos-ip>:8005/api` if Paperless runs in this store.
+  title:
+    en_US: Paperless-AI
+  id: com.wisdomsky.coolstore.paperless-ai
+  index: /
+  port_map: "3000"
+  scheme: http
+  version: 3.0.9
+  update_at: "2026-10-30"
