@@ -1,0 +1,56 @@
+name: calpal
+services:
+  app:
+    image: ghcr.io/grimmdev/calpal:1.0.0
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      PORT: "8080"
+      BASE_URL: http://localhost:8080
+      TZ: $TZ
+      SMTP_HOST: ""
+      SMTP_PORT: "587"
+      SMTP_USER: ""
+      SMTP_PASS: ""
+      SMTP_FROM: ""
+      GOOGLE_CLIENT_ID: ""
+      GOOGLE_CLIENT_SECRET: ""
+      MICROSOFT_CLIENT_ID: ""
+      MICROSOFT_CLIENT_SECRET: ""
+      MICROSOFT_TENANT_ID: common
+    volumes:
+      - type: bind
+        source: /DATA/AppData/calpal/data
+        target: /app/data
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Lightweight Calendly alternative with booking pages, ICS invites, timezone handling, and optional Google/Microsoft calendar sync. Single Go binary with embedded SQLite.
+  tagline:
+    en_US: Self-hosted scheduling without the SaaS.
+  developer: grimmdev
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/grimmdev/CalPal/main/assets/images/icon.png
+  thumbnail: https://raw.githubusercontent.com/grimmdev/CalPal/main/assets/images/icon.png
+  screenshot_link:
+    - https://raw.githubusercontent.com/grimmdev/CalPal/main/assets/images/img1.png
+    - https://raw.githubusercontent.com/grimmdev/CalPal/main/assets/images/img2.png
+    - https://raw.githubusercontent.com/grimmdev/CalPal/main/assets/images/img3.png
+  category: Productivity
+  tips:
+    before_install:
+      en_US: After installation, change `BASE_URL` in the app settings to your CasaOS address, for example `http://192.168.1.10:8080`. The first signup creates the admin account.
+  title:
+    en_US: CalPal
+  id: com.wisdomsky.coolstore.calpal
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 1.0.0
+  update_at: "2026-10-30"
