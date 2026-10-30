@@ -20,10 +20,10 @@ x-casaos:
     - amd64
   main: app
   description:
-    en_us: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
+    en_US: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
   tagline:
-    en_us: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
-  developer: ''
+    en_US: Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.
+  developer: Furier
   author: WisdomSky
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/websync/screenshot-1.png
@@ -31,6 +31,11 @@ x-casaos:
   icon: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
   thumbnail: https://cdn0.iconfinder.com/data/icons/octicons/1024/sync-1024.png
   title:
-    en_us: Web Sync (RSync)
-  category: Coolstore
-  port_map: '3000'
+    en_US: Web Sync (RSync)
+  category: Productivity
+  port_map: "3000"
+  id: com.wisdomsky.coolstore.websync
+  index: /
+  scheme: http
+  version: latest
+  update_at: "2026-10-30"

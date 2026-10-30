@@ -10,10 +10,10 @@ services:
       envs:
         - container: PUID
           description:
-            en_us: ''
+            en_US: ""
         - container: PGID
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 8080
         published: 8080
@@ -32,15 +32,20 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data!
+    en_US: PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data!
   tagline:
-    en_us: |
+    en_US: |
       Privatebin Is A Minimalist, Open Source Online Pastebin Where The Server Has Zero Knowledge Of Pasted Data!
-  developer: ''
+  developer: PrivateBin
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/privatebin.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/privatebin.png
   title:
-    en_us: Privatebin
-  category: Coolstore
-  port_map: '8080'
+    en_US: Privatebin
+  category: Productivity
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.privatebin
+  index: /
+  scheme: http
+  version: 2.1.0
+  update_at: "2026-10-30"

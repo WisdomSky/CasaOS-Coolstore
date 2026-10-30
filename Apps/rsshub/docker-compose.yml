@@ -35,19 +35,24 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: |
+    en_US: |
       RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
 
       RSSHub delivers millions of contents aggregated from all kinds of sources, our vibrant open source community is ensuring the deliver of RSSHub's new routes, new features and bug fixes.
 
       RSSHub can be used with browser extension RSSHub Radar and mobile auxiliary app RSSBud (iOS) and RSSAid (Android)
   tagline:
-    en_us: RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
+    en_US: RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.
   developer: DIYgod
   author: WisdomSky
-  icon: https://docs.rsshub.app/logo.png
-  thumbnail: https://docs.rsshub.app/logo.png
+  icon: https://raw.githubusercontent.com/DIYgod/RSSHub/master/public/logo.png
+  thumbnail: https://raw.githubusercontent.com/DIYgod/RSSHub/master/public/logo.png
   title:
-    en_us: RSShub
-  category: Coolstore
-  port_map: '1200'
+    en_US: RSShub
+  category: Productivity
+  port_map: "1200"
+  id: com.wisdomsky.coolstore.rsshub
+  index: /
+  scheme: http
+  version: "2026-10-29"
+  update_at: "2026-10-30"

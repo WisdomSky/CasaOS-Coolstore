@@ -1,35 +1,56 @@
 name: rustdesk-server
 services:
   hbbs:
-    image: rustdesk/rustdesk-server:1
-    command: hbbs
+    image: rustdesk/rustdesk-server-s6:1
+    entrypoint:
+      - /usr/bin/hbbs
     volumes:
-      - /DATA/AppData/rustdesk/data:/root
+      - type: bind
+        source: /DATA/AppData/rustdesk/data
+        target: /data
     network_mode: host
     depends_on:
       - hbbr
     restart: unless-stopped
+    healthcheck:
+      disable: true
   hbbr:
-    image: rustdesk/rustdesk-server:1
-    command: hbbr
+    image: rustdesk/rustdesk-server-s6:1
+    entrypoint:
+      - /usr/bin/hbbr
     volumes:
-      - /DATA/AppData/rustdesk/data:/root
+      - type: bind
+        source: /DATA/AppData/rustdesk/data
+        target: /data
     network_mode: host
     restart: unless-stopped
+    healthcheck:
+      disable: true
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
+    - arm
   main: hbbs
   description:
-    en_us: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
+    en_US: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
   tagline:
-    en_us: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
+    en_US: RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.
   developer: RustDesk
   author: WisdomSky
-  icon: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rustdesk.svg/48px-Rustdesk.svg.png
-  thumbnail: https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Rustdesk.svg/48px-Rustdesk.svg.png
+  icon: https://raw.githubusercontent.com/rustdesk/rustdesk/master/res/icon.png
+  thumbnail: https://raw.githubusercontent.com/rustdesk/rustdesk/master/res/icon.png
   title:
-    en_us: Rustdesk Server
-  category: Coolstore
+    en_US: Rustdesk Server
+  tips:
+    before_install:
+      en_US: |
+        RustDesk clients connect to this server using your CasaOS host IP and port `21116`.
+
+        The container image includes a shell, so the CasaOS terminal can be used normally.
+  category: Networking
+  id: com.wisdomsky.coolstore.rustdesk-server
+  index: /
+  port_map: "21116"
+  version: "1"
+  update_at: "2026-10-30"

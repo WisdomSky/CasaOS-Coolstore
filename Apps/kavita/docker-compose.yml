@@ -10,10 +10,10 @@ services:
       envs:
         - container: PUID
           description:
-            en_us: ''
+            en_US: ""
         - container: PGID
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 5000
         published: 5000
@@ -32,13 +32,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Kavita Manga, Comic and E-Book Server
+    en_US: Kavita Manga, Comic and E-Book Server
   tagline:
-    en_us: Kavita Manga, Comic And E-book Server
-  developer: ''
+    en_US: Kavita Manga, Comic And E-book Server
+  developer: Kareadita
   author: WisdomSky
   icon: https://raw.githubusercontent.com/Kareadita/Kavita/main/UI/Web/src/assets/images/logo.png
   thumbnail: https://raw.githubusercontent.com/Kareadita/Kavita/main/UI/Web/src/assets/images/logo.png
   title:
-    en_us: Kavita
-  category: Coolstore
+    en_US: Kavita
+  category: Media
+  id: com.wisdomsky.coolstore.kavita
+  index: /
+  port_map: "5000"
+  scheme: http
+  version: 0.9.1
+  update_at: "2026-10-30"

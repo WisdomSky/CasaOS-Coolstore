@@ -12,8 +12,8 @@ services:
       DB_USER: casaos
       DB_PASS: casaos
       DB_DATABASE: casaos
-      NAME: ''
-      DESCRIPTION: ''
+      NAME: ""
+      DESCRIPTION: ""
     x-casaos:
       envs: []
     ports:
@@ -38,26 +38,26 @@ services:
       envs:
         - container: PUID
           description:
-            en_us: for UserID
+            en_US: for UserID
         - container: PGID
           description:
-            en_us: for GroupID
+            en_US: for GroupID
         - container: TZ
           description:
-            en_us: specify a timezone to use, see this list.
+            en_US: specify a timezone to use, see this list.
         - container: POSTGRES_DB
           description:
-            en_us: Specify the name of a database to be created on image startup.
+            en_US: Specify the name of a database to be created on image startup.
         - container: POSTGRES_USER
           description:
-            en_us: Postgres server username
+            en_US: Postgres server username
         - container: POSTGRES_PASSWORD
           description:
-            en_us: Postgres server password
+            en_US: Postgres server password
       volumes:
         - container: /var/lib/postgresql/data
           description:
-            en_us: Directory where Postgres database data is stored
+            en_US: Directory where Postgres database data is stored
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/postgres/data
@@ -69,14 +69,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page.
+    en_US: An easy to use Status Page for your websites and applications. Statping will automatically fetch the application and render a beautiful status page with tons of features for you to build an even better status page.
   tagline:
-    en_us: An Easy To Use Status Page For Your Websites And Applications. Statping Will Automatically Fetch The Application And Render A Beautiful Status Page With Tons Of Features For You To Build An Even Better Status Page.
-  developer: ''
+    en_US: An Easy To Use Status Page For Your Websites And Applications. Statping Will Automatically Fetch The Application And Render A Beautiful Status Page With Tons Of Features For You To Build An Even Better Status Page.
+  developer: Statping
   author: WisdomSky
   icon: https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/statping.png
   thumbnail: https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/statping.png
   title:
-    en_us: Statping
-  category: Coolstore
-  port_map: '8080'
+    en_US: Statping
+  category: Developer
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.statping
+  index: /
+  scheme: http
+  version: 0.90.74
+  update_at: "2026-10-30"

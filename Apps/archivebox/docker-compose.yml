@@ -4,7 +4,7 @@ services:
     image: archivebox/archivebox:0.9.77
     restart: unless-stopped
     environment:
-      ALLOWED_HOSTS: '*'
+      ALLOWED_HOSTS: "*"
       MEDIA_MAX_SIZE: 500m
       PUBLIC_INDEX: true
       PUBLIC_SNAPSHOTS: true
@@ -13,19 +13,19 @@ services:
       envs:
         - container: ALLOWED_HOSTS
           description:
-            en_us: ''
+            en_US: ""
         - container: MEDIA_MAX_SIZE
           description:
-            en_us: ''
+            en_US: ""
         - container: PUBLIC_INDEX
           description:
-            en_us: ''
+            en_US: ""
         - container: PUBLIC_SNAPSHOTS
           description:
-            en_us: ''
+            en_US: ""
         - container: PUBLIC_ADD_VIEW
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 8000
         published: 8002
@@ -37,18 +37,22 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
+    en_US: ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.
   tagline:
-    en_us: Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.
-  developer: ''
+    en_US: Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.
+  developer: ArchiveBox
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/archivebox.png
   title:
-    en_us: Archivebox
-  category: Coolstore
-  port_map: '8002'
+    en_US: Archivebox
+  category: Productivity
+  port_map: "8002"
+  id: com.wisdomsky.coolstore.archivebox
+  index: /
+  scheme: http
+  version: 0.9.77
+  update_at: "2026-10-30"

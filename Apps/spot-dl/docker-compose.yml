@@ -16,11 +16,11 @@ services:
         target: /config
     command:
       - web
-      - '--host'
+      - "--host"
       - 0.0.0.0
-      - '--port'
-      - '8800'
-      - '--web-use-output-dir'
+      - "--port"
+      - "8800"
+      - "--web-use-output-dir"
     tty: true
 x-casaos:
   architectures:
@@ -28,18 +28,23 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
+    en_US: spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
   tagline:
-    en_us: spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
+    en_US: spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.
   developer: spotDL
   author: WisdomSky
   icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/spot-dl/icon.svg
   thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/spot-dl/icon.svg
   title:
-    en_us: spotDL
+    en_US: spotDL
   tips:
     before_install:
-      en_us: |
+      en_US: |
         The default download location is set to `/DATA/Media/Music`. You can change this by going into the app settings and changing the specified path.
-  category: Coolstore
-  port_map: '8800'
+  category: Media
+  port_map: "8800"
+  id: com.wisdomsky.coolstore.spot-dl
+  index: /
+  scheme: http
+  version: 4.6.0
+  update_at: "2026-10-30"

@@ -30,14 +30,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Caddy - The Ultimate Server with Automatic HTTPS.
+    en_US: Caddy - The Ultimate Server with Automatic HTTPS.
   tagline:
-    en_us: Caddy - The Ultimate Server With Automatic Https.
-  developer: ''
+    en_US: Caddy - The Ultimate Server With Automatic Https.
+  developer: Caddy
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/caddy.png
   title:
-    en_us: Caddy
-  category: Coolstore
-  port_map: '80'
+    en_US: Caddy
+  category: Networking
+  port_map: "80"
+  id: com.wisdomsky.coolstore.caddy
+  index: /
+  scheme: http
+  version: 2.11.7
+  update_at: "2026-10-30"

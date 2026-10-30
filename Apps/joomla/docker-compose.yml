@@ -4,17 +4,19 @@ services:
     image: joomla:6.2.0-apache
     environment:
       JOOMLA_DB_HOST: joomladb
+      JOOMLA_DB_USER: joomla
       JOOMLA_DB_PASSWORD: casaos
+      JOOMLA_DB_NAME: joomla
     depends_on:
       - joomladb
     x-casaos:
       envs:
         - container: JOOMLA_DB_HOST
           description:
-            en_us: ''
+            en_US: ""
         - container: JOOMLA_DB_PASSWORD
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 80
         published: 80
@@ -24,10 +26,13 @@ services:
         source: /DATA/AppData/$AppID/www
         target: /var/www/html
   joomladb:
-    image: mysql:9.7.4
+    image: mysql:8.4.13
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: joomla
+      MYSQL_USER: joomla
+      MYSQL_PASSWORD: casaos
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/mysql
@@ -35,22 +40,26 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: Another free and open-source CMS
+    en_US: Another free and open-source CMS
   tagline:
-    en_us: Another Free And Open-source Cms
-  developer: ''
+    en_US: Another Free And Open-source Cms
+  developer: Open Source Matters
   author: WisdomSky
   icon: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
   thumbnail: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png
   tips:
     before_install:
-      en_us: |
+      en_US: |
         For database connection, select `MySQL` then on the `database host` field put `joomladb`, for `database user` put `root` and for `database password` put `casaos`
   title:
-    en_us: Joomla
-  category: Coolstore
-  port_map: '80'
+    en_US: Joomla
+  category: Productivity
+  port_map: "80"
+  id: com.wisdomsky.coolstore.joomla
+  index: /
+  scheme: http
+  version: 6.2.0-apache
+  update_at: "2026-10-30"

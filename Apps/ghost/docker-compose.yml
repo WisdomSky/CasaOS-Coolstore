@@ -37,26 +37,30 @@ services:
       test:
         - CMD
         - healthcheck.sh
-        - '--connect'
-        - '--innodb_initialized'
+        - "--connect"
+        - "--innodb_initialized"
       interval: 10s
       timeout: 5s
       retries: 3
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: Free and open-source blogging platform
+    en_US: Free and open-source blogging platform
   tagline:
-    en_us: Free And Open-source Blogging Platform
-  developer: ''
+    en_US: Free And Open-source Blogging Platform
+  developer: Ghost Foundation
   author: WisdomSky
   icon: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png
   thumbnail: https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png
   title:
-    en_us: Ghost
-  category: Coolstore
-  port_map: '2368'
+    en_US: Ghost
+  category: Social
+  port_map: "2368"
+  id: com.wisdomsky.coolstore.ghost
+  index: /
+  scheme: http
+  version: 6.73.0
+  update_at: "2026-10-30"

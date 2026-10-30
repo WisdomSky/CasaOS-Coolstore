@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "store_id": "coolstore",
+  "name": {
+    "en_US": "CasaOS Coolstore"
+  },
+  "description": {
+    "en_US": "A custom CasaOS/ZimaOS AppStore with a curated collection of self-hosted applications."
+  },
+  "maintainer": "WisdomSky",
+  "url": "https://github.com/WisdomSky/CasaOS-Coolstore"
+}

@@ -13,13 +13,13 @@ services:
       envs:
         - container: PGID
           description:
-            en_us: ''
+            en_US: ""
         - container: PUID
           description:
-            en_us: ''
+            en_US: ""
         - container: TZ
           description:
-            en_us: ''
+            en_US: ""
     volumes:
       - type: bind
         source: /DATA/AppData/$AppID/config
@@ -31,14 +31,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.
+    en_US: Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.
   tagline:
-    en_us: Homebridge Allows You To Integrate With Smart Home Devices That Do Not Natively Support Homekit. There Are Over 2,000 Homebridge Plugins Supporting Thousands Of Different Smart Accessories.
-  developer: ''
+    en_US: Homebridge Allows You To Integrate With Smart Home Devices That Do Not Natively Support Homekit. There Are Over 2,000 Homebridge Plugins Supporting Thousands Of Different Smart Accessories.
+  developer: Homebridge
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/homebridge.png
   title:
-    en_us: Homebridge
-  category: Coolstore
-  port_map: '8581'
+    en_US: Homebridge
+  category: Home
+  port_map: "8581"
+  id: com.wisdomsky.coolstore.homebridge
+  index: /
+  scheme: http
+  version: "2023-01-08"
+  update_at: "2026-10-30"

@@ -25,13 +25,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: FlareSolverr is a proxy server to bypass Cloudflare protection. FlareSolverr starts a proxy server, and it waits for user requests in an idle state using few resources. When some request arrives, it uses Selenium with the undetected-chromedriver to create a web browser (Chrome). It opens the URL with user parameters and waits until the Cloudflare challenge is solved (or timeout). The HTML code and the cookies are sent back to the user, and those cookies can be used to bypass Cloudflare using other HTTP clients.
+    en_US: FlareSolverr is a proxy server to bypass Cloudflare protection. FlareSolverr starts a proxy server, and it waits for user requests in an idle state using few resources. When some request arrives, it uses Selenium with the undetected-chromedriver to create a web browser (Chrome). It opens the URL with user parameters and waits until the Cloudflare challenge is solved (or timeout). The HTML code and the cookies are sent back to the user, and those cookies can be used to bypass Cloudflare using other HTTP clients.
   tagline:
-    en_us: FlareSolverr is a proxy server to bypass Cloudflare protection.
+    en_US: FlareSolverr is a proxy server to bypass Cloudflare protection.
   developer: FlareSolverr
   author: WisdomSky
   icon: https://avatars.githubusercontent.com/u/10577978
   thumbnail: https://avatars.githubusercontent.com/u/10577978
   title:
-    en_us: FlareSolverr
-  category: Coolstore
+    en_US: FlareSolverr
+  category: Networking
+  id: com.wisdomsky.coolstore.flaresolverr
+  index: /
+  port_map: "8191"
+  scheme: http
+  version: 3.5.2
+  update_at: "2026-10-30"

@@ -20,18 +20,22 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: Web GUI for youtube-dl with playlist support. Allows you to download videos from YouTube and dozens of other sites (https://ytdl-org.github.io/youtube-dl/supportedsites.html).
+    en_US: Web GUI for youtube-dl with playlist support. Allows you to download videos from YouTube and dozens of other sites (https://ytdl-org.github.io/youtube-dl/supportedsites.html).
   tagline:
-    en_us: Web Gui For Youtube-dl With Playlist Support. Allows You To Download Videos From Youtube And Dozens Of Other Sites (https://ytdl-org.github.io/youtube-dl/supportedsites.html).
-  developer: ''
+    en_US: Web Gui For Youtube-dl With Playlist Support. Allows You To Download Videos From Youtube And Dozens Of Other Sites (https://ytdl-org.github.io/youtube-dl/supportedsites.html).
+  developer: alexta69
   author: WisdomSky
   icon: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png
   thumbnail: https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ytdlm.png
   title:
-    en_us: Metube
-  category: Coolstore
-  port_map: '8081'
+    en_US: Metube
+  category: Media
+  port_map: "8081"
+  id: com.wisdomsky.coolstore.metube-youtubedl
+  index: /
+  scheme: http
+  version: "2025-07-30"
+  update_at: "2026-10-30"

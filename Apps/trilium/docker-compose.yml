@@ -9,7 +9,7 @@ services:
       envs:
         - container: TRILIUM_DATA_DIR
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 8080
         published: 8080
@@ -25,14 +25,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases
+    en_US: Trilium Notes is a hierarchical note taking application with focus on building large personal knowledge bases
   tagline:
-    en_us: Trilium Notes Is A Hierarchical Note Taking Application With Focus On Building Large Personal Knowledge Bases
-  developer: ''
+    en_US: Trilium Notes Is A Hierarchical Note Taking Application With Focus On Building Large Personal Knowledge Bases
+  developer: Trilium Notes
   author: WisdomSky
   icon: https://www.saashub.com/images/app/service_logos/55/2901389fab77/large.png?1561117248
   thumbnail: https://www.saashub.com/images/app/service_logos/55/2901389fab77/large.png?1561117248
   title:
-    en_us: Trilium
-  category: Coolstore
-  port_map: '8080'
+    en_US: Trilium
+  category: Productivity
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.trilium
+  index: /
+  scheme: http
+  version: 0.63.7
+  update_at: "2026-10-30"

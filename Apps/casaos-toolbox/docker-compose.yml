@@ -27,20 +27,19 @@ services:
       MYSQL_PASSWORD: casaos
     ports:
       - target: 3306
-        published: '33066'
+        published: "33066"
         protocol: tcp
     volumes:
       - /DATA/AppData/casaos-toolbox/mysql:/var/lib/mysql
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: CasaOS Toolbox is an extension application that provides additional features to CasaOS.
+    en_US: CasaOS Toolbox is an extension application that provides additional features to CasaOS.
   tagline:
-    en_us: Provides additional features to CasaOS.
+    en_US: Provides additional features to CasaOS.
   developer: WisdomSky
   author: WisdomSky
   screenshot_link:
@@ -49,7 +48,12 @@ x-casaos:
     - https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/screenshot-3.png
   icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/icon.png
   thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/casaos-toolbox/icon.png
-  category: Coolstore
+  category: Others
   title:
-    en_us: CasaOS Toolbox
-  port_map: '8088'
+    en_US: CasaOS Toolbox
+  port_map: "8088"
+  id: com.wisdomsky.coolstore.casaos-toolbox
+  index: /
+  scheme: http
+  version: "0.2"
+  update_at: "2026-10-30"

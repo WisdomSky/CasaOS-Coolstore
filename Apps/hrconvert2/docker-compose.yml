@@ -12,9 +12,9 @@ x-casaos:
     - amd64
   main: app
   description:
-    en_us: HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.
+    en_US: HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.
   tagline:
-    en_us: HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.
+    en_US: HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.
   developer: zelon88
   author: WisdomSky
   screenshot_link:
@@ -22,6 +22,11 @@ x-casaos:
   icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/hrconvert2/icon.png
   thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/hrconvert2/icon.png
   title:
-    en_us: HRConvert2
-  category: Coolstore
-  port_map: '8085'
+    en_US: HRConvert2
+  category: Productivity
+  port_map: "8085"
+  id: com.wisdomsky.coolstore.hrconvert2
+  index: /
+  scheme: http
+  version: latest
+  update_at: "2026-10-30"

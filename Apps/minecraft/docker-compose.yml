@@ -8,7 +8,7 @@ services:
       envs:
         - container: EULA
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 25565
         published: 25565
@@ -20,17 +20,21 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot. See the Versions section below for more information.
+    en_US: This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot. See the Versions section below for more information.
   tagline:
-    en_us: This Docker Image Provides A Minecraft Server That Will Automatically Download The Latest Stable Version At Startup. You Can Also Run/upgrade To Any Specific Version Or The Latest Snapshot. See The Versions Section Below For More Information.
-  developer: ''
+    en_US: This Docker Image Provides A Minecraft Server That Will Automatically Download The Latest Stable Version At Startup. You Can Also Run/upgrade To Any Specific Version Or The Latest Snapshot. See The Versions Section Below For More Information.
+  developer: itzg
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/minecraft.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/minecraft.png
   title:
-    en_us: Minecraft Server
-  category: Coolstore
+    en_US: Minecraft Server
+  category: Others
+  id: com.wisdomsky.coolstore.minecraft
+  index: /
+  port_map: "25565"
+  version: 2026.10.1
+  update_at: "2026-10-30"

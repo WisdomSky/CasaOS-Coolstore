@@ -1,60 +1,81 @@
 name: hestiacp
 services:
   app:
-    image: artsemkniazeu/hestiacp
+    image: dddmmm/hestiacp:1.10.5.2
+    hostname: hestia.localhost
     restart: unless-stopped
+    privileged: true
+    depends_on:
+      - mariadb
     environment:
-      TZ: $TZ
-    networks:
-      docnet:
-        ipv4_address: 10.1.1.0
+      MAIL_ADMIN: admin@hestia.localhost
+      AUTOSTART_DISABLED: clamav-daemon
     ports:
       - target: 8083
         published: 8083
         protocol: tcp
     volumes:
       - type: bind
-        source: /DATA/AppData/$AppID/config
-        target: /hestia
+        source: /DATA/AppData/hestiacp/backup
+        target: /backup
       - type: bind
-        source: /DATA/AppData/$AppID/home
+        source: /DATA/AppData/hestiacp/conf
+        target: /conf
+      - type: bind
+        source: /DATA/AppData/hestiacp/home
         target: /home
       - type: bind
-        source: /DATA/AppData/$AppID/backup
-        target: /backup
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-      - SYS_NICE
-      - DAC_READ_SEARCH
-networks:
-  docnet:
-    name: docnet
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.1.0.0/16
-          ip_range: 10.1.1.0/24
-          gateway: 10.1.0.1
+        source: /DATA/AppData/hestiacp/mariadb-logs
+        target: /var/log/mysql
+  mariadb:
+    image: mariadb:10.11.19
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_ROOT_HOST: "%"
+      MARIADB_INITDB_SKIP_TZINFO: 1
+    command:
+      - mariadbd
+      - "--max-connections=1000"
+      - "--max-user-connections=150"
+      - "--max-allowed-packet=128M"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/hestiacp/mariadb
+        target: /var/lib/mysql
+      - type: bind
+        source: /DATA/AppData/hestiacp/mariadb-logs
+        target: /var/log/mysql
 x-casaos:
   architectures:
     - amd64
-    - arm
-    - arm64
   main: app
   description:
-    en_us: Hestia Control Panel (HestiaCP) is an open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks.
+    en_US: Hestia Control Panel (HestiaCP) is an open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks.
   tagline:
-    en_us: An open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more. It provides a user-friendly interface for managing web hosting environments and simplifies various administrative tasks.
-  developer: ''
+    en_US: An open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more.
+  developer: HestiaCP
   author: WisdomSky
   icon: https://raw.githubusercontent.com/hestiacp/hestiacp/main/web/images/logo.png
   thumbnail: https://raw.githubusercontent.com/hestiacp/hestiacp/main/web/images/logo.png
   tips:
     before_install:
-      en_us: |
-        Default `username` is `admin` and the default password can be found inside the `/DATA/AppData/hestiacp/config/root/password.txt` file.
+      en_US: |
+        The first start can take several minutes while HestiaCP initializes.
+
+        Find the generated `admin` password in the app container logs, or set a new one from the CasaOS terminal:
+
+        ```
+        /usr/local/hestia/bin/v-change-user-password admin YOUR_NEW_PASSWORD
+        ```
+
+        The control panel is available on port `8083`. Add ports `80` and `443` in the app settings if you want HestiaCP to serve websites directly.
   title:
-    en_us: Hestia CP
-  category: Coolstore
-  port_map: '8083'
+    en_US: Hestia CP
+  category: Developer
+  id: com.wisdomsky.coolstore.hestiacp
+  index: /
+  port_map: "8083"
+  scheme: http
+  version: 1.10.5.2
+  update_at: "2026-10-30"

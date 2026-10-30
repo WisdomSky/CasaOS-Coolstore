@@ -1,7 +1,7 @@
 name: wg-easy
 services:
   app:
-    image: ghcr.io/wg-easy/wg-easy:15.5
+    image: ghcr.io/wg-easy/wg-easy:15.5.0
     environment:
       WG_HOST: 0.0.0.0
       PASSWORD: casaos
@@ -13,19 +13,19 @@ services:
       envs:
         - container: WG_HOST
           description:
-            en_us: Set here your DDNS domain
+            en_US: Set here your DDNS domain
         - container: PASSWORD
           description:
-            en_us: Leave blank to access WebUI without loggin
+            en_US: Leave blank to access WebUI without loggin
         - container: WG_PORT
           description:
-            en_us: ''
+            en_US: ""
         - container: WG_DEFAULT_DNS
           description:
-            en_us: ''
+            en_US: ""
         - container: WG_ALLOWED_IPS
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 51820
         published: 51820
@@ -46,21 +46,25 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: Fast VPN Server with easy to use User Interface
+    en_US: Fast VPN Server with easy to use User Interface
   tagline:
-    en_us: Fast Vpn Server With Easy To Use User Interface
-  developer: ''
+    en_US: Fast Vpn Server With Easy To Use User Interface
+  developer: Wg-Easy
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/wireguard.png
   tips:
     before_install:
-      en_us: Default password is `casaos`.
+      en_US: Default password is `casaos`.
   title:
-    en_us: Wireguard Server
-  category: Coolstore
-  port_map: '51821'
+    en_US: Wireguard Server
+  category: Networking
+  port_map: "51821"
+  id: com.wisdomsky.coolstore.wg-easy
+  index: /
+  scheme: http
+  version: 15.5.0
+  update_at: "2026-10-30"

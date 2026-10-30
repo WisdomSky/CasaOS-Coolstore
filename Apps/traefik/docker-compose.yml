@@ -43,14 +43,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Cloud-Native Networking Stack That Just Works.
+    en_US: Cloud-Native Networking Stack That Just Works.
   tagline:
-    en_us: Cloud-native Networking Stack That Just Works.
-  developer: ''
+    en_US: Cloud-native Networking Stack That Just Works.
+  developer: Traefik Labs
   author: WisdomSky
   icon: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/traefik.png
   thumbnail: https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/images/traefik.png
   title:
-    en_us: Traefik
-  category: Coolstore
-  port_map: '8080'
+    en_US: Traefik
+  category: Networking
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.traefik
+  index: /
+  scheme: http
+  version: 3.7.16
+  update_at: "2026-10-30"

@@ -1,7 +1,7 @@
 name: matter-server
 services:
   app:
-    image: ghcr.io/home-assistant-libs/python-matter-server:8.1
+    image: ghcr.io/home-assistant-libs/python-matter-server:8.1.0
     restart: unless-stopped
     network_mode: host
     volumes:
@@ -20,13 +20,18 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: A Matter Controller Server over WebSockets using the official Matter (formerly CHIP) SDK as a base and provides both a server and client implementation. The goal of this project is primary to have Matter support in Home Assistant but its universal approach makes it suitable to be used in other projects too.
+    en_US: A Matter Controller Server over WebSockets using the official Matter (formerly CHIP) SDK as a base and provides both a server and client implementation. The goal of this project is primary to have Matter support in Home Assistant but its universal approach makes it suitable to be used in other projects too.
   tagline:
-    en_us: Matter support in Home Assistant
+    en_US: Matter support in Home Assistant
   developer: Home Assistant
   author: WisdomSky
   icon: https://avatars.githubusercontent.com/u/61027988
   thumbnail: https://avatars.githubusercontent.com/u/61027988
-  category: Coolstore
+  category: Home
   title:
-    en_us: Matter Server
+    en_US: Matter Server
+  id: com.wisdomsky.coolstore.matter-server
+  index: /
+  port_map: "5580"
+  version: 8.1.0
+  update_at: "2026-10-30"

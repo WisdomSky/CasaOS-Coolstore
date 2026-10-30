@@ -19,19 +19,24 @@ x-casaos:
     - amd64
   main: app
   description:
-    en_us: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
+    en_US: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
   tagline:
-    en_us: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
+    en_US: Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.
   developer: InMethod
   author: WisdomSky
   icon: https://airvideo.app/images/icon.png
   thumbnail: https://airvideo.app/images/icon.png
-  category: Coolstore
+  category: Media
   tips:
     before_install:
-      en_us: |
+      en_US: |
         ### Note
 
         To find your `Server PIN`, look in the `network.log` file in `/DATA/AppData/airvideohd/config/logs` after the server has started.
   title:
-    en_us: Air Video HD
+    en_US: Air Video HD
+  id: com.wisdomsky.coolstore.airvideohd
+  index: /
+  port_map: "45633"
+  version: latest
+  update_at: "2026-10-30"

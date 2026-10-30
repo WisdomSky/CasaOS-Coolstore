@@ -29,26 +29,26 @@ services:
       envs:
         - container: PUID
           description:
-            en_us: for UserID
+            en_US: for UserID
         - container: PGID
           description:
-            en_us: for GroupID
+            en_US: for GroupID
         - container: TZ
           description:
-            en_us: specify a timezone to use, see this list.
+            en_US: specify a timezone to use, see this list.
         - container: POSTGRES_DB
           description:
-            en_us: Specify the name of a database to be created on image startup.
+            en_US: Specify the name of a database to be created on image startup.
         - container: POSTGRES_USER
           description:
-            en_us: Postgres server username
+            en_US: Postgres server username
         - container: POSTGRES_PASSWORD
           description:
-            en_us: Postgres server password
+            en_US: Postgres server password
       volumes:
         - container: /var/lib/postgresql/data
           description:
-            en_us: Directory where Postgres database data is stored
+            en_US: Directory where Postgres database data is stored
     volumes:
       - type: bind
         source: /DATA/AppData/peppermint/postgres/data
@@ -58,9 +58,9 @@ x-casaos:
     - amd64
   main: app
   description:
-    en_us: Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
+    en_US: Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
   tagline:
-    en_us: Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
+    en_US: Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.
   developer: Pepperlabs
   author: WisdomSky
   screenshot_link:
@@ -76,11 +76,11 @@ x-casaos:
   icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/peppermint/icon.png
   thumbnail: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@main/Apps/peppermint/icon.png
   title:
-    en_us: Peppermint
-  category: Coolstore
+    en_US: Peppermint
+  category: Productivity
   tips:
     before_install:
-      en_us: |
+      en_US: |
         ### Additional Instructions:
 
         After finished installing, open the `app settings` and update the `BASE_URL` to point it to your Home Server's IP Address.
@@ -95,4 +95,9 @@ x-casaos:
         Username: `admin@admin.com`
 
         Password: `1234`
-  port_map: '5000'
+  port_map: "5000"
+  id: com.wisdomsky.coolstore.peppermint
+  index: /
+  scheme: http
+  version: latest
+  update_at: "2026-10-30"

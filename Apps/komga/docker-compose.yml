@@ -11,10 +11,10 @@ services:
       envs:
         - container: PUID
           description:
-            en_us: ''
+            en_US: ""
         - container: PGID
           description:
-            en_us: ''
+            en_US: ""
     ports:
       - target: 25600
         published: 25600
@@ -33,14 +33,19 @@ x-casaos:
     - arm64
   main: app
   description:
-    en_us: Koomga Manga, Comic and E-Book Server
+    en_US: Koomga Manga, Comic and E-Book Server
   tagline:
-    en_us: Koomga Manga, Comic And E-book Server
-  developer: ''
+    en_US: Koomga Manga, Comic And E-book Server
+  developer: Gotson
   author: WisdomSky
   icon: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
   thumbnail: https://raw.githubusercontent.com/gotson/komga/master/.github/readme-images/app-icon.png
   title:
-    en_us: Komga
-  category: Coolstore
-  port_map: '25600 '
+    en_US: Komga
+  category: Media
+  port_map: "25600"
+  id: com.wisdomsky.coolstore.komga
+  index: /
+  scheme: http
+  version: 1.29.2
+  update_at: "2026-10-30"

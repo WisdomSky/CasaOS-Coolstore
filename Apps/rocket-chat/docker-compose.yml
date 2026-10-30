@@ -3,21 +3,20 @@ services:
   app:
     image: rocket.chat:8.9.0
     restart: unless-stopped
+    network_mode: host
     environment:
-      MONGO_OPLOG_URL: mongodb://db:27017/local
+      MONGO_URL: mongodb://127.0.0.1:27017/rocketchat
+      ROOT_URL: http://localhost:3000
     depends_on:
       - db
-    ports:
-      - target: 3000
-        published: '3000'
-        protocol: tcp
   db:
-    image: mongo:9.0.4
+    image: mongo:8.0.34
     restart: unless-stopped
-    environment:
-      PUID: $PUID
-      PGID: $PGID
-      TZ: $TZ
+    network_mode: host
+    command:
+      - mongod
+      - "--bind_ip"
+      - 127.0.0.1
     volumes:
       - type: bind
         source: /DATA/AppData/rocket-chat/mongo/data/configdb
@@ -28,26 +27,32 @@ services:
 x-casaos:
   architectures:
     - amd64
-    - arm
     - arm64
   main: app
   description:
-    en_us: Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection. It enables real-time conversations between colleagues, with other companies or with your customers, across devices on web, desktop or mobile.
+    en_US: Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection. It enables real-time conversations between colleagues, with other companies or with your customers, across devices on web, desktop or mobile.
   tagline:
-    en_us: Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection.
+    en_US: Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection.
   developer: Rocket Chat
-  author: ''
+  author: WisdomSky
   icon: https://static.cdnlogo.com/logos/r/32/rocket-chat.svg
   thumbnail: https://static.cdnlogo.com/logos/r/32/rocket-chat.svg
   title:
-    en_us: Rocket. Chat
+    en_US: Rocket. Chat
   tips:
     before_install:
-      en_us: |
+      en_US: |-
         ### Note
 
-        After finished installing the Rocket. Chat app, wait for at least 1 to 5 minutes before opening the Web UI.
+        After installing the Rocket. Chat app, wait for at least 1 to 5 minutes before opening the Web UI.
 
-        Opening the Web UI right after the installation will cause the Rocket. Chat app to crash and never recover which requires re-installing.
-  category: Chat
-  port_map: '3000'
+        Opening the Web UI right after installation can cause Rocket. Chat to crash before it finishes initializing.
+
+        If you access CasaOS from another device, change `ROOT_URL` in the app settings to `http://<casaos-ip>:3000`.
+  category: Social
+  id: com.wisdomsky.coolstore.rocket-chat
+  index: /
+  port_map: "3000"
+  scheme: http
+  version: 8.9.0
+  update_at: "2026-10-30"
