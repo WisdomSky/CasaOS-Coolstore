@@ -1,0 +1,47 @@
+name: vdfusion
+services:
+  app:
+    image: ghcr.io/vsl86/vdfusion:v1.2.0
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      VDF_DB_PATH: /app/storage/vdf.db
+      VDF_LOG_LEVEL: info
+      VDF_SERVER_ADDR: ":8080"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/vdfusion
+        target: /app/storage
+      - type: bind
+        source: /DATA/Media
+        target: /media
+x-casaos:
+  architectures:
+    - amd64
+  main: app
+  description:
+    en_US: Headless video duplicate finder with a web UI, perceptual hashing, FFmpeg probing, and corruption detection. Designed for NAS and home-server libraries.
+  tagline:
+    en_US: Find duplicate videos by content, not filename.
+  developer: vsl86
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/vsl86/vdfusion/main/vdfusion-logo.svg
+  thumbnail: https://raw.githubusercontent.com/vsl86/vdfusion/main/vdfusion-logo.svg
+  screenshot_link:
+    - https://github.com/user-attachments/assets/877064fe-b85a-44d1-96a6-97b74afc6293
+    - https://github.com/user-attachments/assets/81336190-8426-43d7-839d-31fce83c3c48
+  category: Media
+  tips:
+    before_install:
+      en_US: VDFusion has no authentication. Keep it on a trusted LAN or behind a reverse proxy. The app is amd64-only.
+  title:
+    en_US: VDFusion
+  id: com.wisdomsky.coolstore.vdfusion
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 1.2.0
+  update_at: "2026-10-30"
