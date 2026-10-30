@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Fast VPN Server with easy to use User Interface",
+  "tagline": "Fast Vpn Server With Easy To Use User Interface",
+  "developer": "Wg-Easy",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.wg-easy/assets/wireguard.webp",
+  "tips": {
+    "before_install": "Default password is `casaos`."
+  },
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Wireguard Server",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.wg-easy",
+  "version": "15.5.0",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 82834760,
+    "arm64": 82117994
+  }
+}

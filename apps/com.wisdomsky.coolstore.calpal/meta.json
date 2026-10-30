@@ -1,0 +1,33 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Lightweight Calendly alternative with booking pages, ICS invites, timezone handling, and optional Google/Microsoft calendar sync. Single Go binary with embedded SQLite.",
+  "tagline": "Self-hosted scheduling without the SaaS.",
+  "developer": "grimmdev",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.calpal/assets/icon.webp",
+  "screenshot_link": [
+    "/apps/com.wisdomsky.coolstore.calpal/assets/img1.webp",
+    "/apps/com.wisdomsky.coolstore.calpal/assets/img2.webp",
+    "/apps/com.wisdomsky.coolstore.calpal/assets/img3.webp"
+  ],
+  "category": "Productivity",
+  "tips": {
+    "before_install": "After installation, change `BASE_URL` in the app settings to your CasaOS address, for example `http://192.168.1.10:8080`. The first signup creates the admin account."
+  },
+  "update_at": "2026-10-30",
+  "title": "CalPal",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.calpal",
+  "version": "1.0.0",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 9927665,
+    "arm64": 9856749
+  }
+}

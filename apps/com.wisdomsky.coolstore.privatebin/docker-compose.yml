@@ -1,0 +1,29 @@
+name: privatebin
+services:
+  app:
+    image: privatebin/nginx-fpm-alpine:2.1.0
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /srv/data
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /srv/cfg
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.privatebin/assets/icon.png
+  title:
+    en_US: Privatebin
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.privatebin
+  index: /
+  scheme: http
+  version: 2.1.0

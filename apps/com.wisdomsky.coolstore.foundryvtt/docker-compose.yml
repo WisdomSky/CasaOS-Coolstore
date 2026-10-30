@@ -1,0 +1,34 @@
+name: foundryvtt
+services:
+  app:
+    image: ghcr.io/felddy/foundryvtt:14.369
+    hostname: foundryvtt
+    restart: unless-stopped
+    ports:
+      - target: 30000
+        published: "30000"
+        protocol: tcp
+    environment:
+      FOUNDRY_USERNAME: you@example.com
+      FOUNDRY_PASSWORD: change-me
+      FOUNDRY_ADMIN_KEY: casaos
+      FOUNDRY_LICENSE_KEY: ""
+      FOUNDRY_MINIFY_STATIC_FILES: "true"
+      FOUNDRY_COMPRESS_WEBSOCKET: "true"
+      FOUNDRY_TELEMETRY: "false"
+      TZ: $TZ
+      CONTAINER_PRESERVE_CONFIG: "true"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/foundryvtt/data
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.foundryvtt/assets/icon.png
+  title:
+    en_US: FoundryVTT
+  id: com.wisdomsky.coolstore.foundryvtt
+  index: /
+  port_map: "30000"
+  scheme: http
+  version: "14.369"

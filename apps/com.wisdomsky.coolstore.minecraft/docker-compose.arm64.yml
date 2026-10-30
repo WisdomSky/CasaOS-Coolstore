@@ -1,0 +1,23 @@
+name: minecraft
+services:
+  app:
+    image: itzg/minecraft-server:2026.10.1@sha256:3f821289276c4dd5073781b56a3cb922505615db94fd637bcc2490e06e1bfd5b
+    environment:
+      EULA: true
+    ports:
+      - target: 25565
+        published: 25565
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.minecraft/assets/icon.png
+  title:
+    en_US: Minecraft Server
+  id: com.wisdomsky.coolstore.minecraft
+  index: /
+  port_map: "25565"
+  version: 2026.10.1

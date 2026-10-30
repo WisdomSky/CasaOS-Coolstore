@@ -1,0 +1,35 @@
+name: caddy
+services:
+  app:
+    image: caddy:2.11.7@sha256:04913b1da43339a40ad1ea87827d70a576ac5aa6cf674c6e24fdca675887533a
+    restart: unless-stopped
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+      - target: 443
+        published: 443
+        protocol: tcp
+      - target: 2019
+        published: 2019
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/caddy/data
+        target: /data
+      - type: bind
+        source: /DATA/AppData/caddy/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/caddy/caddyfile
+        target: /etc/caddy/caddyfile
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.caddy/assets/icon.png
+  title:
+    en_US: Caddy
+  port_map: "80"
+  id: com.wisdomsky.coolstore.caddy
+  index: /
+  scheme: http
+  version: 2.11.7

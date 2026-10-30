@@ -1,0 +1,52 @@
+name: ghost
+services:
+  app:
+    image: ghost:6.73.0@sha256:3656324ad804308b9ef39571b15b41465cdee64f6a78d1807719b5ea379688fd
+    environment:
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: casaos
+      database__connection__password: casaos
+      database__connection__database: casaos
+    ports:
+      - target: 2368
+        published: 2368
+        protocol: tcp
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ghost/content
+        target: /var/lib/ghost/content
+  db:
+    image: mariadb:13.0.2@sha256:0231965d72f758adea93162ed7be119dfd49f14172c5754ed8c9d49b0f17bbc6
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: casaos
+      MYSQL_USER: casaos
+      MYSQL_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/ghost/mysql
+        target: /var/lib/mysql
+    healthcheck:
+      test:
+        - CMD
+        - healthcheck.sh
+        - "--connect"
+        - "--innodb_initialized"
+      interval: 10s
+      timeout: 5s
+      retries: 3
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.ghost/assets/icon.png
+  title:
+    en_US: Ghost
+  port_map: "2368"
+  id: com.wisdomsky.coolstore.ghost
+  index: /
+  scheme: http
+  version: 6.73.0

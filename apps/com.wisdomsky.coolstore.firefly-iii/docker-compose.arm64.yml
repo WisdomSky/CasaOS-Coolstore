@@ -1,0 +1,68 @@
+name: firefly-iii
+services:
+  app:
+    image: fireflyiii/core:version-6.7.9@sha256:6915a020d5b0c97f7dd1c0ff19221536510ac117c1aac84dc53ea54981b255a6
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      APP_ENV: production
+      APP_DEBUG: "false"
+      APP_KEY: 0123456789abcdef0123456789abcdef
+      APP_URL: http://localhost:8080
+      SITE_OWNER: admin@example.com
+      DEFAULT_LANGUAGE: en_US
+      DEFAULT_LOCALE: equal
+      TZ: $TZ
+      TRUSTED_PROXIES: "**"
+      DB_CONNECTION: mysql
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_DATABASE: firefly
+      DB_USERNAME: firefly
+      DB_PASSWORD: casaos
+      CACHE_STORE: file
+      SESSION_DRIVER: file
+      STATIC_CRON_TOKEN: abcdef0123456789abcdef0123456789
+    volumes:
+      - type: bind
+        source: /DATA/AppData/firefly-iii/upload
+        target: /var/www/html/storage/upload
+    depends_on:
+      - db
+  db:
+    image: mariadb:11.8.9@sha256:51d5a3273562df11f0642bf1815ae64922f1657b0ee0edff35b65a4f489c3925
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: casaos
+      MARIADB_DATABASE: firefly
+      MARIADB_USER: firefly
+      MARIADB_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/firefly-iii/db
+        target: /var/lib/mysql
+  cron:
+    image: alpine:latest@sha256:e311ae748be7f56ae5cba304bc488f0786df68ee507513f654a5cc8597cffb42
+    restart: unless-stopped
+    depends_on:
+      - app
+    environment:
+      TZ: $TZ
+      STATIC_CRON_TOKEN: abcdef0123456789abcdef0123456789
+    command:
+      - sh
+      - "-c"
+      - apk add --no-cache tzdata && (ln -s /usr/share/zoneinfo/$$TZ /etc/localtime || true) && echo "0 3 * * * wget -qO- http://app:8080/api/v1/cron/$$STATIC_CRON_TOKEN;echo" | crontab - && crond -f -L /dev/stdout
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.firefly-iii/assets/icon.png
+  title:
+    en_US: Firefly III
+  id: com.wisdomsky.coolstore.firefly-iii
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 6.7.9

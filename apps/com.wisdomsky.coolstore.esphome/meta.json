@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+  "tagline": "ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+  "developer": "ESPHome",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.esphome/assets/45919759.webp",
+  "category": "Home",
+  "tips": {
+    "before_install": "| Label | Value |\n| --- | --- |\n| Username | `casaos` |\n| Password | `casaos` |\n"
+  },
+  "update_at": "2026-10-30",
+  "title": "ESPHome",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.esphome",
+  "version": "2026.10",
+  "categories": [
+    "home"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 259998838,
+    "arm64": 250971287
+  }
+}

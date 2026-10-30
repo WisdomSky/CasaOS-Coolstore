@@ -1,0 +1,30 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64",
+    "arm"
+  ],
+  "description": "Open-source modular smart-mirror platform with clock, weather, calendar, news, and hundreds of community modules. Runs headless in server-only mode and renders in any browser.",
+  "tagline": "Turn a mirror into a modular smart display.",
+  "developer": "MagicMirrorOrg",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.magicmirror/assets/favicon.svg",
+  "category": "Home",
+  "tips": {
+    "before_install": "MagicMirror has no authentication. Keep it on a trusted LAN. Edit `/DATA/AppData/magicmirror/config/config.js` to add modules, calendars, and news feeds."
+  },
+  "update_at": "2026-10-30",
+  "title": "MagicMirror²",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.magicmirror",
+  "version": "2.38.0",
+  "categories": [
+    "home"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 71879832,
+    "arm": 217337597,
+    "arm64": 71837093
+  }
+}

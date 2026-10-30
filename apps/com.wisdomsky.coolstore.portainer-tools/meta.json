@@ -1,0 +1,23 @@
+{
+  "architectures": [
+    "amd64"
+  ],
+  "description": "Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server. You can set the Portainer App Templates URL from within the application to easily switch App Template definitions. Detailed information about installing and using the application and more can be found on https://www.technorabilia.com/portainer-tools-merge-and-host-app-template-definitions.",
+  "tagline": "Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server.",
+  "developer": "Technorabilia",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.portainer-tools/assets/icon.webp",
+  "category": "Developer",
+  "update_at": "2026-10-30",
+  "title": "Portainer Tools",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.portainer-tools",
+  "version": "latest",
+  "categories": [
+    "developer"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 0
+  }
+}

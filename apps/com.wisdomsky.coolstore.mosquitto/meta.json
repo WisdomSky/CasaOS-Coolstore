@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Eclipse Mosquitto is an open source implementation of a server for versions 5, 3.1.1, and 3.1 of the MQTT protocol.\rYou will need to create /portainer/Files/AppData/Config/Mosquitto/config/mosquitto.conf and if needed your password file.\rHave a look on https://mosquitto.org/man/mosquitto_passwd-1.html",
+  "tagline": "Eclipse Mosquitto Is An Open Source Implementation Of A Server For Versions 5, 3.1.1, And 3.1 Of The Mqtt Protocol.\r\nyou Will Need To Create /portainer/files/appdata/config/mosquitto/config/mosquitto.conf And If Needed Your Password File.\r\nhave A Look On Https://mosquitto.org/man/mosquitto_passwd-1.html",
+  "developer": "Eclipse Foundation",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.mosquitto/assets/logo.webp",
+  "category": "Developer",
+  "update_at": "2026-10-30",
+  "title": "Eclipse Mosquitto",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.mosquitto",
+  "version": "2.0.22",
+  "categories": [
+    "developer"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 7724619,
+    "arm": 7004247,
+    "arm64": 8042514
+  }
+}

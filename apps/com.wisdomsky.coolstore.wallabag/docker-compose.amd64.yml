@@ -1,0 +1,59 @@
+name: wallabag
+services:
+  app:
+    image: wallabag/wallabag:2.6.15@sha256:e88e7fa8300a69e9f15ef1c1fe4b6154c284e9a62002503b3a6e6725d0d5d967
+    restart: unless-stopped
+    environment:
+      SYMFONY__ENV__DATABASE_DRIVER: pdo_mysql
+      SYMFONY__ENV__DATABASE_HOST: db
+      SYMFONY__ENV__DATABASE_PORT: 3306
+      SYMFONY__ENV__DATABASE_NAME: wallabag
+      SYMFONY__ENV__DATABASE_USER: wallabag
+      SYMFONY__ENV__DATABASE_PASSWORD: casaos
+      SYMFONY__ENV__DATABASE_CHARSET: utf8mb4
+      SYMFONY__ENV__DATABASE_TABLE_PREFIX: wallabag_
+      SYMFONY__ENV__SECRET: casaos-wallabag-secret-change-me
+      SYMFONY__ENV__DOMAIN_NAME: http://localhost:8080
+      SYMFONY__ENV__SERVER_NAME: Wallabag
+      SYMFONY__ENV__MAILER_DSN: smtp://127.0.0.1
+      SYMFONY__ENV__FROM_EMAIL: wallabag@example.com
+    depends_on:
+      - db
+      - redis
+    ports:
+      - target: 80
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Wallabag/images
+        target: /var/www/wallabag/web/assets/images
+  db:
+    image: mariadb:10.11.19@sha256:6c65a843396dc6c78dd0da19eccaa0a91d25d9d26a4c2afcb75010ac3f59f5ea
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: casaos
+      MARIADB_DATABASE: wallabag
+      MARIADB_USER: wallabag
+      MARIADB_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Wallabag/mysql
+        target: /var/lib/mysql
+  redis:
+    image: redis:7.4.12-alpine@sha256:1cf73a2f04808e55a8bd2f5706c2aa0ebb0f71938f93deb7af79f48311cd5cb9
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/Wallabag/redis
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.wallabag/assets/icon.png
+  title:
+    en_US: Wallabag
+  id: com.wisdomsky.coolstore.wallabag
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 2.6.15

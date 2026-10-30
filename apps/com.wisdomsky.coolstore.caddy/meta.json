@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Caddy - The Ultimate Server with Automatic HTTPS.",
+  "tagline": "Caddy - The Ultimate Server With Automatic Https.",
+  "developer": "Caddy",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.caddy/assets/caddy.webp",
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Caddy",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.caddy",
+  "version": "2.11.7",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 24878392,
+    "arm": 23570959,
+    "arm64": 23639921
+  }
+}

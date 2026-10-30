@@ -1,0 +1,37 @@
+name: rustdesk-server
+services:
+  hbbs:
+    image: rustdesk/rustdesk-server-s6:1
+    entrypoint:
+      - /usr/bin/hbbs
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rustdesk/data
+        target: /data
+    network_mode: host
+    depends_on:
+      - hbbr
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+  hbbr:
+    image: rustdesk/rustdesk-server-s6:1
+    entrypoint:
+      - /usr/bin/hbbr
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rustdesk/data
+        target: /data
+    network_mode: host
+    restart: unless-stopped
+    healthcheck:
+      disable: true
+x-casaos:
+  main: hbbs
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.rustdesk-server/assets/icon.png
+  title:
+    en_US: Rustdesk Server
+  id: com.wisdomsky.coolstore.rustdesk-server
+  index: /
+  port_map: "21116"
+  version: "1"

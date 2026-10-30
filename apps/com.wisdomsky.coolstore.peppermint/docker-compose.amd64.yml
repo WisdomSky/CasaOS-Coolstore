@@ -1,0 +1,41 @@
+name: peppermint
+services:
+  app:
+    image: pepperlabs/peppermint:latest@sha256:049d540f5fbe09498bde3628ea184c6939b5cf75e0c55cf8ae66d43a3feeb991
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    depends_on:
+      - db
+    environment:
+      PORT: 5000
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+      DB_HOST: db
+      BASE_URL: http://casaos.local:5000
+    restart: unless-stopped
+  db:
+    image: postgres:18.6@sha256:f4b419e350fd98d4a8429603295208976dea4c8fb8326d818d346d3e29f1db6f
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/peppermint/postgres/data
+        target: /var/lib/postgresql/data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.peppermint/assets/icon.png
+  title:
+    en_US: Peppermint
+  port_map: "5000"
+  id: com.wisdomsky.coolstore.peppermint
+  index: /
+  scheme: http
+  version: latest

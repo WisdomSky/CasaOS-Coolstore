@@ -1,0 +1,28 @@
+name: speedtest-tracker
+services:
+  app:
+    image: henrywhitaker3/speedtest-tracker:v1.12.3-dev@sha256:548d45f87911c11d67d9182f2fe29acdd2ae4f6886bf7cd30fefa6172132b9e3
+    restart: unless-stopped
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      TZ: $TZ
+      OOKLA_EULA_GDPR: true
+    ports:
+      - target: 80
+        published: 8765
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /config
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.speedtest-tracker/assets/icon.png
+  title:
+    en_US: Speedtest Tracker
+  port_map: "8765"
+  id: com.wisdomsky.coolstore.speedtest-tracker
+  index: /
+  scheme: http
+  version: 1.12.3-dev

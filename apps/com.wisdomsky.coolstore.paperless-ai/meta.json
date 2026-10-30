@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Automatically classifies Paperless-ngx documents with titles, tags, correspondents, and document types, and adds RAG-based natural-language search over the archive.",
+  "tagline": "AI tagging and chat for Paperless-ngx.",
+  "developer": "clusterzx",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.paperless-ai/assets/paperless-ai.webp",
+  "category": "Productivity",
+  "tips": {
+    "before_install": "Requires an existing Paperless-ngx instance. After installation, open the app and enter your Paperless URL, API token, and AI provider settings. Use `http://<casaos-ip>:8005/api` if Paperless runs in this store."
+  },
+  "update_at": "2026-10-30",
+  "title": "Paperless-AI",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.paperless-ai",
+  "version": "3.0.9",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 4616601769,
+    "arm64": 621433425
+  }
+}

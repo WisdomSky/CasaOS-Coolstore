@@ -1,0 +1,30 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64",
+    "arm"
+  ],
+  "description": "Briefing is a WebRTC group video room with screen sharing, chat, and no account system. Rooms are joined by URL and media flows peer-to-peer.",
+  "tagline": "Secure direct video group chat.",
+  "developer": "holtwick",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.briefing/assets/icon.webp",
+  "category": "Social",
+  "tips": {
+    "before_install": "Camera and microphone access requires HTTPS in most browsers. Use a reverse proxy with TLS for internet access. A TURN server may be needed for restrictive NATs."
+  },
+  "update_at": "2026-10-30",
+  "title": "Briefing",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.briefing",
+  "version": "3.1.10",
+  "categories": [
+    "social"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 56388388,
+    "arm": 54022328,
+    "arm64": 56195437
+  }
+}

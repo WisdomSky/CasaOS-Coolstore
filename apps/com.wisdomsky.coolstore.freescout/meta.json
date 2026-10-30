@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "FreeScout is a lightweight shared mailbox and help desk with conversations, assignments, modules, and customer management. It can pull mail over IMAP and send via SMTP.",
+  "tagline": "Self-hosted help desk and shared inbox.",
+  "developer": "FreeScout",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.freescout/assets/freescout.webp",
+  "category": "Productivity",
+  "tips": {
+    "before_install": "The initial admin is `admin@example.com` with password `casaos`. Change it after first login. Set `APP_URL` to your CasaOS address and configure IMAP/SMTP in the app settings for real mail flow."
+  },
+  "update_at": "2026-10-30",
+  "title": "FreeScout",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.freescout",
+  "version": "2.2.22",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 283613739,
+    "arm64": 278849675
+  }
+}

@@ -1,0 +1,29 @@
+name: archivebox
+services:
+  app:
+    image: archivebox/archivebox:0.9.77@sha256:cf4f0421e3298fefe8e9355f7e478b466f8bdf19d2bb78430d981d7f82fb49da
+    restart: unless-stopped
+    environment:
+      ALLOWED_HOSTS: "*"
+      MEDIA_MAX_SIZE: 500m
+      PUBLIC_INDEX: true
+      PUBLIC_SNAPSHOTS: true
+      PUBLIC_ADD_VIEW: true
+    ports:
+      - target: 8000
+        published: 8002
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.archivebox/assets/icon.png
+  title:
+    en_US: Archivebox
+  port_map: "8002"
+  id: com.wisdomsky.coolstore.archivebox
+  index: /
+  scheme: http
+  version: 0.9.77

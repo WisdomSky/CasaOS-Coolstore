@@ -1,0 +1,57 @@
+name: freescout
+services:
+  app:
+    image: nfrastack/freescout:2.2.22@sha256:9f945002d0454b2ef5d53a804760d1bd187cc37c87b828ddf945d3be2914e3fd
+    restart: unless-stopped
+    ports:
+      - target: 80
+        published: "8080"
+        protocol: tcp
+    environment:
+      CONTAINER_NAME: freescout-app
+      TIMEZONE: $TZ
+      APP_URL: http://localhost:8080
+      DB_TYPE: mariadb
+      DB_HOST: db
+      DB_PORT: "3306"
+      DB_NAME: freescout
+      DB_USER: freescout
+      DB_PASS: casaos
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_FIRST_NAME: FreeScout
+      ADMIN_LAST_NAME: Admin
+      ADMIN_PASS: casaos
+      SCHEDULER_TYPE: service
+      FREESCOUT_APP_LOCALE: en
+      FREESCOUT_MAIL_DRIVER: log
+    volumes:
+      - type: bind
+        source: /DATA/AppData/freescout/data
+        target: /data
+      - type: bind
+        source: /DATA/AppData/freescout/logs
+        target: /logs
+    depends_on:
+      - db
+  db:
+    image: mariadb:11.8.9@sha256:51d5a3273562df11f0642bf1815ae64922f1657b0ee0edff35b65a4f489c3925
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: casaos
+      MARIADB_DATABASE: freescout
+      MARIADB_USER: freescout
+      MARIADB_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/freescout/db
+        target: /var/lib/mysql
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.freescout/assets/icon.png
+  title:
+    en_US: FreeScout
+  id: com.wisdomsky.coolstore.freescout
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 2.2.22

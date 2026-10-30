@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Run a Speedtest every hour and graph the results.  See https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/tags for arch options",
+  "tagline": "Run A Speedtest Every Hour And Graph The Results.  See Https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/tags For Arch Options",
+  "developer": "Henry Whitaker",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.speedtest-tracker/assets/speedtest-tracker.webp",
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Speedtest Tracker",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.speedtest-tracker",
+  "version": "1.12.3-dev",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 465605805,
+    "arm": 465605805,
+    "arm64": 465605805
+  }
+}

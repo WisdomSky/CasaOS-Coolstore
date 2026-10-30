@@ -1,0 +1,36 @@
+name: rocket-chat
+services:
+  app:
+    image: rocket.chat:8.9.0
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      MONGO_URL: mongodb://127.0.0.1:27017/rocketchat
+      ROOT_URL: http://localhost:3000
+    depends_on:
+      - db
+  db:
+    image: mongo:8.0.34@sha256:ec4aeabb7db10f2fb3cde7e1982becef96779646c34c220a7fbcfe2f880b2846
+    restart: unless-stopped
+    network_mode: host
+    command:
+      - mongod
+      - "--bind_ip"
+      - 127.0.0.1
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rocket-chat/mongo/data/configdb
+        target: /data/configdb
+      - type: bind
+        source: /DATA/AppData/rocket-chat/mongo/data/db
+        target: /data/db
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.rocket-chat/assets/icon.svg
+  title:
+    en_US: Rocket. Chat
+  id: com.wisdomsky.coolstore.rocket-chat
+  index: /
+  port_map: "3000"
+  scheme: http
+  version: 8.9.0

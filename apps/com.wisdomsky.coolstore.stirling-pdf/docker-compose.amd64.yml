@@ -1,0 +1,23 @@
+name: stirling-pdf
+services:
+  app:
+    image: frooodle/s-pdf:3.2.2@sha256:0d3fa730272ddb037c71db6ae760e1af991722d88c2129f41c31feee6fca30e6
+    restart: unless-stopped
+    environment:
+      APP_HOME_NAME: Stirling PDF
+      LANG: en_US.UTF-8
+      LANGUAGE: en_US:en
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.stirling-pdf/assets/icon.png
+  title:
+    en_US: Stirling PDF
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.stirling-pdf
+  index: /
+  scheme: http
+  version: 3.2.2

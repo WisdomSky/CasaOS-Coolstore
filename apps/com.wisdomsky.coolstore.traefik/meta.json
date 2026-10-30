@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Cloud-Native Networking Stack That Just Works.",
+  "tagline": "Cloud-native Networking Stack That Just Works.",
+  "developer": "Traefik Labs",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.traefik/assets/traefik.webp",
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Traefik",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.traefik",
+  "version": "3.7.16",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 55392025,
+    "arm": 50717317,
+    "arm64": 50197716
+  }
+}

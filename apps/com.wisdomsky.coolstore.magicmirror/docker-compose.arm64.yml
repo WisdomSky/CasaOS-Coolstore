@@ -1,0 +1,25 @@
+name: magicmirror
+services:
+  app:
+    image: karsten13/magicmirror:alpine-v2.38.0@sha256:17b9cb07a2d2c28b69ea8ae13f31614ba935081c9bab8ac1f9c9066e8db5d6b7
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/magicmirror/config
+        target: /opt/magic_mirror/config
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.magicmirror/assets/icon.svg
+  title:
+    en_US: MagicMirror²
+  id: com.wisdomsky.coolstore.magicmirror
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 2.38.0

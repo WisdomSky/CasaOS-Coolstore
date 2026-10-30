@@ -1,0 +1,37 @@
+name: forgejo
+services:
+  app:
+    image: codeberg.org/forgejo/forgejo:17.0.1@sha256:ed10aa4d76273770413ba4520dc65359c7c525b780aca3097da889560d9bff39
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "3002"
+        protocol: tcp
+      - target: 22
+        published: "2222"
+        protocol: tcp
+    environment:
+      USER_UID: "1000"
+      USER_GID: "1000"
+      FORGEJO__server__ROOT_URL: http://localhost:3002/
+      FORGEJO__server__SSH_DOMAIN: localhost
+      FORGEJO__server__SSH_PORT: "2222"
+      FORGEJO__server__SSH_LISTEN_PORT: "22"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/forgejo/data
+        target: /data
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.forgejo/assets/icon.png
+  title:
+    en_US: Forgejo
+  id: com.wisdomsky.coolstore.forgejo
+  index: /
+  port_map: "3002"
+  scheme: http
+  version: 17.0.1

@@ -1,0 +1,30 @@
+{
+  "architectures": [
+    "amd64"
+  ],
+  "description": "Headless video duplicate finder with a web UI, perceptual hashing, FFmpeg probing, and corruption detection. Designed for NAS and home-server libraries.",
+  "tagline": "Find duplicate videos by content, not filename.",
+  "developer": "vsl86",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.vdfusion/assets/vdfusion-logo.svg",
+  "screenshot_link": [
+    "/apps/com.wisdomsky.coolstore.vdfusion/assets/877064fe-b85a-44d1-96a6-97b74afc6293.webp",
+    "/apps/com.wisdomsky.coolstore.vdfusion/assets/81336190-8426-43d7-839d-31fce83c3c48.webp"
+  ],
+  "category": "Media",
+  "tips": {
+    "before_install": "VDFusion has no authentication. Keep it on a trusted LAN or behind a reverse proxy. The app is amd64-only."
+  },
+  "update_at": "2026-10-30",
+  "title": "VDFusion",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.vdfusion",
+  "version": "1.2.0",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 68269214
+  }
+}

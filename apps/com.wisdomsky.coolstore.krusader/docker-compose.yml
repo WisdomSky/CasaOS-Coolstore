@@ -1,0 +1,49 @@
+name: krusader
+services:
+  app:
+    image: binhex/arch-krusader:latest
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - target: 6080
+        published: "6080"
+        protocol: tcp
+      - target: 5900
+        published: "5900"
+        protocol: tcp
+    environment:
+      TEMP_FOLDER: /config/krusader/tmp
+      WEBPAGE_TITLE: Krusader
+      VNC_PASSWORD: casaos
+      ENABLE_STARTUP_SCRIPTS: "no"
+      UMASK: "022"
+      WEBUI_PORT: "6080"
+      PUID: $PUID
+      PGID: $PGID
+    volumes:
+      - type: bind
+        source: /DATA/AppData/krusader/config
+        target: /config
+      - type: bind
+        source: /DATA
+        target: /DATA
+      - type: bind
+        source: /mnt
+        target: /mnt
+      - type: bind
+        source: /media
+        target: /media
+      - type: bind
+        source: /etc/localtime
+        target: /etc/localtime
+        read_only: true
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.krusader/assets/icon.png
+  title:
+    en_US: Krusader
+  id: com.wisdomsky.coolstore.krusader
+  index: /vnc.html?resize=remote&autoconnect=1
+  port_map: "6080"
+  scheme: http
+  version: latest

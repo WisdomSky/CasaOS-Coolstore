@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Kavita Manga, Comic and E-Book Server",
+  "tagline": "Kavita Manga, Comic And E-book Server",
+  "developer": "Kareadita",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.kavita/assets/logo.webp",
+  "category": "Media",
+  "update_at": "2026-10-30",
+  "title": "Kavita",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.kavita",
+  "version": "0.9.1",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 253458279,
+    "arm": 241745131,
+    "arm64": 248657044
+  }
+}

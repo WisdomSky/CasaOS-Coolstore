@@ -1,0 +1,30 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64",
+    "arm"
+  ],
+  "description": "RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.",
+  "tagline": "RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.",
+  "developer": "RustDesk",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.rustdesk-server/assets/icon.webp",
+  "tips": {
+    "before_install": "RustDesk clients connect to this server using your CasaOS host IP and port `21116`.\n\nThe container image includes a shell, so the CasaOS terminal can be used normally.\n"
+  },
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Rustdesk Server",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.rustdesk-server",
+  "version": "1",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 11399776,
+    "arm": 10423467,
+    "arm64": 11095647
+  }
+}

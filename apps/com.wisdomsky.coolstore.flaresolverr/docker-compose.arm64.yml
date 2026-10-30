@@ -1,0 +1,30 @@
+name: flaresolverr
+services:
+  app:
+    image: flaresolverr/flaresolverr:v3.5.2@sha256:91c0774e7d634f8b55a69d5027fa13a7fcad9b59b420efb286364fc8236634f1
+    restart: unless-stopped
+    environment:
+      LOG_LEVEL: info
+      LOG_HTML: false
+      PROMETHEUS_ENABLED: false
+      CAPTCHA_SOLVER: none
+      PORT: 8191
+      PROMETHEUS_PORT: 8192
+      TZ: $TZ
+    ports:
+      - target: 8191
+        published: 8191
+        protocol: tcp
+      - target: 8192
+        published: 8192
+        protocol: tcp
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.flaresolverr/assets/icon
+  title:
+    en_US: FlareSolverr
+  id: com.wisdomsky.coolstore.flaresolverr
+  index: /
+  port_map: "8191"
+  scheme: http
+  version: 3.5.2

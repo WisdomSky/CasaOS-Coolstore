@@ -1,0 +1,29 @@
+name: kavita
+services:
+  app:
+    image: jvmilazz0/kavita:0.9.1@sha256:9c27c5d9967cbc131ac21d3f709d441824c761bce134a269fda5e463224f05bf
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/manga
+        target: /manga
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /kavita/config
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.kavita/assets/icon.png
+  title:
+    en_US: Kavita
+  id: com.wisdomsky.coolstore.kavita
+  index: /
+  port_map: "5000"
+  scheme: http
+  version: 0.9.1

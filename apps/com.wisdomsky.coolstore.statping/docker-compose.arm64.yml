@@ -1,0 +1,48 @@
+name: statping
+services:
+  app:
+    image: statping/statping:v0.90.74@sha256:fdc52496e7b70ea0d54e7c8dd26837333576a930d3edc9107d66bf802c2373eb
+    restart: always
+    depends_on:
+      - db
+    environment:
+      VIRTUAL_PORT: 8080
+      DB_CONN: postgres
+      DB_HOST: db
+      DB_USER: casaos
+      DB_PASS: casaos
+      DB_DATABASE: casaos
+      NAME: ""
+      DESCRIPTION: ""
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/app
+        target: /app
+  db:
+    image: postgres:18.6@sha256:9a74990a5c776ff210361b67616b347750c66c36ea0dfbb4f575d19fcc3d8437
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      POSTGRES_USER: casaos
+      POSTGRES_PASSWORD: casaos
+      POSTGRES_DB: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/postgres/data
+        target: /var/lib/postgresql/data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.statping/assets/icon.png
+  title:
+    en_US: Statping
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.statping
+  index: /
+  scheme: http
+  version: 0.90.74

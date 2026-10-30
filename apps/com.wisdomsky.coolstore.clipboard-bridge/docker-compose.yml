@@ -1,0 +1,42 @@
+name: clipboard-bridge
+services:
+  app:
+    image: ghcr.io/mattboxx/clipboard-bridge-server:1.0.11
+    restart: unless-stopped
+    ports:
+      - target: 5088
+        published: "5088"
+        protocol: tcp
+    environment:
+      CLIPBOARD_PORT: "5088"
+      CLIPBOARD_DATA_DIR: /data
+      CLIPBOARD_MAX_HISTORY: "200"
+      CLIPBOARD_MAX_UPLOAD_MB: "64"
+      CLIPBOARD_SESSION_DAYS: "3650"
+      CLIPBOARD_TOKEN: ""
+      CLIPBOARD_PASSWORD: ""
+      CLIPBOARD_ACCOUNTS: ""
+    volumes:
+      - type: bind
+        source: /DATA/AppData/clipboard-bridge/data
+        target: /data
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - "-c"
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:5088/health', timeout=3).read()
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.clipboard-bridge/assets/icon.svg
+  title:
+    en_US: Clipboard Bridge
+  id: com.wisdomsky.coolstore.clipboard-bridge
+  index: /
+  port_map: "5088"
+  scheme: http
+  version: 1.0.11

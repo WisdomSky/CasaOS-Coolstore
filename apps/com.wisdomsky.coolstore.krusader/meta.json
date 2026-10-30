@@ -1,0 +1,26 @@
+{
+  "architectures": [
+    "amd64"
+  ],
+  "description": "Krusader is a KDE orthodox file manager with archive support, FTP, search, sync, and a dual-pane workflow. This image exposes it through noVNC and a VNC server.",
+  "tagline": "Twin-panel file manager in your browser.",
+  "developer": "KDE",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.krusader/assets/128-apps-krusader_root.webp",
+  "category": "Productivity",
+  "tips": {
+    "before_install": "The VNC password is `casaos`. Krusader runs privileged and can access `/DATA`, `/mnt`, and `/media`, so keep it on a trusted network. The app is amd64-only."
+  },
+  "update_at": "2026-10-30",
+  "title": "Krusader",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.krusader",
+  "version": "latest",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1647632955
+  }
+}

@@ -1,0 +1,37 @@
+name: calpal
+services:
+  app:
+    image: ghcr.io/grimmdev/calpal:1.0.0@sha256:e9cda23a20c6ec569a5c67dca3188c02f20731ac016b64f6af4b8f4d07fac51c
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      PORT: "8080"
+      BASE_URL: http://localhost:8080
+      TZ: $TZ
+      SMTP_HOST: ""
+      SMTP_PORT: "587"
+      SMTP_USER: ""
+      SMTP_PASS: ""
+      SMTP_FROM: ""
+      GOOGLE_CLIENT_ID: ""
+      GOOGLE_CLIENT_SECRET: ""
+      MICROSOFT_CLIENT_ID: ""
+      MICROSOFT_CLIENT_SECRET: ""
+      MICROSOFT_TENANT_ID: common
+    volumes:
+      - type: bind
+        source: /DATA/AppData/calpal/data
+        target: /app/data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.calpal/assets/icon.png
+  title:
+    en_US: CalPal
+  id: com.wisdomsky.coolstore.calpal
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 1.0.0

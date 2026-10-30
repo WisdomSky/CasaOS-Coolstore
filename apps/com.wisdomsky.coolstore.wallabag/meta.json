@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "wallabag is a self hostable application for saving web pages: Save and classify articles. Read them later. Freely.",
+  "tagline": "Wallabag Is A Self Hostable Application For Saving Web Pages: Save And Classify Articles. Read Them Later. Freely.",
+  "developer": "Wallabag",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.wallabag/assets/wallabag.webp",
+  "tips": {
+    "before_install": "After installation, open the app settings and update `SYMFONY__ENV__DOMAIN_NAME` to your CasaOS address, for example `http://192.168.1.10:8080`.\n"
+  },
+  "category": "Productivity",
+  "update_at": "2026-10-30",
+  "title": "Wallabag",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.wallabag",
+  "version": "2.6.15",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 231251289,
+    "arm64": 226596531
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Another free and open-source CMS",
+  "tagline": "Another Free And Open-source Cms",
+  "developer": "Open Source Matters",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.joomla/assets/joomla.webp",
+  "tips": {
+    "before_install": "For database connection, select `MySQL` then on the `database host` field put `joomladb`, for `database user` put `root` and for `database password` put `casaos`\n"
+  },
+  "category": "Productivity",
+  "update_at": "2026-10-30",
+  "title": "Joomla",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.joomla",
+  "version": "6.2.0-apache",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 519299288,
+    "arm64": 505070237
+  }
+}

@@ -1,0 +1,76 @@
+name: paperless
+services:
+  paperless:
+    image: ghcr.io/paperless-ngx/paperless-ngx:3.4.0@sha256:39fd4fac06dc928b0bea22bc85abcd724f0f6a83ab33653aa17fc31d3cc522ce
+    restart: unless-stopped
+    depends_on:
+      - db
+      - broker
+    ports:
+      - "8005:8000"
+    healthcheck:
+      test:
+        - CMD
+        - curl
+        - "-f"
+        - http://localhost:8000
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    volumes:
+      - /DATA/AppData/paperless/data:/usr/src/paperless/data
+      - /DATA/AppData/paperless/media:/usr/src/paperless/media
+      - /DATA/AppData/paperless/export:/usr/src/paperless/export
+      - /DATA/AppData/paperless/consume:/usr/src/paperless/consume
+    environment:
+      PAPERLESS_REDIS: redis://broker:6379
+      PAPERLESS_DBENGINE: mariadb
+      PAPERLESS_DBHOST: db
+      PAPERLESS_DBUSER: paperless
+      PAPERLESS_DBPASS: paperless
+      PAPERLESS_DBPORT: 3306
+      PAPERLESS_ADMIN_USER: admin
+      PAPERLESS_ADMIN_PASSWORD: admin
+      PAPERLESS_TIKA_ENABLED: 1
+      PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
+      PAPERLESS_TIKA_ENDPOINT: http://tika:9998
+  broker:
+    image: redis:8.8.4@sha256:36841f58a10cdd085eb552fdcde7cd9d388bc9e5f6e63c5a58ef22057a71201d
+    restart: unless-stopped
+    volumes:
+      - /DATA/AppData/paperless/redis/data:/data
+  db:
+    image: mariadb:13.0.2@sha256:0231965d72f758adea93162ed7be119dfd49f14172c5754ed8c9d49b0f17bbc6
+    restart: unless-stopped
+    volumes:
+      - /DATA/AppData/paperless/mysql:/var/lib/mysql
+    environment:
+      MARIADB_HOST: paperless
+      MARIADB_DATABASE: paperless
+      MARIADB_USER: paperless
+      MARIADB_PASSWORD: paperless
+      MARIADB_ROOT_PASSWORD: paperless
+  tika:
+    image: apache/tika:3.3.3.0@sha256:6d5d54af3439b2f73aae4c7cdec6b11d06d4665c3d8cf78ff4a8cf137f78ed21
+    restart: unless-stopped
+    ports:
+      - "9998:9998"
+  gotenberg:
+    image: docker.io/gotenberg/gotenberg:8.39@sha256:5a9c6b8e5e65c35236f99ff1b55f16a3bbc2fb6d9518292a7c15ca433d5bab24
+    restart: unless-stopped
+    command:
+      - gotenberg
+      - "--chromium-disable-javascript=true"
+      - "--chromium-allow-list=file:///tmp/.*"
+    ports:
+      - "3000:3000"
+x-casaos:
+  main: paperless
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.paperless-ngx/assets/icon
+  title:
+    en_US: Paperless-ngx
+  port_map: "8005"
+  id: com.wisdomsky.coolstore.paperless-ngx
+  index: /
+  scheme: http
+  version: 3.4.0

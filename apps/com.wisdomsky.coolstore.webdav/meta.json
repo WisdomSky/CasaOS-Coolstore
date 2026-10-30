@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers.",
+  "tagline": "Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers.",
+  "developer": "Derkades",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.webdav/assets/webdav.webp",
+  "category": "Productivity",
+  "tips": {
+    "before_install": "| Label | Value |\n| --- | --- |\n| Username | `casaos` |\n| Password | `casaos` |\n| Port | `8080` |\n| Files Path | `/DATA/Documents` |\n"
+  },
+  "update_at": "2026-10-30",
+  "title": "WebDAV",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.webdav",
+  "version": "latest",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 55907364,
+    "arm64": 56263227
+  }
+}

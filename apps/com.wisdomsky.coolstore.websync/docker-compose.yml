@@ -1,0 +1,27 @@
+name: websync
+services:
+  app:
+    image: furier/websync:latest
+    restart: unless-stopped
+    working_dir: /src
+    command:
+      - node
+      - server.js
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/websync/data
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.websync/assets/icon.png
+  title:
+    en_US: Web Sync (RSync)
+  port_map: "3000"
+  id: com.wisdomsky.coolstore.websync
+  index: /
+  scheme: http
+  version: latest

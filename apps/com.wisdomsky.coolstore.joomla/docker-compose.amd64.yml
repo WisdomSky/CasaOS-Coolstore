@@ -1,0 +1,41 @@
+name: joomla
+services:
+  app:
+    image: joomla:6.2.0-apache@sha256:18a7680764e1572343161ee5c5bf31514f22207777d3e7faaf62ab956d6225c4
+    environment:
+      JOOMLA_DB_HOST: joomladb
+      JOOMLA_DB_USER: joomla
+      JOOMLA_DB_PASSWORD: casaos
+      JOOMLA_DB_NAME: joomla
+    depends_on:
+      - joomladb
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/www
+        target: /var/www/html
+  joomladb:
+    image: mysql:8.4.13@sha256:5cf1e1293ea42e077e6a22114e6773b9aae3bb8f9933a2acd5a9721518ff8f5b
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: joomla
+      MYSQL_USER: joomla
+      MYSQL_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/mysql
+        target: /var/lib/mysql
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.joomla/assets/icon.png
+  title:
+    en_US: Joomla
+  port_map: "80"
+  id: com.wisdomsky.coolstore.joomla
+  index: /
+  scheme: http
+  version: 6.2.0-apache

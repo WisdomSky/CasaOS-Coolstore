@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and mealie will automatically import the relevant data or add a family recipe with the UI editor.",
+  "tagline": "Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.",
+  "developer": "hkotel",
+  "author": "WisdomSky",
+  "screenshot_link": [
+    "/apps/com.wisdomsky.coolstore.mealie/assets/home_screenshot.webp"
+  ],
+  "thumbnail": "/apps/com.wisdomsky.coolstore.mealie/assets/Mealie-LZF8.webp",
+  "category": "Home",
+  "update_at": "2026-10-30",
+  "title": "Mealie",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.mealie",
+  "version": "omni-nightly",
+  "categories": [
+    "home"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 609593031,
+    "arm64": 603241540
+  }
+}

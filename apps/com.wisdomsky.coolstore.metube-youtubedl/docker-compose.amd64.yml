@@ -1,0 +1,27 @@
+name: metube-youtubedl
+services:
+  app:
+    image: alexta69/metube:2025-07-30@sha256:17299c007e16e7fb5635b828bc04bfaeaaabcc1c378c588e43cef3c2fc5f2425
+    restart: unless-stopped
+    environment:
+      UID: $PUID
+      GID: $PGID
+      DARK_MODE: true
+    ports:
+      - target: 8081
+        published: 8081
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/downloads
+        target: /downloads
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.metube-youtubedl/assets/icon.png
+  title:
+    en_US: Metube
+  port_map: "8081"
+  id: com.wisdomsky.coolstore.metube-youtubedl
+  index: /
+  scheme: http
+  version: "2025-07-30"

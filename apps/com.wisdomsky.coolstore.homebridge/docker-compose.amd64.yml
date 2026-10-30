@@ -1,0 +1,25 @@
+name: homebridge
+services:
+  app:
+    image: oznu/homebridge:2023-01-08@sha256:ee2eef38be9cf4e564e2a0667a342b4cb371bb60f483dac1bf0b302fc78c2a62
+    restart: unless-stopped
+    environment:
+      PGID: $PGID
+      PUID: $PUID
+      ENABLE_AVAHI: 1
+      TZ: $TZ
+    network_mode: host
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /homebridge
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.homebridge/assets/icon.png
+  title:
+    en_US: Homebridge
+  port_map: "8581"
+  id: com.wisdomsky.coolstore.homebridge
+  index: /
+  scheme: http
+  version: "2023-01-08"

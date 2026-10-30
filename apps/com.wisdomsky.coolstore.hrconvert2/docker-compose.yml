@@ -1,0 +1,19 @@
+name: hrconvert2
+services:
+  app:
+    image: dwaaan/hrconvert2-docker:latest
+    ports:
+      - target: 80
+        published: 8085
+        protocol: tcp
+    restart: unless-stopped
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.hrconvert2/assets/icon.png
+  title:
+    en_US: HRConvert2
+  port_map: "8085"
+  id: com.wisdomsky.coolstore.hrconvert2
+  index: /
+  scheme: http
+  version: latest

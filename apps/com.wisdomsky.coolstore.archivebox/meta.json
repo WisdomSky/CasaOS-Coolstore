@@ -1,0 +1,25 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "ArchiveBox is a powerful, self-hosted internet archiving solution to collect, save, and view sites you want to preserve offline.",
+  "tagline": "Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.",
+  "developer": "ArchiveBox",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.archivebox/assets/archivebox.webp",
+  "category": "Productivity",
+  "update_at": "2026-10-30",
+  "title": "Archivebox",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.archivebox",
+  "version": "0.9.77",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1073261918,
+    "arm64": 1046095591
+  }
+}

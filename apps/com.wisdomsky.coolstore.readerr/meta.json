@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Readarr usent server",
+  "tagline": "Readarr Usent Server",
+  "developer": "Readarr",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.readerr/assets/128.webp",
+  "category": "Media",
+  "update_at": "2026-10-30",
+  "title": "Readarr",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.readerr",
+  "version": "latest",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 0,
+    "arm": 0,
+    "arm64": 0
+  }
+}

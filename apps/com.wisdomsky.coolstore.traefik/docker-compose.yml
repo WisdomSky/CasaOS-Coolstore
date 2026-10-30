@@ -1,0 +1,48 @@
+name: traefik
+services:
+  app:
+    image: traefik:v3.7.16
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+      TRAEFIK_API: false
+      TRAEFIK_API_DASHBOARD: true
+      TRAEFIK_API_INSECURE: false
+    ports:
+      - target: 80
+        published: 80
+        protocol: tcp
+      - target: 443
+        published: 443
+        protocol: tcp
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/traefik.toml
+        target: /etc/traefik/traefik.toml
+      - type: bind
+        source: /DATA/AppData/$AppID/traefik.yml
+        target: /etc/traefik/traefik.yml
+      - type: bind
+        source: /DATA/AppData/$AppID/config.yml
+        target: /etc/traefik/config.yml
+      - type: bind
+        source: /DATA/AppData/$AppID/acme.json
+        target: /etc/traefik/acme.json
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.traefik/assets/icon.png
+  title:
+    en_US: Traefik
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.traefik
+  index: /
+  scheme: http
+  version: 3.7.16

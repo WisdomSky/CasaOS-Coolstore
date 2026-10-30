@@ -1,0 +1,41 @@
+name: rsshub
+services:
+  app:
+    image: diygod/rsshub:2026-10-29
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      CACHE_TYPE: redis
+      REDIS_URL: redis://redis:6379/
+      PUPPETEER_WS_ENDPOINT: ws://browserless:3000
+    ports:
+      - target: 1200
+        published: 1200
+        protocol: tcp
+    depends_on:
+      - redis
+      - browserless
+  browserless:
+    image: browserless/chrome:1-puppeteer-10.4.0
+    restart: unless-stopped
+    ulimits:
+      core:
+        hard: 0
+        soft: 0
+  redis:
+    image: redis:7.4-alpine
+    restart: always
+    volumes:
+      - type: bind
+        source: /DATA/AppData/rsshub/redis
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.rsshub/assets/icon.png
+  title:
+    en_US: RSShub
+  port_map: "1200"
+  id: com.wisdomsky.coolstore.rsshub
+  index: /
+  scheme: http
+  version: "2026-10-29"

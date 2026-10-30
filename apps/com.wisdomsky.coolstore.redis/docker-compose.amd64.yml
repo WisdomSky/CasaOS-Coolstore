@@ -1,0 +1,25 @@
+name: redis
+services:
+  app:
+    image: redis:8.8.4@sha256:36841f58a10cdd085eb552fdcde7cd9d388bc9e5f6e63c5a58ef22057a71201d
+    restart: unless-stopped
+    ports:
+      - target: 6379
+        published: "6379"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/redis/data
+        target: /data
+      - type: bind
+        source: /DATA/AppData/redis/config
+        target: /usr/local/etc/redis
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.redis/assets/icon.png
+  title:
+    en_US: Redis
+  id: com.wisdomsky.coolstore.redis
+  index: /
+  port_map: "6379"
+  version: 8.8.4

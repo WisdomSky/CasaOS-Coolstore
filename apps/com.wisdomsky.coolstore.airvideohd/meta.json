@@ -1,0 +1,26 @@
+{
+  "architectures": [
+    "amd64"
+  ],
+  "description": "Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.",
+  "tagline": "Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.",
+  "developer": "InMethod",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.airvideohd/assets/icon.webp",
+  "category": "Media",
+  "tips": {
+    "before_install": "### Note\n\nTo find your `Server PIN`, look in the `network.log` file in `/DATA/AppData/airvideohd/config/logs` after the server has started.\n"
+  },
+  "update_at": "2026-10-30",
+  "title": "Air Video HD",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.airvideohd",
+  "version": "latest",
+  "categories": [
+    "media"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 220725263
+  }
+}

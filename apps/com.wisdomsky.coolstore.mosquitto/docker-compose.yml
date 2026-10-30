@@ -1,0 +1,31 @@
+name: mosquitto
+services:
+  app:
+    image: eclipse-mosquitto:2.0.22
+    restart: unless-stopped
+    ports:
+      - target: 1883
+        published: 1883
+        protocol: tcp
+      - target: 9001
+        published: 9001
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /mosquitto/config
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /mosquitto/data
+      - type: bind
+        source: /DATA/AppData/$AppID/log
+        target: /mosquitto/log
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.mosquitto/assets/icon.png
+  title:
+    en_US: Eclipse Mosquitto
+  id: com.wisdomsky.coolstore.mosquitto
+  index: /
+  port_map: "1883"
+  version: 2.0.22

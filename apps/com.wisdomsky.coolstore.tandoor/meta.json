@@ -1,0 +1,25 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "The recipe manager that allows you to manage your ever growing collection of digital recipes.",
+  "tagline": "The Recipe Manager That Allows You To Manage Your Ever Growing Collection Of Digital Recipes.",
+  "developer": "Tandoor Recipes",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.tandoor/assets/logo_color.svg",
+  "category": "Home",
+  "update_at": "2026-10-30",
+  "title": "Tandoor",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.tandoor",
+  "version": "2",
+  "categories": [
+    "home"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 504977666,
+    "arm64": 499567274
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "FlareSolverr is a proxy server to bypass Cloudflare protection. FlareSolverr starts a proxy server, and it waits for user requests in an idle state using few resources. When some request arrives, it uses Selenium with the undetected-chromedriver to create a web browser (Chrome). It opens the URL with user parameters and waits until the Cloudflare challenge is solved (or timeout). The HTML code and the cookies are sent back to the user, and those cookies can be used to bypass Cloudflare using other HTTP clients.",
+  "tagline": "FlareSolverr is a proxy server to bypass Cloudflare protection.",
+  "developer": "FlareSolverr",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.flaresolverr/assets/10577978.webp",
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "FlareSolverr",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.flaresolverr",
+  "version": "3.5.2",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 292157035,
+    "arm": 270328178,
+    "arm64": 297303725
+  }
+}

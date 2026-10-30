@@ -1,0 +1,21 @@
+name: retroarch-web
+services:
+  app:
+    image: inglebard/retroarch-web:latest
+    restart: unless-stopped
+    environment:
+      ROOT_WWW_PATH: /var/www/html
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.retroarch-web/assets/icon
+  title:
+    en_US: RetroArch-web
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.retroarch-web
+  index: /
+  scheme: http
+  version: latest

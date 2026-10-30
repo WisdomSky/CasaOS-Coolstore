@@ -1,0 +1,32 @@
+name: draw-io
+services:
+  app:
+    image: jgraph/drawio:32.6.1
+    restart: unless-stopped
+    environment:
+      LETS_ENCRYPT_ENABLED: false
+      PUBLIC_DNS: ""
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/log/letsencrypt
+        target: /var/log/letsencrypt
+      - type: bind
+        source: /DATA/AppData/$AppID/letsencrypt
+        target: /etc/letsencrypt
+      - type: bind
+        source: /DATA/AppData/$AppID/lib/letsencrypt
+        target: /var/lib/letsencrypt
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.draw-io/assets/icon.png
+  title:
+    en_US: Draw.io
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.draw-io
+  index: /
+  scheme: http
+  version: 32.6.1

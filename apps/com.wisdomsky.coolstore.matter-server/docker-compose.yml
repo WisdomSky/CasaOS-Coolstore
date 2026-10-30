@@ -1,0 +1,25 @@
+name: matter-server
+services:
+  app:
+    image: ghcr.io/home-assistant-libs/python-matter-server:8.1.0
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - type: bind
+        source: /DATA/AppData/matter-server/data
+        target: /data
+      - type: bind
+        source: /run/dbus
+        target: /run/dbus
+        read_only: true
+    security_opt:
+      - apparmor:unconfined
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.matter-server/assets/icon
+  title:
+    en_US: Matter Server
+  id: com.wisdomsky.coolstore.matter-server
+  index: /
+  port_map: "5580"
+  version: 8.1.0

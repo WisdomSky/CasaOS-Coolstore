@@ -1,0 +1,42 @@
+name: trek
+services:
+  app:
+    image: mauriceboe/trek:5.0.1
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "3000"
+        protocol: tcp
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      ENCRYPTION_KEY: 0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef
+      TZ: $TZ
+      COOKIE_SECURE: "false"
+      ADMIN_EMAIL: admin@example.com
+      ADMIN_PASSWORD: casaos
+    volumes:
+      - type: bind
+        source: /DATA/AppData/trek/data
+        target: /app/data
+      - type: bind
+        source: /DATA/AppData/trek/uploads
+        target: /app/uploads
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -qO- http://127.0.0.1:3000/api/health || exit 1
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.trek/assets/icon.png
+  title:
+    en_US: TREK
+  id: com.wisdomsky.coolstore.trek
+  index: /
+  port_map: "3000"
+  scheme: http
+  version: 5.0.1

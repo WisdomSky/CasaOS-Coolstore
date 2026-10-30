@@ -1,0 +1,25 @@
+name: trilium
+services:
+  app:
+    image: zadam/trilium:0.63.7@sha256:a501c3cc7cabde31cb6d8839d895f178d8ba0a21e773b5ca5e410c51cda55abf
+    restart: unless-stopped
+    environment:
+      TRILIUM_DATA_DIR: /home/node/trilium-data
+    ports:
+      - target: 8080
+        published: 8080
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /home/node/trilium-data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.trilium/assets/icon.png
+  title:
+    en_US: Trilium
+  port_map: "8080"
+  id: com.wisdomsky.coolstore.trilium
+  index: /
+  scheme: http
+  version: 0.63.7

@@ -1,0 +1,25 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "This docker image provides a Minecraft Server that will automatically download the latest stable version at startup. You can also run/upgrade to any specific version or the latest snapshot. See the Versions section below for more information.",
+  "tagline": "This Docker Image Provides A Minecraft Server That Will Automatically Download The Latest Stable Version At Startup. You Can Also Run/upgrade To Any Specific Version Or The Latest Snapshot. See The Versions Section Below For More Information.",
+  "developer": "itzg",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.minecraft/assets/minecraft.webp",
+  "category": "Others",
+  "update_at": "2026-10-30",
+  "title": "Minecraft Server",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.minecraft",
+  "version": "2026.10.1",
+  "categories": [
+    "others"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 362016281,
+    "arm64": 357632015
+  }
+}

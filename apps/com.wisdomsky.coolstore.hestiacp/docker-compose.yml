@@ -1,0 +1,58 @@
+name: hestiacp
+services:
+  app:
+    image: dddmmm/hestiacp:1.10.5.2
+    hostname: hestia.localhost
+    restart: unless-stopped
+    privileged: true
+    depends_on:
+      - mariadb
+    environment:
+      MAIL_ADMIN: admin@hestia.localhost
+      AUTOSTART_DISABLED: clamav-daemon
+    ports:
+      - target: 8083
+        published: 8083
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/hestiacp/backup
+        target: /backup
+      - type: bind
+        source: /DATA/AppData/hestiacp/conf
+        target: /conf
+      - type: bind
+        source: /DATA/AppData/hestiacp/home
+        target: /home
+      - type: bind
+        source: /DATA/AppData/hestiacp/mariadb-logs
+        target: /var/log/mysql
+  mariadb:
+    image: mariadb:10.11.19
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: root
+      MARIADB_ROOT_HOST: "%"
+      MARIADB_INITDB_SKIP_TZINFO: 1
+    command:
+      - mariadbd
+      - "--max-connections=1000"
+      - "--max-user-connections=150"
+      - "--max-allowed-packet=128M"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/hestiacp/mariadb
+        target: /var/lib/mysql
+      - type: bind
+        source: /DATA/AppData/hestiacp/mariadb-logs
+        target: /var/log/mysql
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.hestiacp/assets/icon.png
+  title:
+    en_US: Hestia CP
+  id: com.wisdomsky.coolstore.hestiacp
+  index: /
+  port_map: "8083"
+  scheme: http
+  version: 1.10.5.2

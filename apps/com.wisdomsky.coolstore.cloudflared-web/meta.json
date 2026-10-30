@@ -1,0 +1,32 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Cloudflared-web packages both Cloudflare tunnel and a simple web-based user interface for easy starting and stopping of cloudflare tunnel.",
+  "tagline": "Cloudflare tunnel with a simple web-based user interface.",
+  "screenshot_link": [
+    "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/screenshot-1.webp",
+    "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/screenshot-2.webp",
+    "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/screenshot-3.webp"
+  ],
+  "developer": "Cloudflare Inc.",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/icon.webp",
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Cloudflared-web",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.cloudflared-web",
+  "version": "2026.10.5",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 247281255,
+    "arm": 222538727,
+    "arm64": 245740045
+  }
+}

@@ -1,0 +1,43 @@
+name: copyparty
+services:
+  app:
+    image: copyparty/ac:1.20.26@sha256:fe6c1cd805bc76461fd410cb812e48b289abc67584096f028faf7d338ddd3cfa
+    restart: unless-stopped
+    user: "1000:1000"
+    ports:
+      - target: 3923
+        published: "3923"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/copyparty/cfg
+        target: /cfg
+      - type: bind
+        source: /DATA/AppData/copyparty/files
+        target: /w
+    command:
+      - "-a"
+      - admin:casaos
+      - "-v"
+      - /w::rw,admin
+      - "-e2dsa"
+      - "-e2ts"
+    healthcheck:
+      test:
+        - CMD
+        - python3
+        - "-c"
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:3923/', timeout=5)
+      interval: 30s
+      timeout: 10s
+      retries: 3
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.copyparty/assets/icon.png
+  title:
+    en_US: copyparty
+  id: com.wisdomsky.coolstore.copyparty
+  index: /
+  port_map: "3923"
+  scheme: http
+  version: 1.20.26

@@ -1,0 +1,43 @@
+name: casaos-toolbox
+services:
+  app:
+    image: wisdomsky/casaos-toolbox:0.2@sha256:7b58d2e6b94ab75d6e948b10cb48ce4449b634ad7085dc007a7b899ab476cd1e
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      FORCE_HTTPS: false
+      WEBUI_PORT: 8088
+      DB_HOST: 0.0.0.0
+      DB_PORT: 33066
+      DB_DATABASE: casaos
+      DB_USERNAME: casaos
+      DB_PASSWORD: casaos
+    volumes:
+      - /usr/bin/casaos-cli:/usr/bin/casaos-cli
+      - /etc/casaos/gateway.ini:/casaos/gateway.ini
+      - /var/lib/casaos/apps:/casaos/apps
+      - /var/lib/casaos/www:/casaos/www
+  db:
+    image: mariadb:13.0.2@sha256:6d882f903b25c6517caf5d14422ebfc371f4c34ebb8fd3c64320a6dc43c9271d
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: casaos
+      MYSQL_DATABASE: casaos
+      MYSQL_USER: casaos
+      MYSQL_PASSWORD: casaos
+    ports:
+      - target: 3306
+        published: "33066"
+        protocol: tcp
+    volumes:
+      - /DATA/AppData/casaos-toolbox/mysql:/var/lib/mysql
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.casaos-toolbox/assets/icon.png
+  title:
+    en_US: CasaOS Toolbox
+  port_map: "8088"
+  id: com.wisdomsky.coolstore.casaos-toolbox
+  index: /
+  scheme: http
+  version: "0.2"

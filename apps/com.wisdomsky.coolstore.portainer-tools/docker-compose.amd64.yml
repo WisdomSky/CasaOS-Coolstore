@@ -1,0 +1,30 @@
+name: portainer-tools
+services:
+  app:
+    image: technorabilia/portainer-tools
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      PORTAINER_USERNAME: ""
+      PORTAINER_PASSWORD: ""
+      PORTAINER_URL: 0.0.0.0:9000
+      SERVER_URL: http://0.0.0.0:9999
+    ports:
+      - target: 9999
+        published: 9999
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/portainer-tools/config
+        target: /config
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.portainer-tools/assets/icon.png
+  title:
+    en_US: Portainer Tools
+  port_map: "9999"
+  id: com.wisdomsky.coolstore.portainer-tools
+  index: /
+  scheme: http
+  version: latest

@@ -1,0 +1,32 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64",
+    "arm",
+    "386"
+  ],
+  "description": "Single-binary file server with a browser UI, resumable uploads, WebDAV/FTP/SFTP options, media thumbnails, search, and sharing. Works on everything from a Raspberry Pi to a NAS.",
+  "tagline": "Turn almost any device into a file server.",
+  "developer": "9001",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.copyparty/assets/copyparty.webp",
+  "category": "Productivity",
+  "tips": {
+    "before_install": "The default account is `admin` with password `casaos`. Change the password in the compose file or app settings. Files are served from `/DATA/AppData/copyparty/files`."
+  },
+  "update_at": "2026-10-30",
+  "title": "copyparty",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.copyparty",
+  "version": "1.20.26",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "386": 38273665,
+    "amd64": 38497169,
+    "arm": 33203276,
+    "arm64": 37331620
+  }
+}

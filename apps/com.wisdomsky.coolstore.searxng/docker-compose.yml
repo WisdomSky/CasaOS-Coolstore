@@ -1,0 +1,40 @@
+name: searxng
+services:
+  app:
+    image: searxng/searxng:2026.10.29-c15647b5a
+    restart: unless-stopped
+    ports:
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+    environment:
+      SEARXNG_BASE_URL: http://localhost:8080/
+      SEARXNG_SECRET: casaos-searxng-secret-change-me
+      SEARXNG_LIMITER: "false"
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/searxng/config
+        target: /etc/searxng
+      - type: bind
+        source: /DATA/AppData/searxng/cache
+        target: /var/cache/searxng
+    healthcheck:
+      test:
+        - CMD
+        - /usr/local/searxng/.venv/bin/python
+        - "-c"
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:8080/healthz', timeout=5)
+      interval: 30s
+      timeout: 10s
+      retries: 3
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.searxng/assets/icon.png
+  title:
+    en_US: SearXNG
+  id: com.wisdomsky.coolstore.searxng
+  index: /
+  port_map: "8080"
+  scheme: http
+  version: 2026.10.29-c15647b5a

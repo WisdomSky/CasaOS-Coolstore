@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "PrivateBin is a minimalist, open source online pastebin where the server has zero knowledge of pasted data!",
+  "tagline": "Privatebin Is A Minimalist, Open Source Online Pastebin Where The Server Has Zero Knowledge Of Pasted Data!\n",
+  "developer": "PrivateBin",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.privatebin/assets/privatebin.webp",
+  "category": "Productivity",
+  "update_at": "2026-10-30",
+  "title": "Privatebin",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.privatebin",
+  "version": "2.1.0",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 45782922,
+    "arm": 40793323,
+    "arm64": 45975896
+  }
+}

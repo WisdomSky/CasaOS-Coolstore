@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "WIFI / LAN intruder detector",
+  "tagline": "Wifi / Lan Intruder Detector",
+  "developer": "Pucherot",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.pi-alert/assets/1_devices.webp",
+  "category": "Networking",
+  "update_at": "2026-10-30",
+  "title": "Pi.alert",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.pi-alert",
+  "version": "25",
+  "categories": [
+    "networking"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 75669796,
+    "arm": 72275576,
+    "arm64": 76106858
+  }
+}

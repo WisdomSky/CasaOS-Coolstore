@@ -1,0 +1,37 @@
+name: immich-power-tools
+services:
+  app:
+    image: ghcr.io/immich-power-tools/immich-power-tools:latest@sha256:99c5e419b8df6353d20a0dcfade33bf39cc90b4442b0c7ebebb14763c40d0367
+    restart: unless-stopped
+    ports:
+      - target: 3000
+        published: "8001"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/immich-power-tools/data
+        target: /app/data
+    environment:
+      IMMICH_URL: http://host.docker.internal:2283
+      EXTERNAL_IMMICH_URL: http://localhost:2283
+      IMMICH_API_KEY: change-me
+      DB_HOST: host.docker.internal
+      DB_PORT: "5432"
+      DB_USERNAME: postgres
+      DB_PASSWORD: change-me
+      DB_DATABASE_NAME: immich
+      AI_API_KEY: ""
+      AI_BASE_URL: https://api.openai.com/v1
+      AI_MODEL: gpt-4o-mini
+    extra_hosts:
+      - host.docker.internal:host-gateway
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.immich-power-tools/assets/icon.png
+  title:
+    en_US: Immich Power Tools
+  id: com.wisdomsky.coolstore.immich-power-tools
+  index: /
+  port_map: "8001"
+  scheme: http
+  version: latest

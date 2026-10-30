@@ -1,0 +1,1305 @@
+{
+  "version": 2,
+  "updated_at": "2026-10-30T06:03:23Z",
+  "app_count": 62,
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "apps": [
+    {
+      "id": "com.wisdomsky.coolstore.airvideohd",
+      "title": "Air Video HD",
+      "tagline": "Watch videos streamed instantly from your computer on your iPhone, iPad, iPod touch or Apple TV.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "InMethod",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.airvideohd/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.airvideohd/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.airvideohd/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.airvideohd/meta.json",
+      "content_hash": "fa6f7c30"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.archivebox",
+      "title": "Archivebox",
+      "tagline": "Archivebox Is A Powerful, Self-hosted Internet Archiving Solution To Collect, Save, And View Sites You Want To Preserve Offline.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "ArchiveBox",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.archivebox/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.archivebox/assets/archivebox.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.archivebox/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.archivebox/meta.json",
+      "content_hash": "01c6a977",
+      "version": "0.9.77"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.azuracast",
+      "title": "AzuraCast",
+      "tagline": "Turnkey self-hosted web radio.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "AzuraCast",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.azuracast/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.azuracast/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.azuracast/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.azuracast/meta.json",
+      "content_hash": "a4ff3c2c"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.briefing",
+      "title": "Briefing",
+      "tagline": "Secure direct video group chat.",
+      "category": "Social",
+      "categories": [
+        "social"
+      ],
+      "author": "WisdomSky",
+      "developer": "holtwick",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.briefing/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.briefing/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.briefing/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.briefing/meta.json",
+      "content_hash": "5b02c989",
+      "version": "3.1.10"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.caddy",
+      "title": "Caddy",
+      "tagline": "Caddy - The Ultimate Server With Automatic Https.",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Caddy",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.caddy/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.caddy/assets/caddy.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.caddy/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.caddy/meta.json",
+      "content_hash": "22d7abc8",
+      "version": "2.11.7"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.calpal",
+      "title": "CalPal",
+      "tagline": "Self-hosted scheduling without the SaaS.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "grimmdev",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.calpal/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.calpal/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.calpal/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.calpal/meta.json",
+      "content_hash": "14e9e47a",
+      "version": "1.0.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.casaos-toolbox",
+      "title": "CasaOS Toolbox",
+      "tagline": "Provides additional features to CasaOS.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "WisdomSky",
+      "developer": "WisdomSky",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.casaos-toolbox/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.casaos-toolbox/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.casaos-toolbox/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.casaos-toolbox/meta.json",
+      "content_hash": "58a2f709"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.clipboard-bridge",
+      "title": "Clipboard Bridge",
+      "tagline": "Copy on one device, use it on another.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Mattboxx",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.clipboard-bridge/assets/icon.svg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.clipboard-bridge/assets/icon.svg",
+      "compose_url": "/apps/com.wisdomsky.coolstore.clipboard-bridge/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.clipboard-bridge/meta.json",
+      "content_hash": "282556f7",
+      "version": "1.0.11"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.cloudflared-web",
+      "title": "Cloudflared-web",
+      "tagline": "Cloudflare tunnel with a simple web-based user interface.",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Cloudflare Inc.",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.cloudflared-web/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.cloudflared-web/meta.json",
+      "content_hash": "9b907124",
+      "version": "2026.10.5"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.copyparty",
+      "title": "copyparty",
+      "tagline": "Turn almost any device into a file server.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "9001",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm",
+        "386"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.copyparty/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.copyparty/assets/copyparty.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.copyparty/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.copyparty/meta.json",
+      "content_hash": "34234da5",
+      "version": "1.20.26"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.draw-io",
+      "title": "Draw.io",
+      "tagline": "Draw.io (formerly Diagramly) Is Free Online Diagram Software. You Can Use It As A Flowchart Maker, Network Diagram Software, To Create Uml Online, As An Er Diagram Tool, To Design Database Schema, To Build Bpmn Online, As A Circuit Diagram Maker, And More. Draw.io Can Import .vsdx, Gliffy™ And Lucidchart™ Files.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "JGraph",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.draw-io/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.draw-io/assets/logo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.draw-io/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.draw-io/meta.json",
+      "content_hash": "ab89ea66",
+      "version": "32.6.1"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.esphome",
+      "title": "ESPHome",
+      "tagline": "ESPHome is a system to control your microcontrollers by simple yet powerful configuration files and control them remotely through Home Automation systems.",
+      "category": "Home",
+      "categories": [
+        "home"
+      ],
+      "author": "WisdomSky",
+      "developer": "ESPHome",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.esphome/assets/icon",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.esphome/assets/45919759.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.esphome/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.esphome/meta.json",
+      "content_hash": "7a2aacd0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.firefly-iii",
+      "title": "Firefly III",
+      "tagline": "Take control of your personal finances.",
+      "category": "Finance",
+      "categories": [
+        "finance"
+      ],
+      "author": "WisdomSky",
+      "developer": "Firefly III",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.firefly-iii/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.firefly-iii/assets/logo-small.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.firefly-iii/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.firefly-iii/meta.json",
+      "content_hash": "deaa37d1",
+      "version": "6.7.9"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.flaresolverr",
+      "title": "FlareSolverr",
+      "tagline": "FlareSolverr is a proxy server to bypass Cloudflare protection.",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "FlareSolverr",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.flaresolverr/assets/icon",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.flaresolverr/assets/10577978.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.flaresolverr/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.flaresolverr/meta.json",
+      "content_hash": "8e19a1cc",
+      "version": "3.5.2"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.forgejo",
+      "title": "Forgejo",
+      "tagline": "Painless self-hosted Git forge.",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "WisdomSky",
+      "developer": "Forgejo",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.forgejo/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.forgejo/assets/forgejo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.forgejo/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.forgejo/meta.json",
+      "content_hash": "b6f8cb2b",
+      "version": "17.0.1"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.foundryvtt",
+      "title": "FoundryVTT",
+      "tagline": "Self-hosted virtual tabletop.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "WisdomSky",
+      "developer": "Foundry Virtual Tabletop",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.foundryvtt/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.foundryvtt/assets/fvtt.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.foundryvtt/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.foundryvtt/meta.json",
+      "content_hash": "d65c6117"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.freescout",
+      "title": "FreeScout",
+      "tagline": "Self-hosted help desk and shared inbox.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "FreeScout",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.freescout/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.freescout/assets/freescout.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.freescout/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.freescout/meta.json",
+      "content_hash": "1f5ab608",
+      "version": "2.2.22"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.ghost",
+      "title": "Ghost",
+      "tagline": "Free And Open-source Blogging Platform",
+      "category": "Social",
+      "categories": [
+        "social"
+      ],
+      "author": "WisdomSky",
+      "developer": "Ghost Foundation",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.ghost/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.ghost/assets/ghost.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.ghost/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.ghost/meta.json",
+      "content_hash": "1938a34e",
+      "version": "6.73.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.hestiacp",
+      "title": "Hestia CP",
+      "tagline": "An open-source web hosting control panel that allows users to manage their websites, domains, email accounts, databases, and more.",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "WisdomSky",
+      "developer": "HestiaCP",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.hestiacp/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.hestiacp/assets/logo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.hestiacp/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.hestiacp/meta.json",
+      "content_hash": "dc3ab363"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.homebridge",
+      "title": "Homebridge",
+      "tagline": "Homebridge Allows You To Integrate With Smart Home Devices That Do Not Natively Support Homekit. There Are Over 2,000 Homebridge Plugins Supporting Thousands Of Different Smart Accessories.",
+      "category": "Home",
+      "categories": [
+        "home"
+      ],
+      "author": "WisdomSky",
+      "developer": "Homebridge",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.homebridge/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.homebridge/assets/homebridge.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.homebridge/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.homebridge/meta.json",
+      "content_hash": "a49697e3"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.hrconvert2",
+      "title": "HRConvert2",
+      "tagline": "HRConvert2 is a self-hosted drag-and-drop file conversion server & file sharing tool that supports 86 file formats with 4 color schemes & 13 end-user selctable languages.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "zelon88",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.hrconvert2/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.hrconvert2/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.hrconvert2/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.hrconvert2/meta.json",
+      "content_hash": "6e0a2740"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.immich-power-tools",
+      "title": "Immich Power Tools",
+      "tagline": "Bulk organization tools for Immich.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "Immich Power Tools",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.immich-power-tools/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.immich-power-tools/assets/immich-power-tools.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.immich-power-tools/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.immich-power-tools/meta.json",
+      "content_hash": "94248973"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.joomla",
+      "title": "Joomla",
+      "tagline": "Another Free And Open-source Cms",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Open Source Matters",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.joomla/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.joomla/assets/joomla.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.joomla/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.joomla/meta.json",
+      "content_hash": "06672198",
+      "version": "6.2.0-apache"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.kavita",
+      "title": "Kavita",
+      "tagline": "Kavita Manga, Comic And E-book Server",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "Kareadita",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.kavita/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.kavita/assets/logo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.kavita/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.kavita/meta.json",
+      "content_hash": "ac9dd6a1",
+      "version": "0.9.1"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.komga",
+      "title": "Komga",
+      "tagline": "Koomga Manga, Comic And E-book Server",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "Gotson",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.komga/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.komga/assets/app-icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.komga/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.komga/meta.json",
+      "content_hash": "b100001f",
+      "version": "1.29.2"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.krusader",
+      "title": "Krusader",
+      "tagline": "Twin-panel file manager in your browser.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "KDE",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.krusader/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.krusader/assets/128-apps-krusader_root.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.krusader/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.krusader/meta.json",
+      "content_hash": "6b4c7ae4"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.magicmirror",
+      "title": "MagicMirror²",
+      "tagline": "Turn a mirror into a modular smart display.",
+      "category": "Home",
+      "categories": [
+        "home"
+      ],
+      "author": "WisdomSky",
+      "developer": "MagicMirrorOrg",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.magicmirror/assets/icon.svg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.magicmirror/assets/favicon.svg",
+      "compose_url": "/apps/com.wisdomsky.coolstore.magicmirror/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.magicmirror/meta.json",
+      "content_hash": "393e70a9",
+      "version": "2.38.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.matter-server",
+      "title": "Matter Server",
+      "tagline": "Matter support in Home Assistant",
+      "category": "Home",
+      "categories": [
+        "home"
+      ],
+      "author": "WisdomSky",
+      "developer": "Home Assistant",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.matter-server/assets/icon",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.matter-server/assets/61027988.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.matter-server/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.matter-server/meta.json",
+      "content_hash": "824e154c",
+      "version": "8.1.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.mealie",
+      "title": "Mealie",
+      "tagline": "Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family.",
+      "category": "Home",
+      "categories": [
+        "home"
+      ],
+      "author": "WisdomSky",
+      "developer": "hkotel",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.mealie/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.mealie/assets/Mealie-LZF8.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.mealie/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.mealie/meta.json",
+      "content_hash": "e4dd4e12"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.metube-youtubedl",
+      "title": "Metube",
+      "tagline": "Web Gui For Youtube-dl With Playlist Support. Allows You To Download Videos From Youtube And Dozens Of Other Sites (https://ytdl-org.github.io/youtube-dl/supportedsites.html).",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "alexta69",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.metube-youtubedl/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.metube-youtubedl/assets/ytdlm.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.metube-youtubedl/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.metube-youtubedl/meta.json",
+      "content_hash": "13a8b766"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.minecraft",
+      "title": "Minecraft Server",
+      "tagline": "This Docker Image Provides A Minecraft Server That Will Automatically Download The Latest Stable Version At Startup. You Can Also Run/upgrade To Any Specific Version Or The Latest Snapshot. See The Versions Section Below For More Information.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "WisdomSky",
+      "developer": "itzg",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.minecraft/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.minecraft/assets/minecraft.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.minecraft/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.minecraft/meta.json",
+      "content_hash": "36c37825",
+      "version": "2026.10.1"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.mosquitto",
+      "title": "Eclipse Mosquitto",
+      "tagline": "Eclipse Mosquitto Is An Open Source Implementation Of A Server For Versions 5, 3.1.1, And 3.1 Of The Mqtt Protocol.\r\nyou Will Need To Create /portainer/files/appdata/config/mosquitto/config/mosquitto.conf And If Needed Your Password File.\r\nhave A Look On Https://mosquitto.org/man/mosquitto_passwd-1.html",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "WisdomSky",
+      "developer": "Eclipse Foundation",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.mosquitto/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.mosquitto/assets/logo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.mosquitto/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.mosquitto/meta.json",
+      "content_hash": "cb6225d8",
+      "version": "2.0.22"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.navidrome",
+      "title": "Navidrome",
+      "tagline": "Navidrome allows you to enjoy your music collection from anywhere, by making it available through a modern Web UI and through a wide range of third-party compatible mobile apps, for both iOS and Android devices.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "Navidrome",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm",
+        "386"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.navidrome/assets/icon.jpg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.navidrome/assets/5lhEh5KF_400x400.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.navidrome/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.navidrome/meta.json",
+      "content_hash": "6dd3ec67",
+      "version": "0.64.2"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.paperless-ai",
+      "title": "Paperless-AI",
+      "tagline": "AI tagging and chat for Paperless-ngx.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "clusterzx",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.paperless-ai/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.paperless-ai/assets/paperless-ai.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.paperless-ai/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.paperless-ai/meta.json",
+      "content_hash": "d895a80d",
+      "version": "3.0.9"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.paperless-ngx",
+      "title": "Paperless-ngx",
+      "tagline": "Paperless-ngx is a document management system that transforms your physical documents into a searchable online archive so you can keep, well, less paper.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "paperless-ngx",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.paperless-ngx/assets/icon",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.paperless-ngx/assets/99562962.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.paperless-ngx/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.paperless-ngx/meta.json",
+      "content_hash": "8dd75362",
+      "version": "3.4.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.peppermint",
+      "title": "Peppermint",
+      "tagline": "Peppermint is a central hub for your help desk. A powerfully easy system for tracking, prioritising, and solving customer support tickets.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Pepperlabs",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.peppermint/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.peppermint/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.peppermint/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.peppermint/meta.json",
+      "content_hash": "684e6263"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.pi-alert",
+      "title": "Pi.alert",
+      "tagline": "Wifi / Lan Intruder Detector",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Pucherot",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.pi-alert/assets/icon.jpg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.pi-alert/assets/1_devices.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.pi-alert/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.pi-alert/meta.json",
+      "content_hash": "dcf4876c"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.playit-docker-web",
+      "title": "Playit.gg",
+      "tagline": "Playit.gg is a global proxy that allows anyone to host a server without port forwarding.",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Playit.gg",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.playit-docker-web/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.playit-docker-web/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.playit-docker-web/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.playit-docker-web/meta.json",
+      "content_hash": "8064c949",
+      "version": "1.1.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.portainer-tools",
+      "title": "Portainer Tools",
+      "tagline": "Portainer Tools allows you to add your own Portainer App Template definitions, merge them with existing ones and host them on your own server.",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "WisdomSky",
+      "developer": "Technorabilia",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.portainer-tools/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.portainer-tools/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.portainer-tools/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.portainer-tools/meta.json",
+      "content_hash": "5363efa0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.privatebin",
+      "title": "Privatebin",
+      "tagline": "Privatebin Is A Minimalist, Open Source Online Pastebin Where The Server Has Zero Knowledge Of Pasted Data!\n",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "PrivateBin",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.privatebin/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.privatebin/assets/privatebin.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.privatebin/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.privatebin/meta.json",
+      "content_hash": "9e6ac376",
+      "version": "2.1.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.readerr",
+      "title": "Readarr",
+      "tagline": "Readarr Usent Server",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "Readarr",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.readerr/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.readerr/assets/128.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.readerr/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.readerr/meta.json",
+      "content_hash": "3d24fa83"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.redis",
+      "title": "Redis",
+      "tagline": "Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache, and message broker.",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "WisdomSky",
+      "developer": "Redis",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm",
+        "386"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.redis/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.redis/assets/Untitled-2-512.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.redis/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.redis/meta.json",
+      "content_hash": "4686e151",
+      "version": "8.8.4"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.retroarch-web",
+      "title": "RetroArch-web",
+      "tagline": "Online retro games emulator.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "WisdomSky",
+      "developer": "Libretro",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.retroarch-web/assets/icon",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.retroarch-web/assets/1812827.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.retroarch-web/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.retroarch-web/meta.json",
+      "content_hash": "182eaa42"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.rocket-chat",
+      "title": "Rocket. Chat",
+      "tagline": "Rocket. Chat is a customizable open source communications platform for organizations with high standards of data protection.",
+      "category": "Social",
+      "categories": [
+        "social"
+      ],
+      "author": "WisdomSky",
+      "developer": "Rocket Chat",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.rocket-chat/assets/icon.svg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.rocket-chat/assets/rocket-chat.svg",
+      "compose_url": "/apps/com.wisdomsky.coolstore.rocket-chat/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.rocket-chat/meta.json",
+      "content_hash": "c99ca4fa",
+      "version": "8.9.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.rsshub",
+      "title": "RSShub",
+      "tagline": "RSSHub is an open source, easy to use, and extensible RSS feed generator. It's capable of generating RSS feeds from pretty much everything.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "DIYgod",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.rsshub/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.rsshub/assets/logo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.rsshub/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.rsshub/meta.json",
+      "content_hash": "bdbd8938"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.rustdesk-server",
+      "title": "Rustdesk Server",
+      "tagline": "RustDesk is a full-featured open source remote control alternative for self-hosting and security with minimal configuration. You have full control of your data, with no concerns about security.",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "RustDesk",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.rustdesk-server/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.rustdesk-server/assets/icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.rustdesk-server/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.rustdesk-server/meta.json",
+      "content_hash": "705d60ad"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.searxng",
+      "title": "SearXNG",
+      "tagline": "Privacy-respecting metasearch.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "SearXNG",
+      "architectures": [
+        "amd64",
+        "arm64",
+        "arm"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.searxng/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.searxng/assets/searxng.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.searxng/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.searxng/meta.json",
+      "content_hash": "52edf3ba",
+      "version": "2026.10.29-c15647b5a"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.speedtest-tracker",
+      "title": "Speedtest Tracker",
+      "tagline": "Run A Speedtest Every Hour And Graph The Results.  See Https://hub.docker.com/r/henrywhitaker3/speedtest-tracker/tags For Arch Options",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Henry Whitaker",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.speedtest-tracker/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.speedtest-tracker/assets/speedtest-tracker.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.speedtest-tracker/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.speedtest-tracker/meta.json",
+      "content_hash": "b2d38206",
+      "version": "1.12.3-dev"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.spot-dl",
+      "title": "spotDL",
+      "tagline": "spotDL finds songs from Spotify playlists on YouTube and downloads them - along with album art, lyrics and metadata.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "spotDL",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.spot-dl/assets/icon.svg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.spot-dl/assets/icon.svg",
+      "compose_url": "/apps/com.wisdomsky.coolstore.spot-dl/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.spot-dl/meta.json",
+      "content_hash": "63f6d847",
+      "version": "4.6.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.statping",
+      "title": "Statping",
+      "tagline": "An Easy To Use Status Page For Your Websites And Applications. Statping Will Automatically Fetch The Application And Render A Beautiful Status Page With Tons Of Features For You To Build An Even Better Status Page.",
+      "category": "Developer",
+      "categories": [
+        "developer"
+      ],
+      "author": "WisdomSky",
+      "developer": "Statping",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.statping/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.statping/assets/statping.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.statping/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.statping/meta.json",
+      "content_hash": "54a941ae",
+      "version": "0.90.74"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.stirling-pdf",
+      "title": "Stirling PDF",
+      "tagline": "Stirling-PDF is a locally hosted web application that allows you to perform various operations on PDF files, such as splitting and adding images.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Frooodle",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/stirling.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.stirling-pdf/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.stirling-pdf/meta.json",
+      "content_hash": "a5518e54",
+      "version": "3.2.2"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.suggestarr",
+      "title": "SuggestArr",
+      "tagline": "Recommendations from your watch history, straight to Seer.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "giuseppe99barchetta",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.suggestarr/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.suggestarr/assets/logo.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.suggestarr/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.suggestarr/meta.json",
+      "content_hash": "e2a18b5a",
+      "version": "3.2.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.tandoor",
+      "title": "Tandoor",
+      "tagline": "The Recipe Manager That Allows You To Manage Your Ever Growing Collection Of Digital Recipes.",
+      "category": "Home",
+      "categories": [
+        "home"
+      ],
+      "author": "WisdomSky",
+      "developer": "Tandoor Recipes",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.tandoor/assets/icon.svg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.tandoor/assets/logo_color.svg",
+      "compose_url": "/apps/com.wisdomsky.coolstore.tandoor/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.tandoor/meta.json",
+      "content_hash": "b373c112"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.traefik",
+      "title": "Traefik",
+      "tagline": "Cloud-native Networking Stack That Just Works.",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Traefik Labs",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.traefik/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.traefik/assets/traefik.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.traefik/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.traefik/meta.json",
+      "content_hash": "293ad018",
+      "version": "3.7.16"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.trek",
+      "title": "TREK",
+      "tagline": "Your trip. Your plan.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "liketrek",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.trek/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.trek/assets/trek-icon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.trek/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.trek/meta.json",
+      "content_hash": "767af57c",
+      "version": "5.0.1"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.trilium",
+      "title": "Trilium",
+      "tagline": "Trilium Notes Is A Hierarchical Note Taking Application With Focus On Building Large Personal Knowledge Bases",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Trilium Notes",
+      "architectures": [
+        "amd64",
+        "arm",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.trilium/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.trilium/assets/large.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.trilium/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.trilium/meta.json",
+      "content_hash": "66c3b89d",
+      "version": "0.63.7"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.vdfusion",
+      "title": "VDFusion",
+      "tagline": "Find duplicate videos by content, not filename.",
+      "category": "Media",
+      "categories": [
+        "media"
+      ],
+      "author": "WisdomSky",
+      "developer": "vsl86",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.vdfusion/assets/icon.svg",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.vdfusion/assets/vdfusion-logo.svg",
+      "compose_url": "/apps/com.wisdomsky.coolstore.vdfusion/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.vdfusion/meta.json",
+      "content_hash": "258df120",
+      "version": "1.2.0"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.veloren",
+      "title": "Veloren Server",
+      "tagline": "Open-source multiplayer voxel RPG.",
+      "category": "Others",
+      "categories": [
+        "others"
+      ],
+      "author": "WisdomSky",
+      "developer": "Veloren",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.veloren/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.veloren/assets/favicon.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.veloren/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.veloren/meta.json",
+      "content_hash": "21bc9b1d"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.wallabag",
+      "title": "Wallabag",
+      "tagline": "Wallabag Is A Self Hostable Application For Saving Web Pages: Save And Classify Articles. Read Them Later. Freely.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Wallabag",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.wallabag/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.wallabag/assets/wallabag.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.wallabag/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.wallabag/meta.json",
+      "content_hash": "c984b5ec",
+      "version": "2.6.15"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.webdav",
+      "title": "WebDAV",
+      "tagline": "Web-based distributed authoring and versioning (WebDAV) is a set of extensions to the HTTP protocol that allows WebDAV clients (such as Microsoft Web Folders) to collaboratively edit and manage files on remote Web servers.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Derkades",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.webdav/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.webdav/assets/webdav.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.webdav/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.webdav/meta.json",
+      "content_hash": "d3b9d3cd"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.websync",
+      "title": "Web Sync (RSync)",
+      "tagline": "Websync is intended to be an rsync task manager, where rsync tasks can be added, scheduled and maintained in a sane manner.",
+      "category": "Productivity",
+      "categories": [
+        "productivity"
+      ],
+      "author": "WisdomSky",
+      "developer": "Furier",
+      "architectures": [
+        "amd64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.websync/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.websync/assets/sync-1024.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.websync/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.websync/meta.json",
+      "content_hash": "85f0ce8d"
+    },
+    {
+      "id": "com.wisdomsky.coolstore.wg-easy",
+      "title": "Wireguard Server",
+      "tagline": "Fast Vpn Server With Easy To Use User Interface",
+      "category": "Networking",
+      "categories": [
+        "networking"
+      ],
+      "author": "WisdomSky",
+      "developer": "Wg-Easy",
+      "architectures": [
+        "amd64",
+        "arm64"
+      ],
+      "icon": "/apps/com.wisdomsky.coolstore.wg-easy/assets/icon.png",
+      "thumbnail": "/apps/com.wisdomsky.coolstore.wg-easy/assets/wireguard.webp",
+      "compose_url": "/apps/com.wisdomsky.coolstore.wg-easy/docker-compose.yml",
+      "meta_url": "/apps/com.wisdomsky.coolstore.wg-easy/meta.json",
+      "content_hash": "3200fb51",
+      "version": "15.5.0"
+    }
+  ]
+}

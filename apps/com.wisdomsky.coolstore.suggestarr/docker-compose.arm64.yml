@@ -1,0 +1,37 @@
+name: suggestarr
+services:
+  app:
+    image: ciuse99/suggestarr:v3.2.0@sha256:5b16003fe3ef3b6c51cc36a539f40aa95943bb02824e1d86eaf79389c46f8c12
+    restart: unless-stopped
+    ports:
+      - target: 4455
+        published: "4455"
+        protocol: tcp
+    environment:
+      SUGGESTARR_PORT: "4455"
+      LOG_LEVEL: INFO
+      TZ: $TZ
+    volumes:
+      - type: bind
+        source: /DATA/AppData/suggestarr/config_files
+        target: /app/config/config_files
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - "-c"
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:4455/api/health', timeout=5)
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.suggestarr/assets/icon.png
+  title:
+    en_US: SuggestArr
+  id: com.wisdomsky.coolstore.suggestarr
+  index: /
+  port_map: "4455"
+  scheme: http
+  version: 3.2.0

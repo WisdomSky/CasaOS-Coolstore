@@ -1,0 +1,27 @@
+{
+  "architectures": [
+    "amd64",
+    "arm",
+    "arm64"
+  ],
+  "description": "Homebridge allows you to integrate with smart home devices that do not natively support HomeKit. There are over 2,000 Homebridge plugins supporting thousands of different smart accessories.",
+  "tagline": "Homebridge Allows You To Integrate With Smart Home Devices That Do Not Natively Support Homekit. There Are Over 2,000 Homebridge Plugins Supporting Thousands Of Different Smart Accessories.",
+  "developer": "Homebridge",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.homebridge/assets/homebridge.webp",
+  "category": "Home",
+  "update_at": "2026-10-30",
+  "title": "Homebridge",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.homebridge",
+  "version": "2023-01-08",
+  "categories": [
+    "home"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 303288055,
+    "arm": 267124469,
+    "arm64": 292981444
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Stirling-PDF is a locally hosted web application that allows you to perform various operations on PDF files, such as splitting and adding images.",
+  "tagline": "Stirling-PDF is a locally hosted web application that allows you to perform various operations on PDF files, such as splitting and adding images.",
+  "developer": "Frooodle",
+  "author": "WisdomSky",
+  "screenshot_link": [
+    "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/home.webp"
+  ],
+  "thumbnail": "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/stirling.webp",
+  "category": "Productivity",
+  "update_at": "2026-10-30",
+  "title": "Stirling PDF",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.stirling-pdf",
+  "version": "3.2.2",
+  "categories": [
+    "productivity"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 1166101791,
+    "arm64": 1140008458
+  }
+}

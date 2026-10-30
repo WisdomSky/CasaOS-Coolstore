@@ -1,0 +1,30 @@
+name: komga
+services:
+  app:
+    image: gotson/komga:1.29.2@sha256:8a1002c71a2003da3e5f546a818f42388f90f6cc7f34dea0a88ff9108862b348
+    restart: unless-stopped
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      TZ: $TZ
+    ports:
+      - target: 25600
+        published: 25600
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/$AppID/data
+        target: /data
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.komga/assets/icon.png
+  title:
+    en_US: Komga
+  port_map: "25600"
+  id: com.wisdomsky.coolstore.komga
+  index: /
+  scheme: http
+  version: 1.29.2

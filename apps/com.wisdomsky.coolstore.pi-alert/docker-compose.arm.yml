@@ -1,0 +1,33 @@
+name: pi-alert
+services:
+  app:
+    image: jokobsk/pi.alert:25@sha256:7fd62cdd1aac76d6efcbc392bdd6cf6d5503aa70b4a3bc858ca558afe99d6b80
+    restart: always
+    network_mode: host
+    environment:
+      PUID: $PUID
+      PGID: $PGID
+      HOST_USER_ID: $PUID
+      HOST_USER_GID: $PGID
+      TZ: $TZ
+    ports:
+      - target: 20211
+        published: 20211
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/$AppID/config
+        target: /home/pi/pialert/config
+      - type: bind
+        source: /DATA/AppData/$AppID/db
+        target: /home/pi/pialert/db
+x-casaos:
+  main: app
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.pi-alert/assets/icon.jpg
+  title:
+    en_US: Pi.alert
+  port_map: "20211"
+  id: com.wisdomsky.coolstore.pi-alert
+  index: /
+  scheme: http
+  version: "25"

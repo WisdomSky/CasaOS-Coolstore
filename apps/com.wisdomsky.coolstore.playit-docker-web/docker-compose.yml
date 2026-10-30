@@ -1,0 +1,24 @@
+name: playit-docker-web
+services:
+  playit:
+    image: wisdomsky/playit-docker-web:1.1.0
+    restart: unless-stopped
+    network_mode: host
+    ports:
+      - target: 8008
+        published: "8008"
+        protocol: tcp
+    volumes:
+      - type: bind
+        source: /DATA/AppData/playit-docker-web/config
+        target: /config
+x-casaos:
+  main: playit
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.playit-docker-web/assets/icon.png
+  title:
+    en_US: Playit.gg
+  port_map: "8008"
+  id: com.wisdomsky.coolstore.playit-docker-web
+  index: /
+  scheme: http
+  version: 1.1.0

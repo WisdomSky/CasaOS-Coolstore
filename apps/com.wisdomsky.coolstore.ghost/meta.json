@@ -1,0 +1,25 @@
+{
+  "architectures": [
+    "amd64",
+    "arm64"
+  ],
+  "description": "Free and open-source blogging platform",
+  "tagline": "Free And Open-source Blogging Platform",
+  "developer": "Ghost Foundation",
+  "author": "WisdomSky",
+  "thumbnail": "/apps/com.wisdomsky.coolstore.ghost/assets/ghost.webp",
+  "category": "Social",
+  "update_at": "2026-10-30",
+  "title": "Ghost",
+  "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
+  "id": "com.wisdomsky.coolstore.ghost",
+  "version": "6.73.0",
+  "categories": [
+    "social"
+  ],
+  "min_memory": 0,
+  "min_image_size": {
+    "amd64": 339018298,
+    "arm64": 335487775
+  }
+}
