@@ -1,0 +1,60 @@
+name: clipboard-bridge
+services:
+  app:
+    image: ghcr.io/mattboxx/clipboard-bridge-server:1.0.11
+    restart: unless-stopped
+    ports:
+      - target: 5088
+        published: "5088"
+        protocol: tcp
+    environment:
+      CLIPBOARD_PORT: "5088"
+      CLIPBOARD_DATA_DIR: /data
+      CLIPBOARD_MAX_HISTORY: "200"
+      CLIPBOARD_MAX_UPLOAD_MB: "64"
+      CLIPBOARD_SESSION_DAYS: "3650"
+      CLIPBOARD_TOKEN: ""
+      CLIPBOARD_PASSWORD: ""
+      CLIPBOARD_ACCOUNTS: ""
+    volumes:
+      - type: bind
+        source: /DATA/AppData/clipboard-bridge/data
+        target: /data
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - "-c"
+        - import urllib.request; urllib.request.urlopen('http://127.0.0.1:5088/health', timeout=3).read()
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Self-hosted clipboard and file bridge for Windows, Android, iPhone, iPad, and the browser. Stores shared text, photos, and files with searchable history and optional accounts.
+  tagline:
+    en_US: Copy on one device, use it on another.
+  developer: Mattboxx
+  author: WisdomSky
+  icon: https://raw.githubusercontent.com/Mattboxx/Clipboard-Bridge-AppStore/main/Apps/ClipboardBridge/icon.svg
+  thumbnail: https://raw.githubusercontent.com/Mattboxx/Clipboard-Bridge-AppStore/main/Apps/ClipboardBridge/icon.svg
+  screenshot_link:
+    - https://mattboxx.github.io/Clipboard-Bridge/assets/server-web.png
+    - https://mattboxx.github.io/Clipboard-Bridge/assets/server-history.png
+  category: Productivity
+  tips:
+    before_install:
+      en_US: Use only on a trusted LAN or private VPN. Protection with `CLIPBOARD_PASSWORD` and `CLIPBOARD_TOKEN` is optional. Keep `/data` persistent and back it up before updates.
+  title:
+    en_US: Clipboard Bridge
+  id: com.wisdomsky.coolstore.clipboard-bridge
+  index: /
+  port_map: "5088"
+  scheme: http
+  version: 1.0.11
+  update_at: "2026-10-30"
