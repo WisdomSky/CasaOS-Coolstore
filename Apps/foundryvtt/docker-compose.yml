@@ -1,0 +1,49 @@
+name: foundryvtt
+services:
+  app:
+    image: ghcr.io/felddy/foundryvtt:14.369
+    hostname: foundryvtt
+    restart: unless-stopped
+    ports:
+      - target: 30000
+        published: "30000"
+        protocol: tcp
+    environment:
+      FOUNDRY_USERNAME: you@example.com
+      FOUNDRY_PASSWORD: change-me
+      FOUNDRY_ADMIN_KEY: casaos
+      FOUNDRY_LICENSE_KEY: ""
+      FOUNDRY_MINIFY_STATIC_FILES: "true"
+      FOUNDRY_COMPRESS_WEBSOCKET: "true"
+      FOUNDRY_TELEMETRY: "false"
+      TZ: $TZ
+      CONTAINER_PRESERVE_CONFIG: "true"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/foundryvtt/data
+        target: /data
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: app
+  description:
+    en_US: Runs Foundry Virtual Tabletop headlessly in Docker, with a browser-based game server, world data, modules, and assets. Requires a Foundry license but no external database.
+  tagline:
+    en_US: Self-hosted virtual tabletop.
+  developer: Foundry Virtual Tabletop
+  author: WisdomSky
+  icon: https://foundryvtt.com/static/assets/icons/fvtt.png
+  thumbnail: https://foundryvtt.com/static/assets/icons/fvtt.png
+  category: Others
+  tips:
+    before_install:
+      en_US: Requires a purchased FoundryVTT license. Set `FOUNDRY_USERNAME`, `FOUNDRY_PASSWORD`, `FOUNDRY_ADMIN_KEY`, and optionally `FOUNDRY_LICENSE_KEY` in the app settings. The stable hostname is required for license activation.
+  title:
+    en_US: FoundryVTT
+  id: com.wisdomsky.coolstore.foundryvtt
+  index: /
+  port_map: "30000"
+  scheme: http
+  version: "14.369"
+  update_at: "2026-10-30"
