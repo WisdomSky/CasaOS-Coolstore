@@ -57,4 +57,4 @@ x-casaos:
   port_map: "3923"
   scheme: http
   version: 1.20.26
-  update_at: "2026-10-30"
+  update_at: "2026-10-31"

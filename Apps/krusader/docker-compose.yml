@@ -60,4 +60,4 @@ x-casaos:
   port_map: "6080"
   scheme: http
   version: latest
-  update_at: "2026-10-30"
+  update_at: "2026-10-31"

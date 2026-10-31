@@ -1,7 +1,7 @@
 name: suggestarr
 services:
   app:
-    image: ciuse99/suggestarr:v3.2.0
+    image: ciuse99/suggestarr:v3.3.0
     restart: unless-stopped
     ports:
       - target: 4455
@@ -48,5 +48,5 @@ x-casaos:
   index: /
   port_map: "4455"
   scheme: http
-  version: 3.2.0
-  update_at: "2026-10-30"
+  version: 3.3.0
+  update_at: "2026-10-31"
