@@ -16,17 +16,17 @@
   "tips": {
     "before_install": "The initial admin account is `admin@example.com` with password `casaos`. Change it after first login and keep `ENCRYPTION_KEY` safe. Use HTTPS if exposing TREK to the internet."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "TREK",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.trek",
-  "version": "5.0.1",
+  "version": "5.1.0",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 631851424,
-    "arm64": 622807821
+    "amd64": 648695938,
+    "arm64": 639664785
   }
 }

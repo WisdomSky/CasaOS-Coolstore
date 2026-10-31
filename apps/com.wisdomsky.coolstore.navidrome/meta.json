@@ -14,7 +14,7 @@
   "tips": {
     "before_install": "The default path of the music library is pointed to `/DATA/Media/Music`. If your music library is stored elsewhere, you can change this by going into the app settings and changing the specified volume path.\n"
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Navidrome",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.navidrome",

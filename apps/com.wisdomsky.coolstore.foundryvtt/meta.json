@@ -12,7 +12,7 @@
   "tips": {
     "before_install": "Requires a purchased FoundryVTT license. Set `FOUNDRY_USERNAME`, `FOUNDRY_PASSWORD`, `FOUNDRY_ADMIN_KEY`, and optionally `FOUNDRY_LICENSE_KEY` in the app settings. The stable hostname is required for license activation."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "FoundryVTT",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.foundryvtt",

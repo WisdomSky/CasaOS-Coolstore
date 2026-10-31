@@ -11,7 +11,7 @@
   "tips": {
     "before_install": "The VNC password is `casaos`. Krusader runs privileged and can access `/DATA`, `/mnt`, and `/media`, so keep it on a trusted network. The app is amd64-only."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Krusader",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.krusader",

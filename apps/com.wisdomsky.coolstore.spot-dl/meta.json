@@ -12,7 +12,7 @@
     "before_install": "The default download location is set to `/DATA/Media/Music`. You can change this by going into the app settings and changing the specified path.\n"
   },
   "category": "Media",
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "spotDL",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.spot-dl",

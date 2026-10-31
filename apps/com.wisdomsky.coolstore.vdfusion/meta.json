@@ -15,7 +15,7 @@
   "tips": {
     "before_install": "VDFusion has no authentication. Keep it on a trusted LAN or behind a reverse proxy. The app is amd64-only."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "VDFusion",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.vdfusion",

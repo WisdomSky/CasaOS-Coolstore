@@ -13,7 +13,7 @@
   "tips": {
     "before_install": "MagicMirror has no authentication. Keep it on a trusted LAN. Edit `/DATA/AppData/magicmirror/config/config.js` to add modules, calendars, and news feeds."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "MagicMirror²",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.magicmirror",

@@ -12,7 +12,7 @@
   "tips": {
     "before_install": "The first visit creates the admin account. Change `APP_KEY` and `STATIC_CRON_TOKEN` in the app settings before exposing Firefly outside your LAN. The cron container handles recurring transactions and bills."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Firefly III",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.firefly-iii",

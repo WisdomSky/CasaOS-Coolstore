@@ -1,7 +1,7 @@
 name: freescout
 services:
   app:
-    image: nfrastack/freescout:2.2.22@sha256:4e39be0ea399e4244309492611023b29ef09efbc7cbc7dd5bafd50bc22d9bd57
+    image: nfrastack/freescout:2.2.23@sha256:3f153a3ed7e07ed27714a3222caafe108017b7a8e6b4aac8f09834dd1147097a
     restart: unless-stopped
     ports:
       - target: 80
@@ -54,4 +54,4 @@ x-casaos:
   index: /
   port_map: "8080"
   scheme: http
-  version: 2.2.22
+  version: 2.2.23

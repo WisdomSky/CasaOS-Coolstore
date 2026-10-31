@@ -12,17 +12,17 @@
   "tips": {
     "before_install": "The initial admin is `admin@example.com` with password `casaos`. Change it after first login. Set `APP_URL` to your CasaOS address and configure IMAP/SMTP in the app settings for real mail flow."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "FreeScout",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.freescout",
-  "version": "2.2.22",
+  "version": "2.2.23",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 283613739,
-    "arm64": 278849675
+    "amd64": 283155432,
+    "arm64": 278376895
   }
 }

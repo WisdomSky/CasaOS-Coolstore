@@ -17,7 +17,7 @@
   "tips": {
     "before_install": "After installation, change `BASE_URL` in the app settings to your CasaOS address, for example `http://192.168.1.10:8080`. The first signup creates the admin account."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "CalPal",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.calpal",

@@ -13,7 +13,7 @@
   "tips": {
     "before_install": "The web UI is on port `3002`; Git SSH is on port `2222`. Complete the first-run onboarding at the web UI.\n\nIf you access CasaOS from another device, change `FORGEJO__server__ROOT_URL` in the app settings to `http://<casaos-ip>:3002/`."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Forgejo",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.forgejo",

@@ -12,7 +12,7 @@
     "before_install": "After installation, open the app settings and update `SYMFONY__ENV__DOMAIN_NAME` to your CasaOS address, for example `http://192.168.1.10:8080`.\n"
   },
   "category": "Productivity",
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Wallabag",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.wallabag",

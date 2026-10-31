@@ -11,7 +11,7 @@
   "tips": {
     "before_install": "### Note\n\nTo find your `Server PIN`, look in the `network.log` file in `/DATA/AppData/airvideohd/config/logs` after the server has started.\n"
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Air Video HD",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.airvideohd",

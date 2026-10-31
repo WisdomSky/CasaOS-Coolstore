@@ -12,7 +12,7 @@
   "tips": {
     "before_install": "This is a companion app for Immich. Set `IMMICH_URL`, `IMMICH_API_KEY`, and the Immich Postgres credentials in the app settings. If Immich runs in Docker, `host.docker.internal` reaches the host; expose Immich PostgreSQL on the host or adjust `DB_HOST` to reach it."
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Immich Power Tools",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.immich-power-tools",

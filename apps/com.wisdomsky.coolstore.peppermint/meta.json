@@ -22,7 +22,7 @@
   "tips": {
     "before_install": "### Additional Instructions:\n\nAfter finished installing, open the `app settings` and update the `BASE_URL` to point it to your Home Server's IP Address.\n\ne.g:\n```\nhttp://192.168.31.31:5000\n```\n\n### Default credentials:\n\nUsername: `admin@admin.com`\n\nPassword: `1234`\n"
   },
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Peppermint",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.peppermint",

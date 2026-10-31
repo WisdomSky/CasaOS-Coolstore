@@ -13,7 +13,7 @@
     "before_install": "RustDesk clients connect to this server using your CasaOS host IP and port `21116`.\n\nThe container image includes a shell, so the CasaOS terminal can be used normally.\n"
   },
   "category": "Networking",
-  "update_at": "2026-10-30",
+  "update_at": "2026-10-31",
   "title": "Rustdesk Server",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.rustdesk-server",

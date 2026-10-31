@@ -1,7 +1,7 @@
 name: draw-io
 services:
   app:
-    image: jgraph/drawio:32.6.1
+    image: jgraph/drawio:32.6.9
     restart: unless-stopped
     environment:
       LETS_ENCRYPT_ENABLED: false
@@ -29,4 +29,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.draw-io
   index: /
   scheme: http
-  version: 32.6.1
+  version: 32.6.9
