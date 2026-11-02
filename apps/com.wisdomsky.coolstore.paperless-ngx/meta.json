@@ -12,7 +12,7 @@
     "before_install": "## Credentials:\n\nusername: `admin`\n\npassword: `admin`\n"
   },
   "category": "Productivity",
-  "update_at": "2026-10-31",
+  "update_at": "2026-11-02",
   "title": "Paperless-ngx",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.paperless-ngx",
