@@ -18,7 +18,7 @@ services:
         source: /DATA/AppData/$AppID/www
         target: /var/www/html
   joomladb:
-    image: mysql:8.4.13@sha256:8ab2115abe8ca3d2745962f4e75f2f86fb8182ae19908773cd4cce811f3c106e
+    image: mysql:8.4.13@sha256:f4539b86c82f2c168fc95b439448bde3b9f48e8460344ce41e39081867d2b58e
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos

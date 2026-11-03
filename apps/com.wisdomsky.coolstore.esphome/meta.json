@@ -12,7 +12,7 @@
   "tips": {
     "before_install": "| Label | Value |\n| --- | --- |\n| Username | `casaos` |\n| Password | `casaos` |\n"
   },
-  "update_at": "2026-11-02",
+  "update_at": "2026-11-03",
   "title": "ESPHome",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.esphome",
@@ -22,7 +22,7 @@
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 259998838,
-    "arm64": 250971287
+    "amd64": 260313253,
+    "arm64": 251258763
   }
 }

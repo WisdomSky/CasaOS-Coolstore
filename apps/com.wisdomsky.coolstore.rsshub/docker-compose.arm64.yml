@@ -1,7 +1,7 @@
 name: rsshub
 services:
   app:
-    image: diygod/rsshub:2026-11-02@sha256:ea281dc774214a9a0898ff73005f27c5822524672a4a497abc05df96298e1a35
+    image: diygod/rsshub:2026-11-03@sha256:f66c12f0e6fa3a793e3c7e72c175f6677b44b31fc6e47a033e7fc79b5bf7af52
     restart: unless-stopped
     environment:
       NODE_ENV: production
@@ -38,4 +38,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.rsshub
   index: /
   scheme: http
-  version: "2026-11-02"
+  version: "2026-11-03"
