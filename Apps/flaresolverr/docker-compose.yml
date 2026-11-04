@@ -40,4 +40,4 @@ x-casaos:
   port_map: "8191"
   scheme: http
   version: 3.5.2
-  update_at: "2026-11-03"
+  update_at: "2026-11-04"
