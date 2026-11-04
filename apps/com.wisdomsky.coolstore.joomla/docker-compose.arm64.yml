@@ -1,7 +1,7 @@
 name: joomla
 services:
   app:
-    image: joomla:6.2.0-apache@sha256:43a8976d327c5f3e5999fa0adf7e5cca73d9839e03ddd1646faa37520f1cfa80
+    image: joomla:5.4-apache@sha256:7e75f25b4fc4337f6e7795c2a3d9b06938e114c0f30d856f5ce474c402a19dbe
     environment:
       JOOMLA_DB_HOST: joomladb
       JOOMLA_DB_USER: joomla
@@ -38,4 +38,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.joomla
   index: /
   scheme: http
-  version: 6.2.0-apache
+  version: 5.4-apache
