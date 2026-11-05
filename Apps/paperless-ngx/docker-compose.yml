@@ -56,7 +56,7 @@ services:
     ports:
       - "9998:9998"
   gotenberg:
-    image: docker.io/gotenberg/gotenberg:8.39
+    image: docker.io/gotenberg/gotenberg:8.40
     restart: unless-stopped
     command:
       - gotenberg
@@ -93,4 +93,4 @@ x-casaos:
   index: /
   scheme: http
   version: 3.4.2
-  update_at: "2026-11-04"
+  update_at: "2026-11-05"

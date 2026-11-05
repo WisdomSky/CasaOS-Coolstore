@@ -1,7 +1,7 @@
 name: caddy
 services:
   app:
-    image: caddy:2.11.7
+    image: caddy:2.11.8
     restart: unless-stopped
     ports:
       - target: 80
@@ -44,5 +44,5 @@ x-casaos:
   id: com.wisdomsky.coolstore.caddy
   index: /
   scheme: http
-  version: 2.11.7
-  update_at: "2026-11-04"
+  version: 2.11.8
+  update_at: "2026-11-05"

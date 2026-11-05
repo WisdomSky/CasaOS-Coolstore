@@ -109,4 +109,4 @@ x-casaos:
   port_map: "9080"
   scheme: http
   version: latest
-  update_at: "2026-11-04"
+  update_at: "2026-11-05"

@@ -16,7 +16,7 @@ services:
       BASE_URL: http://casaos.local:5000
     restart: unless-stopped
   db:
-    image: postgres:16.15
+    image: postgres:18
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -100,4 +100,4 @@ x-casaos:
   index: /
   scheme: http
   version: latest
-  update_at: "2026-11-04"
+  update_at: "2026-11-05"
