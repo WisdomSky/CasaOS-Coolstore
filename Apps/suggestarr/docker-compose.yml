@@ -49,4 +49,4 @@ x-casaos:
   port_map: "4455"
   scheme: http
   version: 3.3.0
-  update_at: "2026-11-05"
+  update_at: "2026-11-06"

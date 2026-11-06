@@ -53,4 +53,4 @@ x-casaos:
   port_map: "8080"
   scheme: http
   version: 2026.11.5-3e95f6cd2
-  update_at: "2026-11-05"
+  update_at: "2026-11-06"
