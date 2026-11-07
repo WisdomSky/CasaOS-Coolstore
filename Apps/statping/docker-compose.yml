@@ -25,7 +25,7 @@ services:
         source: /DATA/AppData/$AppID/app
         target: /app
   db:
-    image: postgres:18
+    image: postgres:14.24
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -84,4 +84,4 @@ x-casaos:
   index: /
   scheme: http
   version: 0.90.74
-  update_at: "2026-11-06"
+  update_at: "2026-11-07"
