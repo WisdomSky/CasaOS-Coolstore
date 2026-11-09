@@ -1,7 +1,7 @@
 name: vdfusion
 services:
   app:
-    image: ghcr.io/vsl86/vdfusion:v1.2.0@sha256:4235463cf6c1ff6620c18df7c2f02ca4c727cb87c5c23e0aa5426e28c3319df6
+    image: ghcr.io/vsl86/vdfusion:v1.3.1@sha256:5c75d5591b001effbecc0902688ad8974cd4f073f23aa88bcb384d264b30307c
     restart: unless-stopped
     ports:
       - target: 8080
@@ -27,4 +27,4 @@ x-casaos:
   index: /
   port_map: "8080"
   scheme: http
-  version: 1.2.0
+  version: 1.3.1

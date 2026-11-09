@@ -1,7 +1,7 @@
 name: foundryvtt
 services:
   app:
-    image: ghcr.io/felddy/foundryvtt:14.369@sha256:3588e251058b916d57f73da838f33027d1c2000463f28986b362a41df7a63207
+    image: ghcr.io/felddy/foundryvtt:14.370@sha256:74293f1ee95b1f55be5f36bdf70e553341a3268d20cd3ae99521659b4cf4ad82
     hostname: foundryvtt
     restart: unless-stopped
     ports:
@@ -31,4 +31,4 @@ x-casaos:
   index: /
   port_map: "30000"
   scheme: http
-  version: "14.369"
+  version: "14.370"

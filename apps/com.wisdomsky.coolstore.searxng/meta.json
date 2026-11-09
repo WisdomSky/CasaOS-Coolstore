@@ -13,18 +13,18 @@
   "tips": {
     "before_install": "Change `SEARXNG_SECRET` and `SEARXNG_BASE_URL` in the app settings. SearXNG has no built-in login; put it behind a reverse proxy if exposed publicly."
   },
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "SearXNG",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.searxng",
-  "version": "2026.11.2-cccbc9e15",
+  "version": "2026.11.8-74418092d",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 98570109,
-    "arm": 92568589,
-    "arm64": 96293867
+    "amd64": 98630020,
+    "arm": 92638490,
+    "arm64": 96288610
   }
 }

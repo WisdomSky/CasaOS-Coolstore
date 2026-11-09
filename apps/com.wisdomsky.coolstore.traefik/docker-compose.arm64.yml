@@ -1,7 +1,7 @@
 name: traefik
 services:
   app:
-    image: traefik:v3.7.17@sha256:bde69ad80e54ac1acc94097a7327ab95e953139feedc96dbd75fc6c281d3ee7c
+    image: traefik:v3.7.17@sha256:7d059b49c28f167021156e8e7b448823eb8cfd681fdb97fd7e097d6c4e655190
     restart: unless-stopped
     environment:
       PUID: $PUID

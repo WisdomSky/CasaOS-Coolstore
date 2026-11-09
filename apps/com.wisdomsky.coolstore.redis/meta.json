@@ -11,7 +11,7 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.redis/assets/Untitled-2-512.webp",
   "category": "Developer",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "Redis",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.redis",
@@ -21,9 +21,9 @@
   ],
   "min_memory": 0,
   "min_image_size": {
-    "386": 45216777,
-    "amd64": 54591635,
-    "arm": 42147608,
-    "arm64": 54441764
+    "386": 45219011,
+    "amd64": 54592661,
+    "arm": 42148578,
+    "arm64": 54442395
   }
 }

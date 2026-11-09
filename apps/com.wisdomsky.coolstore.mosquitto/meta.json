@@ -10,18 +10,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.mosquitto/assets/logo.webp",
   "category": "Developer",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "Eclipse Mosquitto",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.mosquitto",
-  "version": "2.0.22",
+  "version": "2",
   "categories": [
     "developer"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 7724619,
-    "arm": 7004247,
-    "arm64": 8042514
+    "amd64": 12976122,
+    "arm": 12226621,
+    "arm64": 13194706
   }
 }

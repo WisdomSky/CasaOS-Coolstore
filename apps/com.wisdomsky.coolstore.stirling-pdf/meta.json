@@ -12,17 +12,17 @@
   ],
   "thumbnail": "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/stirling.webp",
   "category": "Productivity",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "Stirling PDF",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.stirling-pdf",
-  "version": "3.2.2",
+  "version": "3.3.0",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 1166101791,
-    "arm64": 1140008458
+    "amd64": 1130363357,
+    "arm64": 1088263069
   }
 }

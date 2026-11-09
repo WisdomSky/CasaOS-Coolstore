@@ -10,18 +10,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.privatebin/assets/privatebin.webp",
   "category": "Productivity",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "Privatebin",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.privatebin",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 45782922,
-    "arm": 40793323,
-    "arm64": 45975896
+    "amd64": 41936023,
+    "arm": 37319603,
+    "arm64": 41821468
   }
 }

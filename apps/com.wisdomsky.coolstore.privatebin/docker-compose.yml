@@ -1,7 +1,7 @@
 name: privatebin
 services:
   app:
-    image: privatebin/nginx-fpm-alpine:2.1.0
+    image: privatebin/nginx-fpm-alpine:2.1.1
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -26,4 +26,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.privatebin
   index: /
   scheme: http
-  version: 2.1.0
+  version: 2.1.1

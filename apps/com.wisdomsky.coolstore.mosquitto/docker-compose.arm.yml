@@ -1,7 +1,7 @@
 name: mosquitto
 services:
   app:
-    image: eclipse-mosquitto:2.0.22@sha256:131e8032faa3ab93bd038c4b9c002ace9735e3b7e08f0fbe38e73d1651139206
+    image: eclipse-mosquitto:2@sha256:dfc86791ff1d33cc48050c94cbfb5ffadb4c1bbb07eccc78d185b310465b2bd1
     restart: unless-stopped
     ports:
       - target: 1883
@@ -28,4 +28,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.mosquitto
   index: /
   port_map: "1883"
-  version: 2.0.22
+  version: "2"

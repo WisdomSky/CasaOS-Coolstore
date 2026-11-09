@@ -18,7 +18,7 @@ services:
     restart: unless-stopped
 x-casaos:
   main: app
-  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.mealie/assets/icon.png
+  icon: https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages/apps/com.wisdomsky.coolstore.mealie/assets/icon
   title:
     en_US: Mealie
   port_map: "3000"

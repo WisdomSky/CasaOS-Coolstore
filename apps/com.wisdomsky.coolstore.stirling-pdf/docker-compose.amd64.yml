@@ -1,7 +1,7 @@
 name: stirling-pdf
 services:
   app:
-    image: frooodle/s-pdf:3.2.2@sha256:0d3fa730272ddb037c71db6ae760e1af991722d88c2129f41c31feee6fca30e6
+    image: frooodle/s-pdf:3.3.0@sha256:b670779e1984ab3b7d2009d34b4fff63f6294aeb2325c97dc93f5f616bf4b9c7
     restart: unless-stopped
     environment:
       APP_HOME_NAME: Stirling PDF
@@ -20,4 +20,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.stirling-pdf
   index: /
   scheme: http
-  version: 3.2.2
+  version: 3.3.0

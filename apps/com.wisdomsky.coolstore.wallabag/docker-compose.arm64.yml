@@ -41,7 +41,7 @@ services:
         source: /DATA/AppData/Wallabag/mysql
         target: /var/lib/mysql
   redis:
-    image: redis:7.4.12-alpine@sha256:c1945f0eeb2d503f8421952da953a3804d38e4f004d4ef11d57826da59d2c332
+    image: redis:7.4.12-alpine@sha256:e8404170eef732867f7801b1453014bc0d9e2dbd1a2284cfcc17fe60a6cd255b
     restart: unless-stopped
     volumes:
       - type: bind

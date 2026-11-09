@@ -9,17 +9,17 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.rsshub/assets/logo.webp",
   "category": "Productivity",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "RSShub",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.rsshub",
-  "version": "2026-11-04",
+  "version": "2026-11-08",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 1372449794,
-    "arm64": 1376371277
+    "amd64": 1394300699,
+    "arm64": 1397337630
   }
 }

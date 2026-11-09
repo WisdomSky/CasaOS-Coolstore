@@ -45,7 +45,7 @@ services:
         source: /DATA/AppData/firefly-iii/db
         target: /var/lib/mysql
   cron:
-    image: alpine:latest@sha256:e311ae748be7f56ae5cba304bc488f0786df68ee507513f654a5cc8597cffb42
+    image: alpine:latest@sha256:1829893486be257df5049ab3b7fc95afbd0fc09d89803cbc580bda1ba5386b29
     restart: unless-stopped
     depends_on:
       - app

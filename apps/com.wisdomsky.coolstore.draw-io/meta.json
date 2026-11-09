@@ -9,17 +9,17 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.draw-io/assets/logo.webp",
   "category": "Productivity",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "Draw.io",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.draw-io",
-  "version": "32.6.9",
+  "version": "32.6.10",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 401618238,
-    "arm64": 397026421
+    "amd64": 401700371,
+    "arm64": 397106142
   }
 }

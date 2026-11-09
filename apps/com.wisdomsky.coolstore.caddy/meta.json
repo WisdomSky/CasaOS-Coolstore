@@ -10,18 +10,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.caddy/assets/caddy.webp",
   "category": "Networking",
-  "update_at": "2026-11-04",
+  "update_at": "2026-11-09",
   "title": "Caddy",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.caddy",
-  "version": "2.11.7",
+  "version": "2.11.9",
   "categories": [
     "networking"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 24878392,
-    "arm": 23570959,
-    "arm64": 23639921
+    "amd64": 24800534,
+    "arm": 23539883,
+    "arm64": 23513580
   }
 }
