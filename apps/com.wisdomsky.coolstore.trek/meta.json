@@ -20,13 +20,13 @@
   "title": "TREK",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.trek",
-  "version": "5.1.1",
+  "version": "5.1.2",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 648973099,
-    "arm64": 639931710
+    "amd64": 649050899,
+    "arm64": 640017791
   }
 }

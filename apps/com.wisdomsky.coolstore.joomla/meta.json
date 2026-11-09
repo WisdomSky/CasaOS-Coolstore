@@ -16,13 +16,13 @@
   "title": "Joomla",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.joomla",
-  "version": "4.4-apache",
+  "version": "5.4-apache",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 500194189,
-    "arm64": 486212270
+    "amd64": 515321552,
+    "arm64": 501479413
   }
 }

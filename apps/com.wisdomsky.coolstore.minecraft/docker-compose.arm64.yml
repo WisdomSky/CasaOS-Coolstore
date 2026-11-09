@@ -1,7 +1,7 @@
 name: minecraft
 services:
   app:
-    image: itzg/minecraft-server:2026.10.1@sha256:3f821289276c4dd5073781b56a3cb922505615db94fd637bcc2490e06e1bfd5b
+    image: itzg/minecraft-server:2026.11.0@sha256:c4ab6fba6e5dfbecc211a7ca8b7689b1473cd82e0efcde2d5ab3f3beb585cec3
     environment:
       EULA: true
     ports:
@@ -20,4 +20,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.minecraft
   index: /
   port_map: "25565"
-  version: 2026.10.1
+  version: 2026.11.0

@@ -13,13 +13,13 @@
   "title": "Minecraft Server",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.minecraft",
-  "version": "2026.10.1",
+  "version": "2026.11.0",
   "categories": [
     "others"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 362016281,
-    "arm64": 357632015
+    "amd64": 362328483,
+    "arm64": 358044073
   }
 }
