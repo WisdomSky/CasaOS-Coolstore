@@ -1,7 +1,7 @@
 name: rocket-chat
 services:
   app:
-    image: rocket.chat:8.9.0
+    image: rocket.chat:8.9.1
     restart: unless-stopped
     network_mode: host
     environment:
@@ -54,5 +54,5 @@ x-casaos:
   index: /
   port_map: "3000"
   scheme: http
-  version: 8.9.0
-  update_at: "2026-11-09"
+  version: 8.9.1
+  update_at: "2026-11-10"

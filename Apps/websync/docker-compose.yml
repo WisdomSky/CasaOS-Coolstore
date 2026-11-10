@@ -1,7 +1,7 @@
 name: websync
 services:
   app:
-    image: furier/websync
+    image: furier/websync:latest
     restart: unless-stopped
     working_dir: /src
     command:
@@ -38,4 +38,4 @@ x-casaos:
   index: /
   scheme: http
   version: latest
-  update_at: "2026-11-09"
+  update_at: "2026-11-10"
