@@ -1,7 +1,7 @@
 name: paperless-ai
 services:
   app:
-    image: clusterzx/paperless-ai:3.0.9@sha256:19baad5ab2607d65087712fcb3ff74b6c5f7e840ea31061dace4d8ab1ef40a17
+    image: clusterzx/paperless-ai:4.0.0@sha256:ab80803f22f07eaf54070691858cb62e3558077b860dcf210a2c17121f03c73f
     restart: unless-stopped
     ports:
       - target: 3000
@@ -28,4 +28,4 @@ x-casaos:
   index: /
   port_map: "3000"
   scheme: http
-  version: 3.0.9
+  version: 4.0.0

@@ -1,7 +1,7 @@
 name: komga
 services:
   app:
-    image: gotson/komga:1.30.0@sha256:7bf0847331ace240f66b3534a47ab9bdc4d7ed920123504099ef7cc4ae2d25f4
+    image: gotson/komga:1.30.1@sha256:e983324fa19a7d6d22fcfa4940b8593d5bc7603c6feadb74191e09571744c531
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -27,4 +27,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.komga
   index: /
   scheme: http
-  version: 1.30.0
+  version: 1.30.1

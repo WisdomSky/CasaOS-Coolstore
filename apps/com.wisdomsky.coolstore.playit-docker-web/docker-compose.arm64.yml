@@ -1,7 +1,7 @@
 name: playit-docker-web
 services:
   playit:
-    image: wisdomsky/playit-docker-web:1.2.0@sha256:30c73091660e3ecdabe181cd6847a7697004626d96a9e670036320f6ed8b1ff4
+    image: wisdomsky/playit-docker-web:2.0.2@sha256:991b05eb1f466e3f086b0a2151c55d13ab0c15d7b7d570b9f8afc530b6a5956b
     restart: unless-stopped
     network_mode: host
     ports:
@@ -21,4 +21,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.playit-docker-web
   index: /
   scheme: http
-  version: 1.2.0
+  version: 2.0.2

@@ -1,7 +1,7 @@
 name: wallabag
 services:
   app:
-    image: wallabag/wallabag
+    image: wallabag/wallabag:2.6.15@sha256:cc67bdd62c6289bb8135b507d5bb5685f6319500aa6ebcbd5373d07b95e03fe1
     restart: unless-stopped
     environment:
       SYMFONY__ENV__DATABASE_DRIVER: pdo_mysql
@@ -41,7 +41,7 @@ services:
         source: /DATA/AppData/Wallabag/mysql
         target: /var/lib/mysql
   redis:
-    image: redis:7.4.12-alpine@sha256:e8404170eef732867f7801b1453014bc0d9e2dbd1a2284cfcc17fe60a6cd255b
+    image: redis:7.4.12-alpine@sha256:52d1ea8a654b10f06af3ecda4e9dbcd035c7868b5c49ee7975de917f81de13db
     restart: unless-stopped
     volumes:
       - type: bind

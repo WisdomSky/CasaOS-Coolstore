@@ -12,17 +12,17 @@
   "tips": {
     "before_install": "Requires an existing Paperless-ngx instance. After installation, open the app and enter your Paperless URL, API token, and AI provider settings. Use `http://<casaos-ip>:8005/api` if Paperless runs in this store."
   },
-  "update_at": "2026-11-09",
+  "update_at": "2026-11-10",
   "title": "Paperless-AI",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.paperless-ai",
-  "version": "3.0.9",
+  "version": "4.0.0",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 4616601769,
-    "arm64": 621433425
+    "amd64": 132954631,
+    "arm64": 125973335
   }
 }

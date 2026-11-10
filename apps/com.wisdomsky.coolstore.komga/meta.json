@@ -10,18 +10,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.komga/assets/app-icon.webp",
   "category": "Media",
-  "update_at": "2026-11-09",
+  "update_at": "2026-11-10",
   "title": "Komga",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.komga",
-  "version": "1.30.0",
+  "version": "1.30.1",
   "categories": [
     "media"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 252802822,
-    "arm": 222172827,
-    "arm64": 248252118
+    "amd64": 253266335,
+    "arm": 222568756,
+    "arm64": 248665181
   }
 }

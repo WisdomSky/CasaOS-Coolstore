@@ -13,18 +13,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.playit-docker-web/assets/icon.webp",
   "category": "Networking",
-  "update_at": "2026-11-09",
+  "update_at": "2026-11-10",
   "title": "Playit.gg",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.playit-docker-web",
-  "version": "1.2.0",
+  "version": "2.0.2",
   "categories": [
     "networking"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 145836500,
-    "arm": 135737853,
-    "arm64": 144779629
+    "amd64": 147238489,
+    "arm": 137092898,
+    "arm64": 146256453
   }
 }
