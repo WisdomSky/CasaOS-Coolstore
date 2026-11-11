@@ -57,4 +57,4 @@ x-casaos:
   port_map: "5088"
   scheme: http
   version: 1.0.12
-  update_at: "2026-11-10"
+  update_at: "2026-11-11"

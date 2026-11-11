@@ -49,4 +49,4 @@ x-casaos:
   port_map: "8001"
   scheme: http
   version: latest
-  update_at: "2026-11-10"
+  update_at: "2026-11-11"
