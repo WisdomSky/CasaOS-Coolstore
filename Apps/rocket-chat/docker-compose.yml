@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
   db:
-    image: mongo:8.0.34
+    image: mongo:8.0.38
     restart: unless-stopped
     network_mode: host
     command:
@@ -55,4 +55,4 @@ x-casaos:
   port_map: "3000"
   scheme: http
   version: 8.9.1
-  update_at: "2026-11-11"
+  update_at: "2026-11-12"

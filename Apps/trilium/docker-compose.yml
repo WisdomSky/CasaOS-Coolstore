@@ -1,7 +1,7 @@
 name: trilium
 services:
   app:
-    image: zadam/trilium:0.63.7
+    image: zadam/trilium
     restart: unless-stopped
     environment:
       TRILIUM_DATA_DIR: /home/node/trilium-data
@@ -40,4 +40,4 @@ x-casaos:
   index: /
   scheme: http
   version: 0.63.7
-  update_at: "2026-11-11"
+  update_at: "2026-11-12"
