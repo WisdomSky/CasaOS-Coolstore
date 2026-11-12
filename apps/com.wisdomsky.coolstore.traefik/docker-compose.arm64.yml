@@ -1,7 +1,7 @@
 name: traefik
 services:
   app:
-    image: traefik:v3.7.17@sha256:7d059b49c28f167021156e8e7b448823eb8cfd681fdb97fd7e097d6c4e655190
+    image: traefik
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -45,4 +45,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.traefik
   index: /
   scheme: http
-  version: 3.7.17
+  version: 3.7.16

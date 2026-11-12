@@ -1,7 +1,7 @@
 name: ghost
 services:
   app:
-    image: ghost:6.75.0@sha256:249c5d5b3969426645682574d748c12447e48c81193e0c010930c24f7d62dab0
+    image: ghost:6.77.0@sha256:3bf9c34dc760c4b5afb47017c57485adaffd9a9a02d7fa806df2309984366f2b
     environment:
       database__client: mysql
       database__connection__host: db
@@ -20,7 +20,7 @@ services:
         source: /DATA/AppData/ghost/content
         target: /var/lib/ghost/content
   db:
-    image: mariadb:13.0.2@sha256:0231965d72f758adea93162ed7be119dfd49f14172c5754ed8c9d49b0f17bbc6
+    image: mariadb:13.0.2@sha256:4817c4f8ac0c9141f6fe42337ec256b7a88dc9461e37be725528688066567e9d
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
@@ -49,4 +49,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.ghost
   index: /
   scheme: http
-  version: 6.75.0
+  version: 6.77.0

@@ -1,7 +1,7 @@
 name: cloudflared-web
 services:
   cloudflared:
-    image: wisdomsky/cloudflared-web:2026.10.7@sha256:ff9ec344483f1b57a0471f5109b071fcd01131a30ee2f24dc09c280b9e60f573
+    image: wisdomsky/cloudflared-web:2026.11.0@sha256:564b350b90dcfd995ec012b9aaae6f71840a18201e163759429dff0ae312304a
     restart: unless-stopped
     network_mode: host
     ports:
@@ -21,4 +21,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.cloudflared-web
   index: /
   scheme: http
-  version: 2026.10.7
+  version: 2026.11.0

@@ -1,7 +1,7 @@
 name: wallabag
 services:
   app:
-    image: wallabag/wallabag:2.6.15@sha256:cc67bdd62c6289bb8135b507d5bb5685f6319500aa6ebcbd5373d07b95e03fe1
+    image: wallabag/wallabag
     restart: unless-stopped
     environment:
       SYMFONY__ENV__DATABASE_DRIVER: pdo_mysql
@@ -29,7 +29,7 @@ services:
         source: /DATA/AppData/Wallabag/images
         target: /var/www/wallabag/web/assets/images
   db:
-    image: mariadb:10.11.19@sha256:0de9840f23463c22eb4892d9bfd63086367e4bffe9b68ff4b62621d6eced854c
+    image: mariadb:10.11.19@sha256:0b18c4a0b2980ab6a28de91e644028f68af8388cf4157f8fd656852df619730c
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: casaos

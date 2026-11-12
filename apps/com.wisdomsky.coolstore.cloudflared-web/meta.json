@@ -15,18 +15,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/icon.webp",
   "category": "Networking",
-  "update_at": "2026-11-10",
+  "update_at": "2026-11-12",
   "title": "Cloudflared-web",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.cloudflared-web",
-  "version": "2026.10.7",
+  "version": "2026.11.0",
   "categories": [
     "networking"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 248158196,
-    "arm": 223417253,
-    "arm64": 246644148
+    "amd64": 250532536,
+    "arm": 225341567,
+    "arm64": 248832906
   }
 }

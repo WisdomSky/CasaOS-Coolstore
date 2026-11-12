@@ -1,7 +1,7 @@
 name: rsshub
 services:
   app:
-    image: diygod/rsshub:2026-11-10@sha256:b91fda5bb5769788440fc65709cadf61d726fe9da2bb0f3cfdc735fa0dc3a7fe
+    image: diygod/rsshub:2026-11-12@sha256:0c3cf1f07a2eb57604a8b6081608736546cd2273f4e5037fa8d7dd31bdc30acc
     restart: unless-stopped
     environment:
       NODE_ENV: production
@@ -23,7 +23,7 @@ services:
         hard: 0
         soft: 0
   redis:
-    image: redis:7.4-alpine@sha256:e4ee3e03ce8f75471f40937a7c6b2b0e500390b6812fcdf5cb32c01295ded446
+    image: redis:8.8.4-alpine@sha256:b85e284e14f616937c8e94a5d0374a6cfa6eb4bc5d6ab4ce59e38eca2fcec476
     restart: always
     volumes:
       - type: bind
@@ -38,4 +38,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.rsshub
   index: /
   scheme: http
-  version: "2026-11-10"
+  version: "2026-11-12"

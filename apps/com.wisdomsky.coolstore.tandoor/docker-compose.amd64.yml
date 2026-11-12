@@ -1,7 +1,7 @@
 name: tandoor
 services:
   app:
-    image: vabene1111/recipes:2@sha256:04468a89f352846bc6e584aa173a94f992011da590e730253e7905e212ca4eda
+    image: vabene1111/recipes:1@sha256:6e77bd6582ef2c9c05ef018e679fa60509a33b9c63f5dba7e2dcbb77cbc78a3f
     restart: unless-stopped
     environment:
       SECRET_KEY: ""
@@ -50,4 +50,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.tandoor
   index: /
   scheme: http
-  version: "2"
+  version: "1"

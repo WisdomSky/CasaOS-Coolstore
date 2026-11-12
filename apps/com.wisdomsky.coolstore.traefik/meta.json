@@ -10,18 +10,18 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.traefik/assets/traefik.webp",
   "category": "Networking",
-  "update_at": "2026-11-10",
+  "update_at": "2026-11-12",
   "title": "Traefik",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.traefik",
-  "version": "3.7.17",
+  "version": "3.7.16",
   "categories": [
     "networking"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 55166835,
-    "arm": 50591227,
-    "arm64": 49877678
+    "amd64": 55250671,
+    "arm": 50666113,
+    "arm64": 49956994
   }
 }

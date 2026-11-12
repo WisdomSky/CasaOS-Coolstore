@@ -1,7 +1,7 @@
 name: forgejo
 services:
   app:
-    image: codeberg.org/forgejo/forgejo:17.0.1@sha256:ed10aa4d76273770413ba4520dc65359c7c525b780aca3097da889560d9bff39
+    image: codeberg.org/forgejo/forgejo:17.0.1
     restart: unless-stopped
     ports:
       - target: 3000
