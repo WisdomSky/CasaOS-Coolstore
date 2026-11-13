@@ -1,7 +1,7 @@
 name: wallabag
 services:
   app:
-    image: wallabag/wallabag
+    image: wallabag/wallabag:2@sha256:02ae4573b68827267a2766aba65bc81693fdf671667e4e7a0ae7ba292e27871a
     restart: unless-stopped
     environment:
       SYMFONY__ENV__DATABASE_DRIVER: pdo_mysql
@@ -56,4 +56,4 @@ x-casaos:
   index: /
   port_map: "8080"
   scheme: http
-  version: 2.6.15
+  version: "2"

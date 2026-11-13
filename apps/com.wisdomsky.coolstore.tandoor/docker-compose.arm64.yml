@@ -1,7 +1,7 @@
 name: tandoor
 services:
   app:
-    image: vabene1111/recipes:1@sha256:f3fc539855c333256fa2dbaf4c2db806256bafb966fa8409a589a298d0cc0631
+    image: vabene1111/recipes:2@sha256:c1a54804326302798581288a840558e39a670ee0c9fce1244e0dde7777b74fea
     restart: unless-stopped
     environment:
       SECRET_KEY: ""
@@ -28,7 +28,7 @@ services:
         source: /DATA/AppData/$AppID/mediafiles
         target: /opt/recipes/mediafiles
   db:
-    image: postgres:14.24@sha256:6e2302670f95ac5312dd7c9b78e5c7a5ef5e983c8f896599341cc48ef3d20cdf
+    image: postgres:14@sha256:08e6ab407f2fa2aafa833392e107d071eecea413e68fa59adf26c2fa6d2b8922
     restart: unless-stopped
     environment:
       PUID: $PUID
@@ -50,4 +50,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.tandoor
   index: /
   scheme: http
-  version: "1"
+  version: "2"

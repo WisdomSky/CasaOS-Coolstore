@@ -1,7 +1,7 @@
 name: magicmirror
 services:
   app:
-    image: karsten13/magicmirror:alpine-v2.38.0@sha256:6c24182db2d693bc32c6d47b272226a32bfea4d0393f742ef5982ba6cb662804
+    image: karsten13/magicmirror:alpine-v2.38.0@sha256:46a7ab4f9859e96f912272a49a60d5da74eb46254ceab867b991f4d26480d721
     restart: unless-stopped
     ports:
       - target: 8080

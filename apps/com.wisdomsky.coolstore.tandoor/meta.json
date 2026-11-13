@@ -9,17 +9,17 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.tandoor/assets/logo_color.svg",
   "category": "Home",
-  "update_at": "2026-11-12",
+  "update_at": "2026-11-13",
   "title": "Tandoor",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.tandoor",
-  "version": "1",
+  "version": "2",
   "categories": [
     "home"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 288164737,
-    "arm64": 286080057
+    "amd64": 505619462,
+    "arm64": 500126172
   }
 }
