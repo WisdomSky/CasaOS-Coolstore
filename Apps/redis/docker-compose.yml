@@ -36,4 +36,4 @@ x-casaos:
   index: /
   port_map: "6379"
   version: 8.8.4
-  update_at: "2026-11-13"
+  update_at: "2026-11-14"
