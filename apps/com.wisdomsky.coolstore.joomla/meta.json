@@ -12,17 +12,17 @@
     "before_install": "For database connection, select `MySQL` then on the `database host` field put `joomladb`, for `database user` put `root` and for `database password` put `casaos`\n"
   },
   "category": "Productivity",
-  "update_at": "2026-11-13",
+  "update_at": "2026-11-14",
   "title": "Joomla",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.joomla",
-  "version": "5.4-apache",
+  "version": "6.2.0-apache",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 515321552,
-    "arm64": 501479413
+    "amd64": 500543626,
+    "arm64": 486392775
   }
 }

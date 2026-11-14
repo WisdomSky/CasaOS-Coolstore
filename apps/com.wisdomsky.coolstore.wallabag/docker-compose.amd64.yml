@@ -1,7 +1,7 @@
 name: wallabag
 services:
   app:
-    image: wallabag/wallabag:2@sha256:02ae4573b68827267a2766aba65bc81693fdf671667e4e7a0ae7ba292e27871a
+    image: wallabag/wallabag:2@sha256:0cd5fe1870bb05fa462f1de91f55ec28c7552055c367c33fb305368a3585db96
     restart: unless-stopped
     environment:
       SYMFONY__ENV__DATABASE_DRIVER: pdo_mysql
