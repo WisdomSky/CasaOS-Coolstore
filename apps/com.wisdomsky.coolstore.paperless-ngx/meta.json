@@ -12,17 +12,17 @@
     "before_install": "## Credentials:\n\nusername: `admin`\n\npassword: `admin`\n"
   },
   "category": "Productivity",
-  "update_at": "2026-11-16",
+  "update_at": "2026-11-18",
   "title": "Paperless-ngx",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.paperless-ngx",
-  "version": "3.4.2",
+  "version": "3.5.1",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 1842336902,
-    "arm64": 1817824187
+    "amd64": 1842842762,
+    "arm64": 1818274983
   }
 }

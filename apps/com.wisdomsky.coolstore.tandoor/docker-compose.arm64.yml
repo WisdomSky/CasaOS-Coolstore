@@ -1,7 +1,7 @@
 name: tandoor
 services:
   app:
-    image: vabene1111/recipes:2@sha256:1f42dfa4a5150f42386d27e0299d3f157a33fb847a7d7a094912ce032907b098
+    image: vabene1111/recipes:2@sha256:b2785623654ab359d408b39fe0f91e904c3be8be40ca3461062c192af11230ed
     restart: unless-stopped
     environment:
       SECRET_KEY: ""

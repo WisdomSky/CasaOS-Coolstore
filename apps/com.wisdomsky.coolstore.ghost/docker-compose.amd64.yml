@@ -1,7 +1,7 @@
 name: ghost
 services:
   app:
-    image: ghost:6.77.0@sha256:3bf9c34dc760c4b5afb47017c57485adaffd9a9a02d7fa806df2309984366f2b
+    image: ghost:6.78.0@sha256:d82cfe8d0b770c2b69063232983685292bb8d5576bb913b6fa3401f9901ea444
     environment:
       database__client: mysql
       database__connection__host: db
@@ -49,4 +49,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.ghost
   index: /
   scheme: http
-  version: 6.77.0
+  version: 6.78.0

@@ -1,7 +1,7 @@
 name: clipboard-bridge
 services:
   app:
-    image: ghcr.io/mattboxx/clipboard-bridge-server:1.0.12@sha256:26ba5db1fa0c6ae19409d02358e1b74406baf1dd4b7bfdb3748f1a2e64b2fe41
+    image: ghcr.io/mattboxx/clipboard-bridge-server:1.0.14@sha256:7f8d9f60b5f1d74f1f64dc8ea284e5fd7b8afd821989058944eb826cdaa5739c
     restart: unless-stopped
     ports:
       - target: 5088
@@ -39,4 +39,4 @@ x-casaos:
   index: /
   port_map: "5088"
   scheme: http
-  version: 1.0.12
+  version: 1.0.14

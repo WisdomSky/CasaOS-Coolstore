@@ -1,7 +1,7 @@
 name: paperless
 services:
   paperless:
-    image: ghcr.io/paperless-ngx/paperless-ngx:3.4.2@sha256:1856adaeccf1a3bfc58722767321888ee6ecbeeb7807ae5b0836d0f0a4ce3f25
+    image: ghcr.io/paperless-ngx/paperless-ngx:3.5.1@sha256:f477d12a1ff8740d9a32bccc50814cd7740bf00d5e2694c294ae0334bb956539
     restart: unless-stopped
     depends_on:
       - db
@@ -73,4 +73,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.paperless-ngx
   index: /
   scheme: http
-  version: 3.4.2
+  version: 3.5.1

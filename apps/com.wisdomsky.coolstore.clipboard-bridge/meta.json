@@ -16,17 +16,17 @@
   "tips": {
     "before_install": "Use only on a trusted LAN or private VPN. Protection with `CLIPBOARD_PASSWORD` and `CLIPBOARD_TOKEN` is optional. Keep `/data` persistent and back it up before updates."
   },
-  "update_at": "2026-11-16",
+  "update_at": "2026-11-18",
   "title": "Clipboard Bridge",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.clipboard-bridge",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 50978500,
-    "arm64": 50641518
+    "amd64": 50994444,
+    "arm64": 50657247
   }
 }

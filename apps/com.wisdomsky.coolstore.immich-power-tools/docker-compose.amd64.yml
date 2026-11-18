@@ -1,7 +1,7 @@
 name: immich-power-tools
 services:
   app:
-    image: ghcr.io/immich-power-tools/immich-power-tools:latest@sha256:f57b4a07fdc374f376092eee5b5dca71619d9dcef530ac144dd285bb550b14aa
+    image: ghcr.io/immich-power-tools/immich-power-tools:latest@sha256:4ad818a262fbee5b4105942c19cfc1e6252e452a63176de9cfd267553fb4478a
     restart: unless-stopped
     ports:
       - target: 3000
