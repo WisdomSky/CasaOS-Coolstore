@@ -1,7 +1,7 @@
 name: joomla
 services:
   app:
-    image: joomla:6.2.0-apache@sha256:ade87f8dec0da02a8ea8c52088fa28bb41dc1d7c6b6f7560452fbb6b38a72e2c
+    image: joomla:6.2.0-apache@sha256:6458e2117b542b1e3a1c8c5e21c224b0f3c8f45c69f499dae6c1e9745a797853
     environment:
       JOOMLA_DB_HOST: joomladb
       JOOMLA_DB_USER: joomla

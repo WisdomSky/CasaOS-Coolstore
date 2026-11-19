@@ -1,7 +1,7 @@
 name: tandoor
 services:
   app:
-    image: vabene1111/recipes:2@sha256:a208d16325ecf3585016e93683ebdcd69a1befbbc46e19e5c670ab1d9b6ab96d
+    image: vabene1111/recipes:2@sha256:35a3037b167bc62286636c0a82afcd51fbe4ad9c4910d8c565cef6e86af612c1
     restart: unless-stopped
     environment:
       SECRET_KEY: ""
@@ -28,7 +28,7 @@ services:
         source: /DATA/AppData/$AppID/mediafiles
         target: /opt/recipes/mediafiles
   db:
-    image: postgres:14@sha256:270cb53984b19f6c4aef23ccfe061d64d2715dfcd1246c7e1b2c42f8efeee263
+    image: postgres:18.7@sha256:12060a1464f232e4f8c721538b342687c6f17cead32a389586cd683262b1d848
     restart: unless-stopped
     environment:
       PUID: $PUID
