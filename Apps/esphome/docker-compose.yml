@@ -1,7 +1,7 @@
 name: esphome
 services:
   app:
-    image: esphome/esphome:2026.10
+    image: esphome/esphome:2026.11
     restart: unless-stopped
     network_mode: host
     privileged: true
@@ -43,5 +43,5 @@ x-casaos:
   id: com.wisdomsky.coolstore.esphome
   index: /
   scheme: http
-  version: "2026.10"
-  update_at: "2026-11-18"
+  version: "2026.11"
+  update_at: "2026-11-19"
