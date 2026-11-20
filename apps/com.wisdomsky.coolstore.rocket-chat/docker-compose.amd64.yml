@@ -10,7 +10,7 @@ services:
     depends_on:
       - db
   db:
-    image: mongo:8.0.38@sha256:9b73c38e39783bd21335f603a9f08be60fe385f5c28933ea32bb4a9fa1fd6d23
+    image: mongo:8.0.38@sha256:d819ca7f8e564eb253ae6dc9cac330386c56e6919f3570a74c04f04679433117
     restart: unless-stopped
     network_mode: host
     command:

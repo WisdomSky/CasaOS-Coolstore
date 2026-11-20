@@ -29,7 +29,7 @@ services:
         source: /DATA/AppData/Wallabag/images
         target: /var/www/wallabag/web/assets/images
   db:
-    image: mariadb:10.11.19@sha256:0b18c4a0b2980ab6a28de91e644028f68af8388cf4157f8fd656852df619730c
+    image: mariadb:10.11.19@sha256:7cefc3f36a20f2f773a7c81f5b683dd6901dab98df71468176ed70b7540e8d6e
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: casaos

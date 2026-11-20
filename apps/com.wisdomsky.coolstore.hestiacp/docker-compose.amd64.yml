@@ -28,7 +28,7 @@ services:
         source: /DATA/AppData/hestiacp/mariadb-logs
         target: /var/log/mysql
   mariadb:
-    image: mariadb:10.11.19@sha256:135c49b72e97143b73cc273dcdc95d2b035e3ebfbd536c3d72c65b715a8e06b5
+    image: mariadb:10.11.19@sha256:5d60ca6129f939453472f4ed385c54820ec57f3aa384a8646619f9bc0e3b5eab
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: root

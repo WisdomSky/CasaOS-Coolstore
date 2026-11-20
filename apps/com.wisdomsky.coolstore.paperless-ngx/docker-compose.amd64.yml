@@ -40,7 +40,7 @@ services:
     volumes:
       - /DATA/AppData/paperless/redis/data:/data
   db:
-    image: mariadb:13.0.2@sha256:4817c4f8ac0c9141f6fe42337ec256b7a88dc9461e37be725528688066567e9d
+    image: mariadb:10.6@sha256:883b61c61aaa82e0d98c909db914ccd107558c9e49e06b6624c2c48ffa3afcda
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/mysql:/var/lib/mysql
@@ -51,7 +51,7 @@ services:
       MARIADB_PASSWORD: paperless
       MARIADB_ROOT_PASSWORD: paperless
   tika:
-    image: apache/tika:3.3.3.0@sha256:6d5d54af3439b2f73aae4c7cdec6b11d06d4665c3d8cf78ff4a8cf137f78ed21
+    image: apache/tika:3.3.3.1@sha256:caf127902d1f40a378132be6e1a3e850ea021cf64dca3c2038b38475f0ececaf
     restart: unless-stopped
     ports:
       - "9998:9998"

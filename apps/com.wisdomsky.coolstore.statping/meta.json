@@ -10,7 +10,7 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.statping/assets/statping.webp",
   "category": "Developer",
-  "update_at": "2026-11-19",
+  "update_at": "2026-11-20",
   "title": "Statping",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.statping",
@@ -20,8 +20,8 @@
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 189032126,
-    "arm": 116749880,
-    "arm64": 186462001
+    "amd64": 190396277,
+    "arm": 117477864,
+    "arm64": 187790165
   }
 }

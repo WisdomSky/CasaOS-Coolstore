@@ -34,7 +34,7 @@ services:
     depends_on:
       - db
   db:
-    image: mariadb:11.8.9@sha256:75b300c790eec33cd4386d80fc1a938e27604ba70f3eeda25e52874be2aae424
+    image: mariadb:11.8.9@sha256:6e562000e74ce36a9c7cc1302e462c271e3e3a5e0e7ae0ec2ab5f71f0f586f02
     restart: unless-stopped
     environment:
       MARIADB_ROOT_PASSWORD: casaos
