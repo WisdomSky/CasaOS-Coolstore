@@ -1,7 +1,7 @@
 name: webdav
 services:
   app:
-    image: derkades/webdav:latest@sha256:8db0346cf344943ac95d5b511f9b9c7156ff8c4a67f5c4071ea396ab384df8fe
+    image: derkades/webdav:latest@sha256:91583ecd26ad657f45bb329cd1f82007337c51c4f8c6f4c34c3e7ecf805c224e
     restart: unless-stopped
     environment:
       USERNAME: casaos

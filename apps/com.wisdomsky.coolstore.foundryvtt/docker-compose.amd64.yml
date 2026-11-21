@@ -1,7 +1,7 @@
 name: foundryvtt
 services:
   app:
-    image: ghcr.io/felddy/foundryvtt:14.370@sha256:74293f1ee95b1f55be5f36bdf70e553341a3268d20cd3ae99521659b4cf4ad82
+    image: ghcr.io/felddy/foundryvtt:14.370@sha256:e52843659a55d30d7b6a4a1c3b6035422935d9889f2ce6ceaf4ad0bd15c0dd55
     hostname: foundryvtt
     restart: unless-stopped
     ports:
