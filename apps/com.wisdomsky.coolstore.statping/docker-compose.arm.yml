@@ -23,7 +23,7 @@ services:
         source: /DATA/AppData/$AppID/app
         target: /app
   db:
-    image: postgres:19.0@sha256:ebbebf50028aeedff4c0bba6f78fd356ac95226bb786c0819ca86f82f30dd2d4
+    image: postgres:15.20@sha256:476730640df33998780356c81986457d74e7d5e80c997531993cb1974bc3b591
     restart: unless-stopped
     environment:
       PUID: $PUID
