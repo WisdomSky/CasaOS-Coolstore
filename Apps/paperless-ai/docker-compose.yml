@@ -43,4 +43,4 @@ x-casaos:
   port_map: "3000"
   scheme: http
   version: 4.4.0
-  update_at: "2026-11-21"
+  update_at: "2026-11-22"
