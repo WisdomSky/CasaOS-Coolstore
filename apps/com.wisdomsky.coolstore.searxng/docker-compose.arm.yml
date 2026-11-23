@@ -1,7 +1,7 @@
 name: searxng
 services:
   app:
-    image: searxng/searxng:2026.11.21-c6ee3e9fd@sha256:7bce61e84d10133cb8ed30da823088555a684973d4e6d29240c3189cfc9a8155
+    image: searxng/searxng:2026.11.23-a7163d091@sha256:120bb910506c624c329b2acf404404de3de3bdfcac617dccb5dd42307e724b26
     restart: unless-stopped
     ports:
       - target: 8080
@@ -37,4 +37,4 @@ x-casaos:
   index: /
   port_map: "8080"
   scheme: http
-  version: 2026.11.21-c6ee3e9fd
+  version: 2026.11.23-a7163d091

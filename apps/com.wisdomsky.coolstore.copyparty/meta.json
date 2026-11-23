@@ -14,19 +14,19 @@
   "tips": {
     "before_install": "The default account is `admin` with password `casaos`. Change the password in the compose file or app settings. Files are served from `/DATA/AppData/copyparty/files`."
   },
-  "update_at": "2026-11-22",
+  "update_at": "2026-11-23",
   "title": "copyparty",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.copyparty",
-  "version": "1.20.26",
+  "version": "1.20.27",
   "categories": [
     "productivity"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "386": 38273665,
-    "amd64": 38497169,
-    "arm": 33203276,
-    "arm64": 37331620
+    "386": 40592078,
+    "amd64": 41195029,
+    "arm": 35124359,
+    "arm64": 40344706
   }
 }

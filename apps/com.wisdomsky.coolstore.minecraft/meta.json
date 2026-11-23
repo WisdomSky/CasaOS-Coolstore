@@ -9,17 +9,17 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.minecraft/assets/minecraft.webp",
   "category": "Others",
-  "update_at": "2026-11-22",
+  "update_at": "2026-11-23",
   "title": "Minecraft Server",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.minecraft",
-  "version": "2026.11.0",
+  "version": "2026.11.1",
   "categories": [
     "others"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 362328483,
-    "arm64": 358044073
+    "amd64": 368912602,
+    "arm64": 364570339
   }
 }

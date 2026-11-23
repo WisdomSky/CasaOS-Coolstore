@@ -1,7 +1,7 @@
 name: copyparty
 services:
   app:
-    image: copyparty/ac:1.20.26@sha256:669104321713ceec1902b7d23d270d0216070dcad8e4f18ed03efc7c00ab5ee2
+    image: copyparty/ac:1.20.27@sha256:4690b17c3fec3c4d602dbbdf00d06a24a6c2b7898a8cc191c99efbdfcd67e6c2
     restart: unless-stopped
     user: "1000:1000"
     ports:
@@ -40,4 +40,4 @@ x-casaos:
   index: /
   port_map: "3923"
   scheme: http
-  version: 1.20.26
+  version: 1.20.27
