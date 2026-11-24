@@ -1,7 +1,7 @@
 name: redis
 services:
   app:
-    image: redis:8.8.4@sha256:8cc2f5d6c05b6c4e30d890d62b0179ceb7d3660dbe0815734d5a5ef90866df91
+    image: redis:8.8.4@sha256:3da02b3a8ab59db0ce0868b0011f9380e222e31c002e6355594b5693b9c02c3e
     restart: unless-stopped
     ports:
       - target: 6379

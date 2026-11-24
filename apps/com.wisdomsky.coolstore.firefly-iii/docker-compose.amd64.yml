@@ -1,7 +1,7 @@
 name: firefly-iii
 services:
   app:
-    image: fireflyiii/core:version-6.7.9@sha256:63471e14fa4fe2a2de81e59b0c616c75a99309ea40be8dfc07a846092e147e12
+    image: fireflyiii/core:version-6.7.9@sha256:088a6f7ab70f3de7d20a33d81ef16d6e70d5989e6d14e671d31c6d0a3a867a7f
     restart: unless-stopped
     ports:
       - target: 8080

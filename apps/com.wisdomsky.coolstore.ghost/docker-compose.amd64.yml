@@ -1,7 +1,7 @@
 name: ghost
 services:
   app:
-    image: ghost:6.78.0@sha256:d82cfe8d0b770c2b69063232983685292bb8d5576bb913b6fa3401f9901ea444
+    image: ghost:6.78.0@sha256:777321033467cd7ce7213b1af51a0bc66d28bb13859541b3c988e3e9fddcc45a
     environment:
       database__client: mysql
       database__connection__host: db

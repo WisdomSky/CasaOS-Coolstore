@@ -35,7 +35,7 @@ services:
       PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://gotenberg:3000
       PAPERLESS_TIKA_ENDPOINT: http://tika:9998
   broker:
-    image: redis:8.8.4@sha256:8f5017281533114d6e6c2be2b4baaf43695d37818f5ff4b423ccf2904aeb76ea
+    image: redis:8.8.4@sha256:a75c3926915583c0052af5985d1201052445068f155e04588c1089835001ad0a
     restart: unless-stopped
     volumes:
       - /DATA/AppData/paperless/redis/data:/data

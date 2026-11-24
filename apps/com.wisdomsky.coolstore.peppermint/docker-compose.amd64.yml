@@ -16,7 +16,7 @@ services:
       BASE_URL: http://casaos.local:5000
     restart: unless-stopped
   db:
-    image: postgres:15.20@sha256:7957245f5540d6bc56b0a65dc4c4e476b76782dc3e28b12309b276b6a9dd6996
+    image: postgres:19.0@sha256:3fb624f672a1cb628d0bdc0f533cffad31345421eedf16ab1f85ed1ea0d07d2e
     restart: unless-stopped
     environment:
       PUID: $PUID

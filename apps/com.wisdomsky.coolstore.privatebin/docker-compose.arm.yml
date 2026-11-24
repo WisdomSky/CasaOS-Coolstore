@@ -1,7 +1,7 @@
 name: privatebin
 services:
   app:
-    image: privatebin/nginx-fpm-alpine:2.1.1@sha256:6bd30a9d70e2f2ec616e441931d80d654649ba91ed96d236414b40ff9830e611
+    image: privatebin/nginx-fpm-alpine:2.1.1@sha256:674ca61cfacb013efaeaa637a5131e5a3a19303899161867aabf228b3b0f754c
     restart: unless-stopped
     environment:
       PUID: $PUID

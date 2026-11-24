@@ -1,7 +1,7 @@
 name: joomla
 services:
   app:
-    image: joomla:6.2.0-apache@sha256:6458e2117b542b1e3a1c8c5e21c224b0f3c8f45c69f499dae6c1e9745a797853
+    image: joomla:6.2.0-apache@sha256:a5bc5ed0e288a7ad88d538904b0b1cd11d7236cb5e141b0c5d522d8226963485
     environment:
       JOOMLA_DB_HOST: joomladb
       JOOMLA_DB_USER: joomla
@@ -18,7 +18,7 @@ services:
         source: /DATA/AppData/$AppID/www
         target: /var/www/html
   joomladb:
-    image: mysql:8.4.13@sha256:72c368d898861f3b3a07af0e6d690400f44f048799ed46822783d9224cc2c86d
+    image: mysql:8.4.13@sha256:f0c7a4430d773ef8433aae82e08cb02ade4a6ad806a18b1610a48a1728fbdfd5
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: casaos
