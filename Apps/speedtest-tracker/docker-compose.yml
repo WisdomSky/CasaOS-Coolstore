@@ -1,7 +1,7 @@
 name: speedtest-tracker
 services:
   app:
-    image: henrywhitaker3/speedtest-tracker:v1.12.3-dev
+    image: henrywhitaker3/speedtest-tracker
     restart: unless-stopped
     environment:
       PGID: $PGID
@@ -43,4 +43,4 @@ x-casaos:
   index: /
   scheme: http
   version: 1.12.3-dev
-  update_at: "2026-11-25"
+  update_at: "2026-11-26"
