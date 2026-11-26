@@ -11,7 +11,7 @@
   "tips": {
     "before_install": "This is a game server with no web UI. The first start generates a world and can take several minutes. Connect using the Veloren client to port `14004`. Server commands are available from the CasaOS terminal."
   },
-  "update_at": "2026-11-24",
+  "update_at": "2026-11-26",
   "title": "Veloren Server",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.veloren",
@@ -21,6 +21,6 @@
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 146761335
+    "amd64": 146734575
   }
 }

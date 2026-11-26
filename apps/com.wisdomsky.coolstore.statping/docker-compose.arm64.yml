@@ -1,7 +1,7 @@
 name: statping
 services:
   app:
-    image: statping/statping:v0.90.74@sha256:fdc52496e7b70ea0d54e7c8dd26837333576a930d3edc9107d66bf802c2373eb
+    image: statping/statping
     restart: always
     depends_on:
       - db

@@ -1,7 +1,7 @@
 name: rustdesk-server
 services:
   hbbs:
-    image: rustdesk/rustdesk-server-s6:1@sha256:cec7df9c71f11a8e6979d88e01417cddc335f6341c53f838ee07225e2e3fffa9
+    image: rustdesk/rustdesk-server-s6:1.1.16@sha256:cec7df9c71f11a8e6979d88e01417cddc335f6341c53f838ee07225e2e3fffa9
     entrypoint:
       - /usr/bin/hbbs
     volumes:
@@ -15,7 +15,7 @@ services:
     healthcheck:
       disable: true
   hbbr:
-    image: rustdesk/rustdesk-server-s6:1@sha256:cec7df9c71f11a8e6979d88e01417cddc335f6341c53f838ee07225e2e3fffa9
+    image: rustdesk/rustdesk-server-s6:1.1.16@sha256:cec7df9c71f11a8e6979d88e01417cddc335f6341c53f838ee07225e2e3fffa9
     entrypoint:
       - /usr/bin/hbbr
     volumes:
@@ -34,4 +34,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.rustdesk-server
   index: /
   port_map: "21116"
-  version: "1"
+  version: 1.1.16

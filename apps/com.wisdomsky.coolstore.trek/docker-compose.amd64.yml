@@ -1,7 +1,7 @@
 name: trek
 services:
   app:
-    image: mauriceboe/trek:5.2.0@sha256:bc1bb79189d983902dbaf21015fc34782c19f9b662e82ba8e674a3fedf5a8646
+    image: mauriceboe/trek:5.0.1@sha256:425993143173a8475a9ce7847bff28fd4d850711407aba3a070fdfc2f9627189
     restart: unless-stopped
     ports:
       - target: 3000
@@ -39,4 +39,4 @@ x-casaos:
   index: /
   port_map: "3000"
   scheme: http
-  version: 5.2.0
+  version: 5.0.1

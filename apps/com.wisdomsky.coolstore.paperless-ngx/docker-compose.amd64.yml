@@ -51,7 +51,7 @@ services:
       MARIADB_PASSWORD: paperless
       MARIADB_ROOT_PASSWORD: paperless
   tika:
-    image: apache/tika:3.3.3.1@sha256:caf127902d1f40a378132be6e1a3e850ea021cf64dca3c2038b38475f0ececaf
+    image: apache/tika:3.4.0.0@sha256:e2fcd682434d6d73916f1153196155903e0f934bd21b36acf49633891ad39cf4
     restart: unless-stopped
     ports:
       - "9998:9998"

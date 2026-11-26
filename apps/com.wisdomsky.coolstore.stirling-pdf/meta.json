@@ -12,11 +12,11 @@
   ],
   "thumbnail": "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/stirling.webp",
   "category": "Productivity",
-  "update_at": "2026-11-24",
+  "update_at": "2026-11-26",
   "title": "Stirling PDF",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.stirling-pdf",
-  "version": "3.5.0",
+  "version": "3.2.2",
   "categories": [
     "productivity"
   ],

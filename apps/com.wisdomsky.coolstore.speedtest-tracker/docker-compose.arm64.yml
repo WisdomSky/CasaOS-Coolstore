@@ -1,7 +1,7 @@
 name: speedtest-tracker
 services:
   app:
-    image: henrywhitaker3/speedtest-tracker:v1.12.3-dev@sha256:548d45f87911c11d67d9182f2fe29acdd2ae4f6886bf7cd30fefa6172132b9e3
+    image: henrywhitaker3/speedtest-tracker
     restart: unless-stopped
     environment:
       PGID: $PGID

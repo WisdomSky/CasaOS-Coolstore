@@ -12,17 +12,17 @@
   "tips": {
     "before_install": "The first-run wizard asks for a TMDb API key and your media server and Seer details. Back up `/DATA/AppData/suggestarr/config_files` before updates."
   },
-  "update_at": "2026-11-24",
+  "update_at": "2026-11-26",
   "title": "SuggestArr",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.suggestarr",
-  "version": "3.5.0",
+  "version": "3.2.0",
   "categories": [
     "media"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 52361608,
-    "arm64": 52207865
+    "amd64": 53151907,
+    "arm64": 53587255
   }
 }

@@ -1,7 +1,7 @@
 name: esphome
 services:
   app:
-    image: esphome/esphome:2026.11@sha256:868b34cf104a922cfa3c5de67e5208fdba69aca7f14bb10adfbb1a7205f71184
+    image: esphome/esphome:2026.11@sha256:49592dfe11e883c1e2d5adb25129598e538fb365c2e7564407a6579ea7ae947b
     restart: unless-stopped
     network_mode: host
     privileged: true

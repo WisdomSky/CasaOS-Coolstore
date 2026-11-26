@@ -1,7 +1,7 @@
 name: azuracast
 services:
   app:
-    image: ghcr.io/azuracast/azuracast:latest@sha256:cff6ea544b68d0ae2188ad51dc100f9aa1ac4dafc9593f6a438cdb50538e99b4
+    image: ghcr.io/azuracast/azuracast:latest@sha256:9342396cfca0f2c891b85961a668d3f1d105873c07f4de0f4ffc65ba79e91422
     restart: unless-stopped
     ports:
       - target: 80

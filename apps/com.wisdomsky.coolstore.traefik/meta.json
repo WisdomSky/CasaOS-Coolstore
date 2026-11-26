@@ -10,11 +10,11 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.traefik/assets/traefik.webp",
   "category": "Networking",
-  "update_at": "2026-11-24",
+  "update_at": "2026-11-26",
   "title": "Traefik",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.traefik",
-  "version": "3.8.0",
+  "version": "3.7.16",
   "categories": [
     "networking"
   ],

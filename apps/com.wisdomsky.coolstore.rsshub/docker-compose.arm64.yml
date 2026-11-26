@@ -1,7 +1,7 @@
 name: rsshub
 services:
   app:
-    image: diygod/rsshub:2026-11-24@sha256:dd3758a7e1adf4b3d439291c1b74c0c97fcf34df1e07e2466acf9211d17cbceb
+    image: diygod/rsshub
     restart: unless-stopped
     environment:
       NODE_ENV: production
@@ -16,7 +16,7 @@ services:
       - redis
       - browserless
   browserless:
-    image: browserless/chrome:1-puppeteer-10.4.0@sha256:8c26d8b423608d23f16ebc6bc18a32d54df48906d34c3af88899e4a973336bbd
+    image: browserless/chrome
     restart: unless-stopped
     ulimits:
       core:
@@ -38,4 +38,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.rsshub
   index: /
   scheme: http
-  version: "2026-11-24"
+  version: "2026-10-29"

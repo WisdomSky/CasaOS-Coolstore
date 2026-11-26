@@ -9,17 +9,17 @@
   "author": "WisdomSky",
   "thumbnail": "/apps/com.wisdomsky.coolstore.ghost/assets/ghost.webp",
   "category": "Social",
-  "update_at": "2026-11-24",
+  "update_at": "2026-11-26",
   "title": "Ghost",
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "id": "com.wisdomsky.coolstore.ghost",
-  "version": "6.78.0",
+  "version": "6.79.0",
   "categories": [
     "social"
   ],
   "min_memory": 0,
   "min_image_size": {
-    "amd64": 358703238,
-    "arm64": 351678979
+    "amd64": 359335005,
+    "arm64": 352303419
   }
 }
