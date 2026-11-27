@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "updated_at": "2026-11-26T16:03:47Z",
+  "updated_at": "2026-11-27T16:03:46Z",
   "app_count": 62,
   "base_url": "https://cdn.jsdelivr.net/gh/WisdomSky/CasaOS-Coolstore@gh-pages",
   "apps": [
@@ -21,7 +21,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.airvideohd/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.airvideohd/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.airvideohd/meta.json",
-      "content_hash": "d205e12b"
+      "content_hash": "f9b6d17a"
     },
     {
       "id": "com.wisdomsky.coolstore.archivebox",
@@ -41,7 +41,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.archivebox/assets/archivebox.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.archivebox/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.archivebox/meta.json",
-      "content_hash": "4e270b6e",
+      "content_hash": "6e781f8d",
       "version": "0.9.77"
     },
     {
@@ -62,7 +62,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.azuracast/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.azuracast/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.azuracast/meta.json",
-      "content_hash": "528f208d"
+      "content_hash": "bdc52f35"
     },
     {
       "id": "com.wisdomsky.coolstore.briefing",
@@ -83,7 +83,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.briefing/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.briefing/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.briefing/meta.json",
-      "content_hash": "8de9e932",
+      "content_hash": "55d29d2c",
       "version": "3.1.10"
     },
     {
@@ -105,7 +105,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.caddy/assets/caddy.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.caddy/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.caddy/meta.json",
-      "content_hash": "eb61b131",
+      "content_hash": "a10b5be6",
       "version": "2.11.9"
     },
     {
@@ -126,7 +126,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.calpal/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.calpal/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.calpal/meta.json",
-      "content_hash": "0c799fd2",
+      "content_hash": "9fb75c50",
       "version": "1.0.0"
     },
     {
@@ -147,7 +147,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.casaos-toolbox/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.casaos-toolbox/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.casaos-toolbox/meta.json",
-      "content_hash": "260e1ecc"
+      "content_hash": "669abe6f"
     },
     {
       "id": "com.wisdomsky.coolstore.clipboard-bridge",
@@ -167,7 +167,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.clipboard-bridge/assets/icon.svg",
       "compose_url": "/apps/com.wisdomsky.coolstore.clipboard-bridge/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.clipboard-bridge/meta.json",
-      "content_hash": "336ce36e",
+      "content_hash": "589f593d",
       "version": "1.0.14"
     },
     {
@@ -189,7 +189,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.cloudflared-web/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.cloudflared-web/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.cloudflared-web/meta.json",
-      "content_hash": "9ad55634",
+      "content_hash": "26765101",
       "version": "2026.11.2"
     },
     {
@@ -212,7 +212,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.copyparty/assets/copyparty.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.copyparty/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.copyparty/meta.json",
-      "content_hash": "4ecc9b1e",
+      "content_hash": "893ed5c0",
       "version": "1.20.28"
     },
     {
@@ -233,7 +233,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.draw-io/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.draw-io/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.draw-io/meta.json",
-      "content_hash": "214bd6aa",
+      "content_hash": "6d9e39ba",
       "version": "32.7.7"
     },
     {
@@ -254,7 +254,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.esphome/assets/45919759.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.esphome/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.esphome/meta.json",
-      "content_hash": "f6147f79"
+      "content_hash": "7413bc1d"
     },
     {
       "id": "com.wisdomsky.coolstore.firefly-iii",
@@ -274,8 +274,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.firefly-iii/assets/logo-small.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.firefly-iii/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.firefly-iii/meta.json",
-      "content_hash": "114b9ab0",
-      "version": "6.7.9"
+      "content_hash": "e2d32f37",
+      "version": "6.7.12"
     },
     {
       "id": "com.wisdomsky.coolstore.flaresolverr",
@@ -296,7 +296,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.flaresolverr/assets/10577978.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.flaresolverr/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.flaresolverr/meta.json",
-      "content_hash": "793d2acd",
+      "content_hash": "01261e76",
       "version": "3.5.2"
     },
     {
@@ -318,7 +318,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.forgejo/assets/forgejo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.forgejo/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.forgejo/meta.json",
-      "content_hash": "819ea930",
+      "content_hash": "55e07d1e",
       "version": "17.0.1"
     },
     {
@@ -339,7 +339,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.foundryvtt/assets/fvtt.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.foundryvtt/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.foundryvtt/meta.json",
-      "content_hash": "08d920b2"
+      "content_hash": "60e28935"
     },
     {
       "id": "com.wisdomsky.coolstore.freescout",
@@ -359,7 +359,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.freescout/assets/freescout.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.freescout/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.freescout/meta.json",
-      "content_hash": "281d8448",
+      "content_hash": "05248355",
       "version": "2.2.26"
     },
     {
@@ -380,7 +380,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.ghost/assets/ghost.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.ghost/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.ghost/meta.json",
-      "content_hash": "5828f2cb",
+      "content_hash": "9cb901cc",
       "version": "6.79.0"
     },
     {
@@ -400,7 +400,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.hestiacp/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.hestiacp/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.hestiacp/meta.json",
-      "content_hash": "742ebf36"
+      "content_hash": "2692a810"
     },
     {
       "id": "com.wisdomsky.coolstore.homebridge",
@@ -421,7 +421,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.homebridge/assets/homebridge.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.homebridge/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.homebridge/meta.json",
-      "content_hash": "d73cae36"
+      "content_hash": "7ab62e3f"
     },
     {
       "id": "com.wisdomsky.coolstore.hrconvert2",
@@ -440,7 +440,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.hrconvert2/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.hrconvert2/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.hrconvert2/meta.json",
-      "content_hash": "ef531e39"
+      "content_hash": "bfeadf38"
     },
     {
       "id": "com.wisdomsky.coolstore.immich-power-tools",
@@ -460,7 +460,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.immich-power-tools/assets/immich-power-tools.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.immich-power-tools/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.immich-power-tools/meta.json",
-      "content_hash": "a240f785"
+      "content_hash": "519cac8a"
     },
     {
       "id": "com.wisdomsky.coolstore.joomla",
@@ -480,7 +480,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.joomla/assets/joomla.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.joomla/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.joomla/meta.json",
-      "content_hash": "723f77b9"
+      "content_hash": "7c982826"
     },
     {
       "id": "com.wisdomsky.coolstore.kavita",
@@ -501,7 +501,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.kavita/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.kavita/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.kavita/meta.json",
-      "content_hash": "21e84381",
+      "content_hash": "f37c3d7d",
       "version": "0.9.1"
     },
     {
@@ -523,7 +523,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.komga/assets/app-icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.komga/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.komga/meta.json",
-      "content_hash": "f86555a5",
+      "content_hash": "cbcab108",
       "version": "1.30.2"
     },
     {
@@ -543,7 +543,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.krusader/assets/128-apps-krusader_root.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.krusader/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.krusader/meta.json",
-      "content_hash": "7f69f358"
+      "content_hash": "ef5adbf3"
     },
     {
       "id": "com.wisdomsky.coolstore.magicmirror",
@@ -564,7 +564,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.magicmirror/assets/favicon.svg",
       "compose_url": "/apps/com.wisdomsky.coolstore.magicmirror/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.magicmirror/meta.json",
-      "content_hash": "9db0b9c4",
+      "content_hash": "9334ef38",
       "version": "2.38.0"
     },
     {
@@ -585,7 +585,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.matter-server/assets/61027988.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.matter-server/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.matter-server/meta.json",
-      "content_hash": "924a7c9c",
+      "content_hash": "7749deaa",
       "version": "8.1.0"
     },
     {
@@ -606,7 +606,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.mealie/assets/92342333.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.mealie/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.mealie/meta.json",
-      "content_hash": "630cdb2b"
+      "content_hash": "e27614bb"
     },
     {
       "id": "com.wisdomsky.coolstore.metube-youtubedl",
@@ -626,7 +626,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.metube-youtubedl/assets/ytdlm.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.metube-youtubedl/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.metube-youtubedl/meta.json",
-      "content_hash": "7ba0cfc5"
+      "content_hash": "44e2e789"
     },
     {
       "id": "com.wisdomsky.coolstore.minecraft",
@@ -646,7 +646,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.minecraft/assets/minecraft.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.minecraft/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.minecraft/meta.json",
-      "content_hash": "ba6b150e",
+      "content_hash": "608d18e8",
       "version": "2026.11.1"
     },
     {
@@ -668,7 +668,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.mosquitto/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.mosquitto/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.mosquitto/meta.json",
-      "content_hash": "dad71554",
+      "content_hash": "fb88b8a1",
       "version": "2.0.23"
     },
     {
@@ -691,7 +691,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.navidrome/assets/5lhEh5KF_400x400.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.navidrome/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.navidrome/meta.json",
-      "content_hash": "e56b9987",
+      "content_hash": "663fafb6",
       "version": "0.64.2"
     },
     {
@@ -712,8 +712,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.paperless-ai/assets/paperless-ai.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.paperless-ai/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.paperless-ai/meta.json",
-      "content_hash": "1f4603ec",
-      "version": "4.7.0"
+      "content_hash": "212bad7a",
+      "version": "4.7.1"
     },
     {
       "id": "com.wisdomsky.coolstore.paperless-ngx",
@@ -733,7 +733,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.paperless-ngx/assets/99562962.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.paperless-ngx/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.paperless-ngx/meta.json",
-      "content_hash": "dc42e24d",
+      "content_hash": "8d1cb9d6",
       "version": "3.5.1"
     },
     {
@@ -753,7 +753,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.peppermint/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.peppermint/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.peppermint/meta.json",
-      "content_hash": "97b82186"
+      "content_hash": "915a4435"
     },
     {
       "id": "com.wisdomsky.coolstore.pi-alert",
@@ -774,7 +774,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.pi-alert/assets/1_devices.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.pi-alert/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.pi-alert/meta.json",
-      "content_hash": "12defbaa"
+      "content_hash": "366215ca"
     },
     {
       "id": "com.wisdomsky.coolstore.playit-docker-web",
@@ -795,7 +795,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.playit-docker-web/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.playit-docker-web/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.playit-docker-web/meta.json",
-      "content_hash": "ac9cdc95",
+      "content_hash": "a35a03e5",
       "version": "2.0.2"
     },
     {
@@ -815,7 +815,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.portainer-tools/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.portainer-tools/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.portainer-tools/meta.json",
-      "content_hash": "9192cf23"
+      "content_hash": "971b5463"
     },
     {
       "id": "com.wisdomsky.coolstore.privatebin",
@@ -836,7 +836,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.privatebin/assets/privatebin.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.privatebin/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.privatebin/meta.json",
-      "content_hash": "f6f51c74",
+      "content_hash": "c1fcd268",
       "version": "2.1.1"
     },
     {
@@ -858,7 +858,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.readerr/assets/128.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.readerr/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.readerr/meta.json",
-      "content_hash": "fd10efc5"
+      "content_hash": "e7b04c88"
     },
     {
       "id": "com.wisdomsky.coolstore.redis",
@@ -880,7 +880,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.redis/assets/Untitled-2-512.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.redis/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.redis/meta.json",
-      "content_hash": "cb5d9033",
+      "content_hash": "0858f580",
       "version": "8.8.4"
     },
     {
@@ -902,7 +902,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.retroarch-web/assets/1812827.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.retroarch-web/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.retroarch-web/meta.json",
-      "content_hash": "9289f4a6"
+      "content_hash": "f6700f56"
     },
     {
       "id": "com.wisdomsky.coolstore.rocket-chat",
@@ -922,7 +922,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.rocket-chat/assets/rocket-chat.svg",
       "compose_url": "/apps/com.wisdomsky.coolstore.rocket-chat/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.rocket-chat/meta.json",
-      "content_hash": "44ef3de2",
+      "content_hash": "78722a62",
       "version": "9.0.0"
     },
     {
@@ -943,7 +943,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.rsshub/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.rsshub/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.rsshub/meta.json",
-      "content_hash": "5987f3f6"
+      "content_hash": "3108efcb"
     },
     {
       "id": "com.wisdomsky.coolstore.rustdesk-server",
@@ -964,8 +964,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.rustdesk-server/assets/icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.rustdesk-server/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.rustdesk-server/meta.json",
-      "content_hash": "53b70c28",
-      "version": "1.1.16"
+      "content_hash": "4e98ec38"
     },
     {
       "id": "com.wisdomsky.coolstore.searxng",
@@ -986,8 +985,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.searxng/assets/searxng.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.searxng/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.searxng/meta.json",
-      "content_hash": "ff5f160a",
-      "version": "2026.10.29-c15647b5a"
+      "content_hash": "0e71a141",
+      "version": "2026.11.26-b5605b8f2"
     },
     {
       "id": "com.wisdomsky.coolstore.speedtest-tracker",
@@ -1008,7 +1007,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.speedtest-tracker/assets/speedtest-tracker.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.speedtest-tracker/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.speedtest-tracker/meta.json",
-      "content_hash": "925ed2a1",
+      "content_hash": "69f78dbc",
       "version": "1.12.3-dev"
     },
     {
@@ -1029,8 +1028,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.spot-dl/assets/icon.svg",
       "compose_url": "/apps/com.wisdomsky.coolstore.spot-dl/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.spot-dl/meta.json",
-      "content_hash": "70b037e1",
-      "version": "4.2.0"
+      "content_hash": "12b019ea",
+      "version": "4.6.0"
     },
     {
       "id": "com.wisdomsky.coolstore.statping",
@@ -1051,7 +1050,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.statping/assets/statping.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.statping/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.statping/meta.json",
-      "content_hash": "df29fac6",
+      "content_hash": "c46355b5",
       "version": "0.90.74"
     },
     {
@@ -1072,8 +1071,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.stirling-pdf/assets/stirling.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.stirling-pdf/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.stirling-pdf/meta.json",
-      "content_hash": "df9b460c",
-      "version": "3.2.2"
+      "content_hash": "6d51a098",
+      "version": "3.5.0"
     },
     {
       "id": "com.wisdomsky.coolstore.suggestarr",
@@ -1093,8 +1092,8 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.suggestarr/assets/logo.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.suggestarr/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.suggestarr/meta.json",
-      "content_hash": "a562fb38",
-      "version": "3.2.0"
+      "content_hash": "4ed2ce8e",
+      "version": "3.5.0"
     },
     {
       "id": "com.wisdomsky.coolstore.tandoor",
@@ -1114,7 +1113,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.tandoor/assets/logo_color.svg",
       "compose_url": "/apps/com.wisdomsky.coolstore.tandoor/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.tandoor/meta.json",
-      "content_hash": "408148c9"
+      "content_hash": "82b24b00"
     },
     {
       "id": "com.wisdomsky.coolstore.traefik",
@@ -1135,7 +1134,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.traefik/assets/traefik.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.traefik/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.traefik/meta.json",
-      "content_hash": "03af13f3",
+      "content_hash": "7e9dc46d",
       "version": "3.7.16"
     },
     {
@@ -1156,7 +1155,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.trek/assets/trek-icon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.trek/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.trek/meta.json",
-      "content_hash": "5172bbad",
+      "content_hash": "fd8325c7",
       "version": "5.0.1"
     },
     {
@@ -1178,7 +1177,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.trilium/assets/large.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.trilium/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.trilium/meta.json",
-      "content_hash": "d2466218",
+      "content_hash": "9bcf22db",
       "version": "0.63.7"
     },
     {
@@ -1198,7 +1197,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.vdfusion/assets/vdfusion-logo.svg",
       "compose_url": "/apps/com.wisdomsky.coolstore.vdfusion/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.vdfusion/meta.json",
-      "content_hash": "7753963f",
+      "content_hash": "0bb49e30",
       "version": "1.3.199"
     },
     {
@@ -1218,7 +1217,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.veloren/assets/favicon.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.veloren/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.veloren/meta.json",
-      "content_hash": "f4dcda77"
+      "content_hash": "6b5c40d1"
     },
     {
       "id": "com.wisdomsky.coolstore.wallabag",
@@ -1238,7 +1237,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.wallabag/assets/wallabag.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.wallabag/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.wallabag/meta.json",
-      "content_hash": "918b6f24",
+      "content_hash": "85155d8c",
       "version": "2.6.15"
     },
     {
@@ -1259,7 +1258,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.webdav/assets/webdav.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.webdav/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.webdav/meta.json",
-      "content_hash": "bea8d7e7"
+      "content_hash": "c9581157"
     },
     {
       "id": "com.wisdomsky.coolstore.websync",
@@ -1278,7 +1277,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.websync/assets/sync-1024.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.websync/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.websync/meta.json",
-      "content_hash": "f00f8858"
+      "content_hash": "3ce4dfba"
     },
     {
       "id": "com.wisdomsky.coolstore.wg-easy",
@@ -1298,7 +1297,7 @@
       "thumbnail": "/apps/com.wisdomsky.coolstore.wg-easy/assets/wireguard.webp",
       "compose_url": "/apps/com.wisdomsky.coolstore.wg-easy/docker-compose.yml",
       "meta_url": "/apps/com.wisdomsky.coolstore.wg-easy/meta.json",
-      "content_hash": "a349435d",
+      "content_hash": "d63612d5",
       "version": "15.5.0"
     }
   ]

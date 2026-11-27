@@ -1,7 +1,7 @@
 name: firefly-iii
 services:
   app:
-    image: fireflyiii/core:version-6.7.9@sha256:088a6f7ab70f3de7d20a33d81ef16d6e70d5989e6d14e671d31c6d0a3a867a7f
+    image: fireflyiii/core:version-6.7.12@sha256:6cfde1dbb5020091fbeff498080a89256f00b3868fb7daa129ff226c0fbdcb08
     restart: unless-stopped
     ports:
       - target: 8080
@@ -65,4 +65,4 @@ x-casaos:
   index: /
   port_map: "8080"
   scheme: http
-  version: 6.7.9
+  version: 6.7.12

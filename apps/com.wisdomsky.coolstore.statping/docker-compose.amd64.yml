@@ -1,7 +1,7 @@
 name: statping
 services:
   app:
-    image: statping/statping
+    image: statping/statping:v0.90.74@sha256:d55c3ea8b64411199f7952fc6e00b2090bb6f1691a1d197a2a7e237e92384523
     restart: always
     depends_on:
       - db
@@ -23,7 +23,7 @@ services:
         source: /DATA/AppData/$AppID/app
         target: /app
   db:
-    image: postgres:19.0@sha256:3fb624f672a1cb628d0bdc0f533cffad31345421eedf16ab1f85ed1ea0d07d2e
+    image: postgres:15@sha256:b14fdb40f71c4ccdaf0f01afb3207f1f7e50fe281ad7480fe24e9974632bd892
     restart: unless-stopped
     environment:
       PUID: $PUID

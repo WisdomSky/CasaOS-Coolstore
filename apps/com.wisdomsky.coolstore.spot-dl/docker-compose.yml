@@ -1,7 +1,7 @@
 name: spot-dl
 services:
   app:
-    image: spotdl/spotify-downloader:v4.2.0
+    image: spotdl/spotify-downloader:v4.6.0
     restart: unless-stopped
     ports:
       - target: 8800
@@ -31,4 +31,4 @@ x-casaos:
   id: com.wisdomsky.coolstore.spot-dl
   index: /
   scheme: http
-  version: 4.2.0
+  version: 4.6.0
